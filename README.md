@@ -13,9 +13,9 @@
 | 依赖 | 状态 | 说明 |
 | --- | --- | --- |
 | 上游快照 `upstream/` | **已内置** | 92 样张 / 45 份参考 / 44 个脚本 / 23 个 demo，固定在上游 `e8d1148`（v3.3.0） |
-| 批印坊 | **需另装** | 装桌面版安装包，再让插件指向它（见下文「批印坊」） |
+| 批印坊 | **需额外配置** | 当前桥接需要批印坊源码及其 Electron 依赖；桌面安装版的自动桥接尚未完成（见下文「批印坊」） |
 
-所以：**创作、七种媒介、作品库、配色、评审、92 张风格样张，开箱即用；批量出片要先装批印坊。** 没装批印坊时，面板仍可进入，五个业务页会明确提示去安装，而不是静默失败。
+风格素材已随仓库提供；批量出片和原生分层交付需要可用的批印坊桥接。当前桌面安装版尚不能直接桥接，具体配置见下文。
 
 ## 能力一览
 
@@ -25,7 +25,7 @@
 | 4 条工作流 | 是 | 三方向探索、稳妥轨道、同风格复用、评审打磨 |
 | 92 种风格样张 | 是 | 高清 4800×3000，含逐条设计说明、筛选、搜索、大图 |
 | 作品库 | 是 | 类型自动筛选、HTML 卡片直显、全屏双击改字、删除 |
-| 原生分层交付 | 是 | 任意媒介可选 `.ppdesign` 真图层工程 + PNG |
+| 原生分层交付 | 否 | 需要可用的批印坊桥接，交付 `.ppdesign` 真图层工程 + PNG |
 | 配色 | 是 | 6 套预设 + 跟随宿主 + 自选色 |
 | 批印坊内嵌 | **否**（需装批印坊） | 5 个业务页，复用本机引擎与数据 |
 | 模型工具 | 部分 | `huashu_design` 9 个动作、`huashu_printpress` 7 个动作 |
@@ -71,7 +71,7 @@
 - 不需要另开独立的批印坊窗口或开发服务器。首次进入启动后台；插件卸载时等待业务收尾并释放数据目录锁。目录被独立桌面版占用时明确提示。
 - 图像处理采用「宿主优先、快速模型兜底」。当前 DSH 未注册抠图提供方时使用已有 MODNet 快速模型，并显示实际来源；已注册宿主服务报错时明确显示，不静默更换来源。宿主与本地快速模型的派生缓存分开，原名单、原图、工程与预设不清除。
 
-这是本机集成：运行依赖原批印坊目录中的 Electron、原生依赖与模型，不把其二进制复制进资源包。目录移动后设置 `HUASHU_PRINTPRESS_ROOT` 并重新构建；Host 可用 `printpressRoot` 指定运行根、`printpressDataDir` / `printpressUserData` 分别指定业务数据与运行缓存。面板内不提供桌面程序的更新、迁移或重启。
+这是本机集成：运行依赖批印坊源码目录中的 Electron、原生依赖与模型，不把其二进制复制进资源包。目录移动后更新 `HUASHU_PRINTPRESS_ROOT` 或 Host 的 `printpressRoot` 配置并重启宿主；`printpressDataDir` / `printpressUserData` 分别指定业务数据与运行缓存。面板内不提供桌面程序的更新、迁移或重启。
 
 ### 配色
 
@@ -123,7 +123,7 @@
 
 低清旧图已被原位替换。逐图尺寸、来源与指纹见 [hd-library-manifest.json](quality-report/hd-library-manifest.json)，同尺寸前后对比见 [before-after.png](quality-report/before-after.png)，处理与清理记录见 [高清素材处理结果.md](quality-report/高清素材处理结果.md)。
 
-`upstream/` 是独立 git clone。逐文件原始来源与采集时哈希见 `upstream-manifest.json`；本地高清派生更新单列于其 `local_derivatives`，原始采集验证只描述采集当时的快照。不会自动联网更新，升级资源时须重新核验清单。
+`upstream/` 随仓库分发，不包含独立的 Git 历史。逐文件原始来源与采集时哈希见 `upstream-manifest.json`；本地高清派生更新单列于其 `local_derivatives`，原始采集验证只描述采集当时的快照。不会自动联网更新，升级资源时须重新核验清单。
 
 脚本默认按 DPR 4 / JPEG 98 输出，总览图渲染前恢复样张视口，Canvas 在绘制前扩大缓冲区。素材更新不会改写已导出的视频，旧成片需重新渲染。
 
@@ -149,17 +149,15 @@ HTTP 接口接入 DSH Connection 认证，写请求要求同源 JSON。静态资
 
 批印坊是独立桌面程序，不随本插件分发——它的运行时要 Electron 加 AI 模型，约 490MB，放进 git 没有意义。要用批量出片，先装它：
 
-1. 从 [Print-Workshop Releases](https://github.com/Chandlersn/Print-Workshop/releases/latest) 下载 `批印坊 Setup *.exe` 安装（安装包未签名，按同页 `SHA256SUMS.txt` 核对后再装）。
-2. 让插件找到它。插件读取 `printpressRoot` 配置或 `HUASHU_PRINTPRESS_ROOT` 环境变量，指向批印坊的安装目录（含 `electron/api.cjs` 与 Electron 运行时）。
-3. 装好后重启 DSH，侧栏「批印坊」五个业务页即可用。
+当前插件只支持指向批印坊源码目录：目录内须有 `electron/api.cjs` 和 `node_modules/electron/dist/electron.exe`，通过 `printpressRoot` 配置或 `HUASHU_PRINTPRESS_ROOT` 环境变量指定。桌面安装版的目录结构不同，目前不能直接桥接；自动发现和桥接安装版正在开发。
 
-没装时面板仍能进，业务页会明确提示去安装，不会静默失败。
+批印坊桌面版可从 [Print-Workshop Releases](https://github.com/Chandlersn/Print-Workshop/releases/latest) 获取，但单独安装它尚不能使本插件的批印坊页面工作。未配置可用的源码目录时，批印坊功能不可用。
 
 ### 构建
 
 Host 直接加载 JavaScript；Client 作者源码在 `src/client.js`，批印坊面板源码在 `src/printpress/`，经 esbuild 打包到 `lib/client.js` 与 `dist/printpress/`。修改后先构建，`check` 会重算产物并拒绝过期文件，避免安装成功却仍显示旧界面。
 
-只有需要重新生成内嵌批印坊面板时才需要它的源码树；日常安装与使用不需要构建：
+使用批印坊桥接需要兼容的源码树和依赖；只有修改源码并重新生成内嵌面板时才需要执行下面的构建：
 
 ```powershell
 $env:HUASHU_PRINTPRESS_ROOT = '<你的批印坊源码目录>'
