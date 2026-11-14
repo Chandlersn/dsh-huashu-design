@@ -1,0 +1,1651 @@
+{
+  "name": "printpress",
+  "version": "0.7.1",
+  "preloadSha256": "c8bcb25bd7edeef92fc308be6e2a48c49a299e81f1568611baeb77b21e5b3beb",
+  "inputsSha256": "521cbe44bfb3193d917556380c9e8cf65146c295ef2c5df1aa9be4bdb40c952f",
+  "embeddedSha256": "c08c8d2961c7d09b25db01aeeed5dc6bbb58314f1e38206352fb7e391913f617",
+  "cssSha256": "018f3f5e4ffe2cd3617d0e1d8b9b85904fad33a16258cc840c8e3923af985cdc",
+  "operations": [
+    {
+      "name": "app:ping",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "app:env",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "app:cacheInfo",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "app:clearCache",
+      "write": true,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "app:changeDataDir",
+      "write": true,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "app:resetDataDir",
+      "write": true,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "app:openDataDir",
+      "write": false,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "app:relaunch",
+      "write": false,
+      "gui": "relaunch",
+      "params": {}
+    },
+    {
+      "name": "app:startUpdate",
+      "write": false,
+      "gui": "updater",
+      "params": {}
+    },
+    {
+      "name": "app:installUpdate",
+      "write": false,
+      "gui": "updater",
+      "params": {}
+    },
+    {
+      "name": "store:load",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "name": {
+          "required": true,
+          "desc": "UI 偏好类键名（settings / display-settings）"
+        }
+      }
+    },
+    {
+      "name": "store:save",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "name": {
+          "required": true,
+          "desc": "UI 偏好类键名（settings / display-settings）"
+        },
+        "value": {
+          "required": true,
+          "desc": "任意 JSON 值，不得为 null/undefined"
+        }
+      }
+    },
+    {
+      "name": "dataset:importDialog",
+      "write": false,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "dataset:inspect",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "filePath": {
+          "required": true,
+          "desc": "数据文件绝对路径（.xlsx / .xls / .csv / .txt）"
+        }
+      }
+    },
+    {
+      "name": "dataset:importSheets",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "filePath": {
+          "required": true,
+          "desc": "Excel 文件绝对路径"
+        },
+        "selections": {
+          "required": true,
+          "desc": "[{ name, headerRow? }] 工作表选择，headerRow 为 0 基行号"
+        },
+        "mode": {
+          "required": false,
+          "desc": "split（默认，每表一个数据集）| merge（合并为一个）"
+        }
+      }
+    },
+    {
+      "name": "dataset:importFile",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "filePath": {
+          "required": true,
+          "desc": "数据文件绝对路径（.xlsx / .xls / .csv / .txt）"
+        },
+        "name": {
+          "required": false,
+          "desc": "数据集名称；缺省用文件名"
+        }
+      }
+    },
+    {
+      "name": "dataset:list",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "dataset:get",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "数据集 id"
+        }
+      }
+    },
+    {
+      "name": "dataset:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "数据集 id"
+        }
+      }
+    },
+    {
+      "name": "dataset:deleteBatch",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "ids": {
+          "required": true,
+          "desc": "[id] 同一导入会话内全部数据集 id"
+        }
+      }
+    },
+    {
+      "name": "dataset:renameColumn",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "key": {
+          "required": true,
+          "desc": "列 key"
+        },
+        "alias": {
+          "required": false,
+          "desc": "列别名；空值表示恢复用原始表头"
+        }
+      }
+    },
+    {
+      "name": "dataset:updateCell",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "rowIndex": {
+          "required": true,
+          "desc": "0 基行号"
+        },
+        "key": {
+          "required": true,
+          "desc": "列 key"
+        },
+        "value": {
+          "required": false,
+          "desc": "单元格新值"
+        }
+      }
+    },
+    {
+      "name": "dataset:addRow",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "数据集 id"
+        }
+      }
+    },
+    {
+      "name": "dataset:deleteRow",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "rowIndex": {
+          "required": true,
+          "desc": "0 基行号"
+        }
+      }
+    },
+    {
+      "name": "dataset:setColumnPrint",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "key": {
+          "required": true,
+          "desc": "列 key"
+        },
+        "printOn": {
+          "required": true,
+          "desc": "true 启用 / false 停用"
+        }
+      }
+    },
+    {
+      "name": "dataset:setPhotoMatchColumn",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "key": {
+          "required": false,
+          "desc": "唯一配图列 key；null 关闭配图"
+        }
+      }
+    },
+    {
+      "name": "photo:importDialog",
+      "write": true,
+      "gui": "dialog",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "column": {
+          "required": true,
+          "desc": "照片文件名列 key"
+        },
+        "mode": {
+          "required": false,
+          "desc": "append 补充或 replace 替换"
+        }
+      }
+    },
+    {
+      "name": "photo:commitSelection",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "token": {
+          "required": true,
+          "desc": "照片目录预检凭证"
+        },
+        "taskId": {
+          "required": true,
+          "desc": "照片导入任务标识"
+        }
+      }
+    },
+    {
+      "name": "photo:cancelSelection",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "token": {
+          "required": true,
+          "desc": "照片目录预检凭证"
+        }
+      }
+    },
+    {
+      "name": "photo:importFolder",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "column": {
+          "required": true,
+          "desc": "照片文件名列 key"
+        },
+        "folder": {
+          "required": true,
+          "desc": "受授权的本地照片目录（CLI）"
+        },
+        "taskId": {
+          "required": false,
+          "desc": "照片导入任务标识"
+        },
+        "mode": {
+          "required": false,
+          "desc": "append 补充或 replace 替换，缺省为 append"
+        }
+      }
+    },
+    {
+      "name": "photo:cancelImport",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "taskId": {
+          "required": true,
+          "desc": "照片导入任务标识"
+        }
+      }
+    },
+    {
+      "name": "photo:tasks",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": false,
+          "desc": "可选名单 id"
+        }
+      }
+    },
+    {
+      "name": "photo:report",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "column": {
+          "required": true,
+          "desc": "照片文件名列 key"
+        },
+        "rows": {
+          "required": false,
+          "desc": "原始行号数组（0 基）"
+        }
+      }
+    },
+    {
+      "name": "photo:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "column": {
+          "required": true
+        },
+        "names": {
+          "required": false
+        },
+        "all": {
+          "required": false
+        },
+        "protectedIds": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingGet",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "rowId": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingPreview",
+      "write": true,
+      "gui": "photoProcessor",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "assetId": {
+          "required": true
+        },
+        "recipe": {
+          "required": true
+        },
+        "model": {
+          "required": false
+        },
+        "protectPolygon": {
+          "required": false
+        },
+        "subjectPolygon": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingApply",
+      "write": true,
+      "gui": "photoProcessor",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "sampleAssetId": {
+          "required": true
+        },
+        "recipe": {
+          "required": true
+        },
+        "taskId": {
+          "required": true
+        },
+        "model": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingCancel",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "taskId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:processingClear",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:processingPresetSave",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "name": {
+          "required": true
+        },
+        "recipe": {
+          "required": true
+        },
+        "id": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingPresetDelete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:processingOptions",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "autoProcess": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:processingSingleSet",
+      "write": true,
+      "gui": "photoProcessor",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        },
+        "assetId": {
+          "required": true
+        },
+        "recipe": {
+          "required": true
+        },
+        "model": {
+          "required": false
+        },
+        "edit": {
+          "required": false
+        },
+        "protectPolygon": {
+          "required": false
+        },
+        "subjectPolygon": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:processingSingleClear",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:processingReview",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:exportIssues",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "column": {
+          "required": true,
+          "desc": "当前配图列 key"
+        },
+        "rows": {
+          "required": false,
+          "desc": "当前筛选命中的原始行号数组（0 基）；缺省为全部"
+        },
+        "identifierKey": {
+          "required": true,
+          "desc": "导出的识别字段 key"
+        },
+        "savePath": {
+          "required": false,
+          "desc": "Excel 文件绝对路径；缺省时弹保存对话框"
+        }
+      }
+    },
+    {
+      "name": "photo:overrideGet",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        },
+        "layerId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "photo:overrideSet",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        },
+        "layerId": {
+          "required": true
+        },
+        "fit": {
+          "required": true
+        },
+        "focal": {
+          "required": true
+        },
+        "position": {
+          "required": false
+        },
+        "size": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "photo:overrideClear",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        },
+        "layerId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "print:recordDesignGet",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "print:recordDesignSet",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        },
+        "baseKey": {
+          "required": true
+        },
+        "photoRevision": {
+          "required": true
+        },
+        "recordRevision": {
+          "required": true
+        },
+        "overrideRevision": {
+          "required": true
+        },
+        "designRef": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "print:recordDesignClear",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true
+        },
+        "templateId": {
+          "required": true
+        },
+        "rowId": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "catalog:fields",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "数据集 id"
+        }
+      }
+    },
+    {
+      "name": "template:list",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "template:get",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "模板 id"
+        }
+      }
+    },
+    {
+      "name": "template:save",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "template": {
+          "required": true,
+          "desc": "模板对象（含 name / pageSize / fields 等）"
+        }
+      }
+    },
+    {
+      "name": "template:matchDataset",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        }
+      }
+    },
+    {
+      "name": "template:rebindDataset",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "datasetId": {
+          "required": true,
+          "desc": "新绑定的数据集 id"
+        }
+      }
+    },
+    {
+      "name": "template:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "模板 id"
+        }
+      }
+    },
+    {
+      "name": "template:uploadBackground",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "filePath": {
+          "required": true,
+          "desc": "底图文件绝对路径（png / jpg / jpeg）"
+        }
+      }
+    },
+    {
+      "name": "template:uploadBackgroundDialog",
+      "write": true,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "template:uploadBackgroundBytes",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "dataBase64": {
+          "required": true,
+          "desc": "图片内容的 base64（不含 data: 前缀）"
+        },
+        "fileName": {
+          "required": false,
+          "desc": "原始文件名，仅用于归档命名；真实格式按内容判定"
+        }
+      }
+    },
+    {
+      "name": "template:discardBackground",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "assetId": {
+          "required": false,
+          "desc": "要丢弃的底图原件标识（asset_<sha256>）"
+        },
+        "path": {
+          "required": false,
+          "desc": "兼容旧数据：print-bg/ 路径副本"
+        },
+        "exceptTemplateId": {
+          "required": false,
+          "desc": "正在编辑且已在内存中移除该底图的模板 id"
+        }
+      }
+    },
+    {
+      "name": "design:listPresets",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "design:createFromPreset",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "presetId": {
+          "required": true,
+          "desc": "内置预设标识，见 design:listPresets"
+        },
+        "name": {
+          "required": false,
+          "desc": "新工程名称；省略或留空用预设名"
+        }
+      }
+    },
+    {
+      "name": "design:list",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "design:touch",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "底图工程 id"
+        }
+      }
+    },
+    {
+      "name": "design:get",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "底图工程 id"
+        },
+        "revision": {
+          "required": false,
+          "desc": "固定版本；省略读取最新保存版本"
+        }
+      }
+    },
+    {
+      "name": "design:save",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "design": {
+          "required": true,
+          "desc": "完整底图工程；更新时携带读取到的 revision"
+        },
+        "recordOwner": {
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "design:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "底图工程 id"
+        }
+      }
+    },
+    {
+      "name": "design:purgeOrphanDirs",
+      "write": true,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "design:importDialog",
+      "write": true,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "design:importBytes",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "base64": {
+          "required": true,
+          "desc": "原始 PNG/JPEG 图片 base64，不含 data: 前缀"
+        },
+        "name": {
+          "required": false,
+          "desc": "显示文件名"
+        }
+      }
+    },
+    {
+      "name": "design:importBackground",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "background": {
+          "required": true,
+          "desc": "现有 print-bg 相对路径"
+        },
+        "w": {
+          "required": true,
+          "desc": "成品宽度 mm"
+        },
+        "h": {
+          "required": true,
+          "desc": "成品高度 mm"
+        },
+        "name": {
+          "required": false,
+          "desc": "工程名称"
+        }
+      }
+    },
+    {
+      "name": "design:samplePixel",
+      "write": false,
+      "gui": "pixel",
+      "params": {
+        "x": {
+          "required": true,
+          "desc": "content viewport X coordinate"
+        },
+        "y": {
+          "required": true,
+          "desc": "content viewport Y coordinate"
+        }
+      }
+    },
+    {
+      "name": "design:exportPng",
+      "write": true,
+      "gui": "printer",
+      "params": {
+        "design": {
+          "required": true,
+          "desc": "当前可编辑草稿，无需先保存工程"
+        },
+        "format": {
+          "required": false,
+          "desc": "png（默认）、jpeg 或 webp"
+        },
+        "quality": {
+          "required": false,
+          "desc": "有损格式质量 1~100；jpeg 默认 90、webp 默认 80，png 忽略"
+        },
+        "dpi": {
+          "required": false,
+          "desc": "150、300或600；默认300"
+        },
+        "transparent": {
+          "required": false,
+          "desc": "true忽略画布背景色并保留图层透明度；jpeg 不支持透明，会自动铺画布底色"
+        },
+        "filePath": {
+          "required": false,
+          "desc": "图片绝对输出路径（扩展名须与 format 一致）；省略则显示保存对话框。渲染仍需要Electron宿主能力"
+        }
+      }
+    },
+    {
+      "name": "design:revealExport",
+      "write": false,
+      "gui": "printer",
+      "params": {}
+    },
+    {
+      "name": "design:openExport",
+      "write": false,
+      "gui": "printer",
+      "params": {}
+    },
+    {
+      "name": "design:packageExport",
+      "write": true,
+      "gui": "dialog",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "底图工程 id"
+        },
+        "revision": {
+          "required": true,
+          "desc": "要导出的已保存版本（不是当前草稿）"
+        },
+        "taskId": {
+          "required": true,
+          "desc": "导出任务编号，用于进度和取消"
+        },
+        "includeFonts": {
+          "required": false,
+          "desc": "true 携带已上传字体原件；false 只登记字体依赖"
+        },
+        "filePath": {
+          "required": false,
+          "desc": ".ppdesign 输出绝对路径；省略则显示保存对话框"
+        }
+      }
+    },
+    {
+      "name": "design:packageCancelExport",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "taskId": {
+          "required": true,
+          "desc": "正在运行的工程包导出任务编号"
+        }
+      }
+    },
+    {
+      "name": "design:packageInspect",
+      "write": true,
+      "gui": "dialog",
+      "params": {
+        "filePath": {
+          "required": false,
+          "desc": ".ppdesign、.psd 或 .psb 绝对路径；省略则显示打开对话框"
+        }
+      }
+    },
+    {
+      "name": "design:packageCommit",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "token": {
+          "required": true,
+          "desc": "检查令牌"
+        },
+        "fontDecisions": {
+          "required": false,
+          "desc": "{ 原字体名: { action: substitute|default|file, family?, filePath? } }"
+        },
+        "rasterizeText": {
+          "required": false,
+          "desc": "PSD/PSB 导入时，将有像素预览的文字转为图片以保留外观"
+        },
+        "name": {
+          "required": false,
+          "desc": "导入后的工程名；默认用包里的名字"
+        }
+      }
+    },
+    {
+      "name": "design:packageCancel",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "token": {
+          "required": true,
+          "desc": "检查令牌"
+        }
+      }
+    },
+    {
+      "name": "design:packagePickFont",
+      "write": false,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "asset:list",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "category": {
+          "required": false,
+          "desc": "design 设计素材（默认）、photo 名单照片或 all 全部"
+        },
+        "query": {
+          "required": false,
+          "desc": "按展示名或标签模糊搜"
+        },
+        "tags": {
+          "required": false,
+          "desc": "标签数组；多标签是收窄（AND）"
+        },
+        "favoriteOnly": {
+          "required": false,
+          "desc": "true 只列收藏"
+        },
+        "includeArchived": {
+          "required": false,
+          "desc": "true 把已归档的也列出来"
+        },
+        "page": {
+          "required": false,
+          "desc": "分页页码，从 1 开始"
+        },
+        "pageSize": {
+          "required": false,
+          "desc": "每页条数，有硬上限"
+        }
+      }
+    },
+    {
+      "name": "asset:listTags",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "asset:get",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "素材标识 asset_<sha256>"
+        }
+      }
+    },
+    {
+      "name": "asset:importBytes",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "base64": {
+          "required": true,
+          "desc": "原始 PNG/JPEG base64，不含 data: 前缀"
+        },
+        "name": {
+          "required": false,
+          "desc": "显示文件名（存进原件记录，不影响素材库叫法）"
+        },
+        "displayName": {
+          "required": false,
+          "desc": "素材库里的展示名"
+        },
+        "tags": {
+          "required": false,
+          "desc": "标签数组"
+        },
+        "favorite": {
+          "required": false,
+          "desc": "是否收藏"
+        }
+      }
+    },
+    {
+      "name": "asset:importDialog",
+      "write": true,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "asset:update",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "素材标识"
+        },
+        "displayName": {
+          "required": false,
+          "desc": "新展示名"
+        },
+        "tags": {
+          "required": false,
+          "desc": "新标签数组（整体替换）"
+        },
+        "favorite": {
+          "required": false,
+          "desc": "是否收藏"
+        }
+      }
+    },
+    {
+      "name": "asset:archive",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "素材标识"
+        }
+      }
+    },
+    {
+      "name": "asset:restore",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "素材标识"
+        }
+      }
+    },
+    {
+      "name": "asset:adopt",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "工程里图片的素材标识"
+        },
+        "displayName": {
+          "required": false,
+          "desc": "素材库展示名"
+        },
+        "tags": {
+          "required": false,
+          "desc": "标签数组"
+        }
+      }
+    },
+    {
+      "name": "asset:rebuildThumb",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "素材标识"
+        }
+      }
+    },
+    {
+      "name": "asset:discardEphemeral",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "assetId": {
+          "required": true,
+          "desc": "asset_<sha256> 或 64 位十六进制 hash"
+        },
+        "exceptDesignId": {
+          "required": false,
+          "desc": "引用扫描时跳过的工程 id（正在编辑未保存的当前工程）"
+        }
+      }
+    },
+    {
+      "name": "asset:listOrphans",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "protectedIds": {
+          "required": false,
+          "desc": "当前未保存草稿持有的素材标识列表"
+        }
+      }
+    },
+    {
+      "name": "asset:purgeOrphans",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "hashes": {
+          "required": true,
+          "desc": "要清理的孤立原件 hash 列表（64 位十六进制）"
+        },
+        "protectedIds": {
+          "required": false,
+          "desc": "当前未保存草稿持有的素材标识列表"
+        }
+      }
+    },
+    {
+      "name": "asset:usage",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "asset:openFolder",
+      "write": false,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "font:list",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "font:upload",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "filePath": {
+          "required": true,
+          "desc": "字体文件绝对路径（ttf / otf / ttc / woff / woff2）"
+        }
+      }
+    },
+    {
+      "name": "font:uploadDialog",
+      "write": true,
+      "gui": "dialog",
+      "params": {}
+    },
+    {
+      "name": "font:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "file": {
+          "required": true,
+          "desc": "已上传字体的文件名"
+        }
+      }
+    },
+    {
+      "name": "print:validate",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        }
+      }
+    },
+    {
+      "name": "print:photoPreflight",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        }
+      }
+    },
+    {
+      "name": "print:generate",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        },
+        "previewPage": {
+          "required": false,
+          "desc": "仅生成指定物理纸张的预览，0 基；保留全作业统计"
+        },
+        "outputDpi": {
+          "required": false,
+          "desc": "出片分辨率 150/300/600 或 original；缺省 300。仅用于体积预估"
+        }
+      }
+    },
+    {
+      "name": "print:exportPdf",
+      "write": true,
+      "gui": "printer",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        },
+        "savePath": {
+          "required": false,
+          "desc": "PDF 保存绝对路径；缺省时经 GUI 保存对话框询问"
+        },
+        "batchRows": {
+          "required": false,
+          "desc": "每批目标记录数；照片缺省25，普通作业缺省100"
+        },
+        "jobKey": {
+          "required": false,
+          "desc": "任务键（进度/取消关联）；缺省自动生成并随结果返回"
+        },
+        "outputDpi": {
+          "required": false,
+          "desc": "出片分辨率 150/300/600 或 original；缺省 300。照片先降到图框需要的像素再出片"
+        },
+        "preflightFingerprint": {
+          "required": false,
+          "desc": "页面预检快照；数据、模板或照片关联变化时拒绝使用旧结果"
+        }
+      }
+    },
+    {
+      "name": "print:exportImages",
+      "write": true,
+      "gui": "printer",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        },
+        "outputDir": {
+          "required": false,
+          "desc": "显式输出目录；提供时无需 GUI 目录选择框"
+        },
+        "field1": {
+          "required": true,
+          "desc": "图片文件名字段一"
+        },
+        "field2": {
+          "required": true,
+          "desc": "图片文件名字段二"
+        },
+        "outputDpi": {
+          "required": false,
+          "desc": "图片分辨率 150/300/600；缺省 300"
+        },
+        "format": {
+          "required": false,
+          "desc": "图片格式 png、jpg/jpeg 或 webp；缺省 png"
+        },
+        "quality": {
+          "required": false,
+          "desc": "JPEG/WebP 质量 1~100；缺省使用格式默认值"
+        },
+        "allowIncomplete": {
+          "required": false,
+          "desc": "true 时跳过「关键字段为空即拒出」的校验；缺省 false（默认拦截）"
+        },
+        "preflightFingerprint": {
+          "required": false,
+          "desc": "页面照片预检快照"
+        },
+        "jobKey": {
+          "required": false,
+          "desc": "进度关联任务键"
+        }
+      }
+    },
+    {
+      "name": "print:send",
+      "write": true,
+      "gui": "printer",
+      "params": {
+        "datasetId": {
+          "required": true,
+          "desc": "数据集 id"
+        },
+        "templateId": {
+          "required": true,
+          "desc": "模板 id"
+        },
+        "rows": {
+          "required": false,
+          "desc": "行级勾选索引集合（0 基）；缺省 = 全量"
+        },
+        "silent": {
+          "required": false,
+          "desc": "true 静默直打；缺省 false 弹系统打印对话框"
+        },
+        "batchRows": {
+          "required": false,
+          "desc": "每批目标记录数；照片缺省25，普通作业缺省100"
+        },
+        "jobKey": {
+          "required": false,
+          "desc": "任务键（进度/取消关联）；缺省自动生成并随结果返回"
+        },
+        "outputDpi": {
+          "required": false,
+          "desc": "出片分辨率 150/300/600 或 original；缺省 300。照片先降到图框需要的像素再送打"
+        },
+        "preflightFingerprint": {
+          "required": false,
+          "desc": "页面预检快照；数据、模板或照片关联变化时拒绝使用旧结果"
+        }
+      }
+    },
+    {
+      "name": "print:cancel",
+      "write": false,
+      "gui": "none",
+      "params": {
+        "jobKey": {
+          "required": true,
+          "desc": "print:exportPdf / print:send 返回的任务键"
+        }
+      }
+    },
+    {
+      "name": "job:list",
+      "write": false,
+      "gui": "none",
+      "params": {}
+    },
+    {
+      "name": "job:openSnapshot",
+      "write": false,
+      "gui": "dialog",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "留痕记录 id"
+        }
+      }
+    },
+    {
+      "name": "job:delete",
+      "write": true,
+      "gui": "none",
+      "params": {
+        "id": {
+          "required": true,
+          "desc": "留痕记录 id"
+        }
+      }
+    }
+  ]
+}

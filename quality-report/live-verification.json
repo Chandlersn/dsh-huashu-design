@@ -1,0 +1,947 @@
+{
+  "checkedAt": "2026-11-11T06:51:41.112Z",
+  "origin": "http://127.0.0.1:3080",
+  "liveStyles": 92,
+  "imagesChecked": 144,
+  "allBytesMatch": true,
+  "displayed": [
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/01-editorial-brutalism.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 360
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/02-neo-brutalism.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/03-memphis-maximalism.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/04-friendly-candy.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/05-pure-css-art.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/06-bold-big-type.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/07-cosmic-retro-futurism.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/08-cinematic-sound-viz.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/09-pixel-side-scroller.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/10-bauhaus-geometric.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/11-dark-editorial.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    },
+    {
+      "source": "/huashu-design/assets/assets/style-specimens/web/12-warm-editorial.jpg",
+      "width": 4800,
+      "height": 3000,
+      "displayedWidth": 349
+    }
+  ],
+  "assets": [
+    {
+      "path": "showcases/cover/cover-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/cover/cover-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/cover/cover-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/infographic/infographic-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/infographic/infographic-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/infographic/infographic-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/ppt/ppt-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/ppt/ppt-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/ppt/ppt-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-saas/saas-build.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-saas/saas-pentagram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "showcases/website-saas/saas-takram.png",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/01-hardware-panel.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/02-liquid-glass.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/03-playful-3d.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/04-friendly-fintech.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/05-pro-camera.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/06-topo-outdoor.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/07-feed-waterfall.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/08-command-palette.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/09-health-color-code.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/10-native-polish.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/11-gentle-encouraging.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/app/12-editorial-reader.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/01-lu-jingren-bookcraft.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/02-song-block-print.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/03-republic-book-jacket.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/04-shanghai-deco-calendar.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/05-hanzi-experimental-poster.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/06-hk-street-signs.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/07-traditional-colors-solar-terms.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/08-sugiura-info-mandala.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/09-tanaka-geometric-poster.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/10-hattori-playful-offset.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/11-sato-minimal-symbol.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/east/12-japan-magazine-dense.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/01-personal-annual-report.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/02-explanation-graphics.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/03-cross-section-epic.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/04-magazine-pop-data.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/05-isotype.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/06-data-humanism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/07-scrollytelling.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/08-cartographic-lead.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/09-newsroom-chart.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/10-computational-portrait.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/11-beautiful-information.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/12-open-research-data.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/13-speculative-tech-diagram.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/14-pictogram-system.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/15-small-multiples.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/16-topological-transit-map.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/17-ma-emptiness.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/18-bookcraft-data.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/19-scientific-figure-plate.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/info/20-swiss-grid-report.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/01-neo-swiss-billboard.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/02-black-big-number-stage.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/03-mono-brand-type-hero.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/04-full-bleed-gradient-manifesto.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/05-candy-lecture-stage.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/06-playful-collins-editorial.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/07-irreverent-pop.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/08-y2k-inflated-wrapped.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/09-bento-grid.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/10-dark-hairline-terminal.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/11-two-font-consulting.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/12-diagram-isotype.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/13-diagrammatic-minimalism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/14-narrative-sparkline.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/15-assertion-evidence.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/16-institutional-swiss.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/17-editorial-longform.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/18-humanist-rounded-cards.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/19-dense-research-report.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/ppt/20-all-text-manifesto.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-app.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-east.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-info.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-ppt.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-web.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/sheet-xhs.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/01-editorial-brutalism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/02-neo-brutalism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/03-memphis-maximalism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/04-friendly-candy.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/05-pure-css-art.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/06-bold-big-type.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/07-cosmic-retro-futurism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/08-cinematic-sound-viz.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/09-pixel-side-scroller.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/10-bauhaus-geometric.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/11-dark-editorial.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/12-warm-editorial.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/13-glassmorphism-bento.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/14-angled-fluid-gradient.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/15-utility-colorful-docs.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/16-terminal-core.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/17-functional-brutalism.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/18-gallery-dark.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/19-swiss-monochrome.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/web/20-kenya-hara-white-gallery.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/01-specimen-journal.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/02-sticker-notebook.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/03-index-ink.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/04-panorama-strip.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/05-daily-paper.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/06-trading-cards.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/07-blank-vertical.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/08-area-infographic.jpg",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Accipiter_nisus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Agapornis_pullarius.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Aix_galericulata.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Alcedo_atthis.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Ara_macao.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Bubo_bubo.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Cacatua_galerita.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Calyptorhynchus_banksii.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Carpodacus_erythrinus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Chrysolophus_pictus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Coracias_caudatus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Ensifera_ensifera.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Eolophus_roseicapilla.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Grus_japonensis.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Merops_apiaster.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Nestor_notabilis.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Platycercus_icterotis.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Psephotellus_chrysopterygius.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Psittacus_erithacus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Trichoglossus_moluccanus.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Upupa_epops.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Vini_kuhlii.webp",
+      "status": 200,
+      "hashMatches": true,
+      "cacheControl": "no-store"
+    }
+  ]
+}

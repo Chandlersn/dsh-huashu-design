@@ -1,0 +1,120 @@
+.hs-printpress {
+  --paper: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --paper-card: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1));
+  --ink: var(--dsw-alias-label-primary);
+  --ink-2: var(--dsw-alias-label-secondary);
+  --line: var(--hs-border-l1,var(--dsw-alias-border-l1));
+  --line-strong: var(--hs-border-l2,var(--dsw-alias-border-l2));
+  --cinnabar: var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+  --cinnabar-soft: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 10%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --stone: var(--dsw-alias-label-secondary);
+  --ok: var(--dsw-alias-state-success-primary);
+  --ok-soft: color-mix(in srgb, var(--dsw-alias-state-success-primary) 8%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --warn: var(--dsw-alias-state-warn-primary);
+  --warn-soft: color-mix(in srgb, var(--dsw-alias-state-warn-primary) 8%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --warn-line: var(--dsw-alias-state-warn-primary);
+  --shadow: 0 2px 12px color-mix(in srgb, var(--dsw-alias-label-primary) 8%, transparent);
+  --input-bg: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --jade: var(--dsw-alias-state-success-primary);
+  --pp-checker-light: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --pp-checker-dark: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2));
+  --design-stage-max: max(480px, calc(100dvh - 380px));
+  color: var(--ink);
+  background: var(--paper);
+  min-width: 0;
+  font: 14px/1.65 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  isolation: isolate;
+  container-type: inline-size;
+}
+.hs-printpress * { box-sizing: border-box; }
+.hs-printpress button, .hs-printpress input, .hs-printpress select, .hs-printpress textarea { font: inherit; color: var(--ink); }
+.hs-printpress button { min-height: 36px; cursor: pointer; border: 1px solid var(--line-strong); background: var(--paper-card); border-radius: 8px; padding: 7px 12px; }
+.hs-printpress button:hover:not(:disabled) { background: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); border-color: var(--line-strong); }
+.hs-printpress button:focus-visible, .hs-printpress input:focus-visible, .hs-printpress select:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; }
+.hs-printpress button:disabled { opacity: .5; cursor: default; }
+.hs-printpress :is(input,select,textarea) { border: 1px solid var(--line-strong); border-radius: 7px; background: var(--input-bg); padding: 7px 10px; }
+.hs-printpress select option { color: var(--ink); background: var(--input-bg); }
+.hs-printpress :is(input[type=checkbox],input[type=radio]) { width: auto; min-height: auto; accent-color: var(--cinnabar); }
+.hs-printpress .btn-primary { border-color: var(--cinnabar); background: var(--cinnabar); color: var(--hs-bg-base,var(--dsw-alias-bg-base)); }
+.hs-printpress .btn-primary:hover:not(:disabled) { background: var(--cinnabar); opacity: .88; }
+.hs-printpress .btn-danger { color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .pp-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0 20px; }
+.hs-printpress .pp-heading h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 620; margin: 0; }
+.hs-printpress .pp-version { font: 12px/1.5 ui-monospace, Consolas, monospace; color: var(--ink-2); padding: 3px 8px; border: 1px solid var(--line); border-radius: 5px; }
+.hs-printpress .pp-heading p { color: var(--ink-2); margin: 6px 0 0; }
+.hs-printpress .pp-data-directory { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; }
+.hs-printpress .pp-nav { display: flex; align-items: center; gap: 4px; border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 20px; overflow-x: auto; }
+.hs-printpress .pp-nav button { flex: none; display: inline-flex; gap: 8px; align-items: center; min-height: 44px; background: transparent; border-color: transparent; }
+.hs-printpress .pp-nav button[aria-selected=true] { background: var(--cinnabar-soft); border-color: var(--line); color: var(--cinnabar); font-weight: 600; }
+.hs-printpress .pp-local-note { margin-left: auto; padding-left: 16px; color: var(--ink-2); font-size: 12px; white-space: nowrap; }
+.hs-printpress .pp-view { min-width: 0; }
+/* Pages whose header row was removed by the adapter keep their own container padding,
+   which would otherwise read as an empty band above the content. Collapse the top
+   padding on exactly those pages so everything below actually moves up. */
+.hs-printpress .pp-view > .photo-library-view { padding-top: 0; }
+.hs-printpress .pp-view > .page { padding-top: 0; }
+.hs-printpress .pp-error { color: var(--dsw-alias-state-error-primary); padding: 12px; border: 1px solid currentColor; border-radius: 8px; }
+.hs-printpress .pp-portal { position: relative; z-index: 60; }
+.hs-printpress .pp-linked-work { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 18px; margin-bottom: 16px; background: var(--paper-card); border: 1px solid var(--line-strong); border-radius: 10px; }
+.hs-printpress .pp-linked-copy { min-width: 0; }
+.hs-printpress .pp-linked-label { display: block; color: var(--ink-2); font-size: 12px; margin-bottom: 4px; }
+.hs-printpress .pp-linked-copy strong { display: block; overflow-wrap: anywhere; }
+.hs-printpress .pp-linked-copy p { margin: 5px 0 0; color: var(--ink-2); font-size: 12px; }
+.hs-printpress .pp-linked-copy .pp-linked-warning { color: var(--warn); }
+.hs-printpress .pp-linked-actions { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+.hs-printpress .pp-linked-actions button { min-height: 44px; }
+.hs-printpress .pp-status { color: var(--ok); padding: 12px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--ok-soft); }
+.hs-printpress .host-image-capability { display: grid; gap: 5px; margin-top: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); color: var(--ink-2); font-size: 12px; }
+.hs-printpress .host-image-capability strong { color: var(--ink); font-weight: 600; }
+.hs-printpress .host-image-capability p { margin: 0; line-height: 1.65; }
+.hs-printpress :is(input,select,textarea) { min-height: 36px; }
+.hs-printpress :is(input[type=checkbox],input[type=radio],input[type=range],input[type=color],.resize-handle,.field-resize,.presets button) { min-height: 0; min-width: 0; }
+.hs-printpress :is(input,textarea)::placeholder { color: var(--ink-2); opacity: .8; }
+.hs-printpress :is(input,select,textarea):hover:not(:disabled) { border-color: var(--line-strong); }
+.hs-printpress :is(input,select,textarea,button,summary):focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; }
+.hs-printpress :is(.page-header,.canvas-toolbar,.canvas-status,.designer-panel,.photo-processing,.photo-review,.processing-controls,.toolbar,.design-toolbar) { border-color: var(--line); }
+.hs-printpress .page-header { margin: 0 0 16px; justify-content: flex-end; }
+.hs-printpress .page-header__actions { gap: 8px; }
+/* 模板排版：头部行已整个搬进工作台顶栏，页面内容自然从最顶开始，侧栏留在原位，
+   工具栏也不再需要向左扩（原来是为了避开侧栏宽度造成的空白）。 */
+/* 底图制作：头部只剩右侧按钮、左半片空着。按钮原地不动，只把左侧工具面板提上去占住
+   那块空白；右侧画布保持原偏移，不与按钮重叠。 */
+.hs-printpress { --pp-header-lift: 50px; }
+.hs-printpress .designer-workspace > .designer-panel.tools-panel { margin-top: calc(-1 * var(--pp-header-lift)); }
+.hs-printpress .designer-panel { background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); box-shadow: var(--shadow); }
+.hs-printpress .canvas-scroll { background-color: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); background-image: radial-gradient(var(--hs-border-l1,var(--dsw-alias-border-l1)) .6px, transparent .6px); }
+.hs-printpress :is(.canvas-toolbar,.canvas-status,.canvas-horizontal-scroll),.hs-printpress .canvas-horizontal-scroll::-webkit-scrollbar-track { background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); }
+.hs-printpress :is(.image-viewport,.lasso-viewport,.review-image,.sample-frame,.image-board) { background-color: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); }
+.hs-printpress :is(.review-image,.sample-frame,.image-board,.lasso-viewport) { background-image: repeating-conic-gradient(var(--pp-checker-dark) 0% 25%,var(--pp-checker-light) 0% 50%); background-size: 16px 16px; }
+.hs-printpress :is(.image-editor,.single-dialog,.lasso-dialog,.portrait-picker,.export-dialog,.modal,.cd-dialog,.asset-missing-dialog,.gd-dialog) { color: var(--ink); background-color: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); border: 1px solid var(--line-strong); box-shadow: var(--shadow); }
+.hs-printpress :is(.processing-error,.review-error,.edit-error,.lasso-error,.design-surface-error) { color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .btn-danger { color: var(--dsw-alias-state-error-primary); border-color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .btn-danger:hover:not(:disabled) { background: color-mix(in srgb,var(--dsw-alias-state-error-primary) 8%,var(--paper)); }
+.hs-printpress :is(.btn-primary,button.primary) { background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-on-accent,var(--dsw-alias-bg-base)); border-color: var(--cinnabar); }
+.hs-printpress :is(.btn-primary,button.primary):hover:not(:disabled) { background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-on-accent,var(--dsw-alias-bg-base)); opacity: 1; filter: none; box-shadow: 0 0 0 2px var(--cinnabar-soft); }
+.hs-printpress .inline-text-editor { min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+/* Keep compact tool controls, but let the existing workspace own page geometry. */
+.hs-printpress .pp-view > .page { padding: 0; }
+.hs-printpress .pp-view .page-header { margin-top: 0; }
+.hs-printpress .pp-view :is(.modal-mask,.cd-mask,.guide-mask) { z-index: 100; }
+@container (max-width: 720px) {
+  .hs-printpress .pp-heading { align-items: flex-start; flex-wrap: wrap; }
+  .hs-printpress .pp-linked-work { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .hs-printpress .pp-linked-actions { width: 100%; }
+  .hs-printpress .pp-local-note { display: none; }
+  .hs-printpress .pp-view { overflow-x: auto; }
+}
+@media (pointer: fine) and (min-width: 721px) {
+  .hs-printpress button { min-height: 34px; padding: 6px 10px; font-size: 13px; }
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button) { min-height: 34px; padding: 6px 11px; font-size: 13px; }
+  .hs-printpress .pp-linked-actions .btn-primary { min-height: 36px; }
+  .hs-printpress :is(.pp-nav,.pp-linked-actions) { gap: 6px; }
+  .hs-printpress :is(.icon-only,.order-button,.layer-actions button) { min-height: 30px; min-width: 30px; padding: 5px; }
+}
+@media (pointer: coarse), (max-width: 720px) {
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button,.processing-actions button,.page-header__actions button) { min-height: 44px; min-width: 44px; }
+}
+@container (max-width: 720px) {
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button,.processing-actions button,.page-header__actions button) { min-height: 44px; min-width: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .hs-printpress * { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

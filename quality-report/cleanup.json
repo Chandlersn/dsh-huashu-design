@@ -1,0 +1,21 @@
+{
+  "cleaned": true,
+  "activeImages": 144,
+  "oldActiveImages": 0,
+  "removed": [
+    {
+      "path": "D:\\视频skills\\dsh-huashu-design\\.hd-work",
+      "kind": "staging",
+      "bytes": 2885912,
+      "reason": "All 144 staged raster files were validated and atomically moved into the active library; only processing metadata remains."
+    },
+    {
+      "path": "D:\\视频skills\\dsh-huashu-design\\artifacts\\dsh-huashu-design-0.1.1.tgz",
+      "kind": "old-archive",
+      "bytes": 40129076,
+      "oldImages": 144,
+      "reason": "Obsolete 0.1.1 package embeds every original low-resolution raster image."
+    }
+  ],
+  "note": "Editable source and Git source history are retained; the comparison is a cropped quality-verification board, not an old material master."
+}

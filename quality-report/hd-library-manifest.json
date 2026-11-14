@@ -1,0 +1,3521 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-11T06:48:07.267902+00:00",
+  "published": true,
+  "scale": 4,
+  "jpegQuality": 98,
+  "count": 144,
+  "counts": {
+    "specimen": 92,
+    "showcase": 24,
+    "sheet": 6,
+    "sticker": 22
+  },
+  "oldBytes": 12526955,
+  "bytes": 143123990,
+  "oldLowResolutionImagesRemaining": 0,
+  "assets": [
+    {
+      "path": "showcases/cover/cover-build.png",
+      "kind": "showcase",
+      "oldWidth": 1200,
+      "oldHeight": 510,
+      "width": 4800,
+      "height": 2040,
+      "oldBytes": 116336,
+      "bytes": 879619,
+      "oldSha256": "a5494a78ae0e6b7553a961fcd830a817cc75c6d9c85e5f5a714b42f74b587824",
+      "sha256": "1f096fa6bafb051dcbd01b95de670f90d8e7f96df60bbb22adbe50c153a55455"
+    },
+    {
+      "path": "showcases/cover/cover-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1200,
+      "oldHeight": 510,
+      "width": 4800,
+      "height": 2040,
+      "oldBytes": 36047,
+      "bytes": 174676,
+      "oldSha256": "d8482c018e4bb15957f95eb0d5f349a318fbd223d5e62d728f667351244bae92",
+      "sha256": "4f40e9ed34855f6a7c972332491ce049af6e50f3285a52ddb9152a479f595b70"
+    },
+    {
+      "path": "showcases/cover/cover-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1200,
+      "oldHeight": 510,
+      "width": 4800,
+      "height": 2040,
+      "oldBytes": 155362,
+      "bytes": 1560010,
+      "oldSha256": "8aa520e057fd5acf7030db6568dd10b493c898f175d7f7d71836b66e30ca6817",
+      "sha256": "983196b22a79d4d3e08e621f6f8ec3106b1a6b48db3ce1f41d2ce5332a574eaa"
+    },
+    {
+      "path": "showcases/infographic/infographic-build.png",
+      "kind": "showcase",
+      "oldWidth": 1080,
+      "oldHeight": 1920,
+      "width": 4320,
+      "height": 7680,
+      "oldBytes": 108710,
+      "bytes": 567894,
+      "oldSha256": "fa9afbfdf559ed0c541f8dc77aedd3796a7a98dcbb75ad2c6e2ac0121f0c0c1b",
+      "sha256": "4b015e40532f4304e50e3f6b57d36d132f20adf379ca7629a352ae00777bf29c"
+    },
+    {
+      "path": "showcases/infographic/infographic-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1080,
+      "oldHeight": 1920,
+      "width": 4320,
+      "height": 7680,
+      "oldBytes": 159021,
+      "bytes": 823455,
+      "oldSha256": "15692b204e9f7ead259983441476e69a12a8f65aa81f72d9ec0619b5cbeccc17",
+      "sha256": "216e227652a31f3225db5e358e6e409818b94588dbe43a28264262fdfeaca097"
+    },
+    {
+      "path": "showcases/infographic/infographic-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1080,
+      "oldHeight": 1920,
+      "width": 4320,
+      "height": 7680,
+      "oldBytes": 162976,
+      "bytes": 858007,
+      "oldSha256": "5eba3094dd2a860083c150665772c7d96a5bf93a47f3cfbe5d797f51989ae3ea",
+      "sha256": "d9ada644d4d792d8405028d63826608a62b19cef1133207f68bb49686a16a33d"
+    },
+    {
+      "path": "showcases/ppt/ppt-build.png",
+      "kind": "showcase",
+      "oldWidth": 1920,
+      "oldHeight": 1080,
+      "width": 7680,
+      "height": 4320,
+      "oldBytes": 84423,
+      "bytes": 435953,
+      "oldSha256": "6aa21e66a1077e24521939dd3bfbf907a7ed6266a40870cd925ee1a03e2b3c69",
+      "sha256": "f3187e4d6877eef74cc16aef5d280cdf5346bb406f2d8edc4e44de78e0cfc5c5"
+    },
+    {
+      "path": "showcases/ppt/ppt-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1920,
+      "oldHeight": 1080,
+      "width": 7680,
+      "height": 4320,
+      "oldBytes": 101335,
+      "bytes": 507640,
+      "oldSha256": "e426bd70703fd6557772006c8db84a6230eab154d1ec6730b9069a327547c7bf",
+      "sha256": "2ffc83fc0faadd1f06ec26b27422f8e6e1c9b31e14d497f08f0ef792b3425eeb"
+    },
+    {
+      "path": "showcases/ppt/ppt-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1920,
+      "oldHeight": 1080,
+      "width": 7680,
+      "height": 4320,
+      "oldBytes": 467187,
+      "bytes": 4218577,
+      "oldSha256": "88bc00e535912eb9bd7d22dc50c9b737704ae81a257af0d3d9273847f3816a2c",
+      "sha256": "5ab12014914ca403cd5fff8fcd34017123d9ed716f61b689db38a4c88877f81c"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-build.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 85064,
+      "bytes": 456437,
+      "oldSha256": "a1f380d9aa9dbb891c73682b0d9627760e2c1e39370ed29338cb4372da3f861c",
+      "sha256": "ea5eb81f89fb7fdb249fff239971f21592fbc085c518f1cc4e19d8dfe0d00551"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 105575,
+      "bytes": 539873,
+      "oldSha256": "04b65a201170453d4f4261f9fed835b3e516b2ecbeb528560991c33d0a582dd0",
+      "sha256": "039aeff3a7300d019a803e0c9ad0d4d16e1e40d41a44d02eeb83455072099d5c"
+    },
+    {
+      "path": "showcases/website-ai-nav/ainav-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 121675,
+      "bytes": 631803,
+      "oldSha256": "8c16c90993f499aadd35d8a597d9793824181c17e7e5ed29a17f4f4b53958400",
+      "sha256": "96ad048389658f89f00d22037f4f766f8c63492374e262de7d8e06289d901126"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-build.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 130604,
+      "bytes": 743381,
+      "oldSha256": "171556a04eb950ae17469a0f040d64b6ee145324f43d76f1d6a8b551582f85d1",
+      "sha256": "44d6da853d0681db046838764dedcae938da22a422ec01333175d5fc21cd868f"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 150195,
+      "bytes": 689356,
+      "oldSha256": "c7eba9cf29218c5a0896d594791c7f1540c37e12855c0969d10b19ba0c2ec71d",
+      "sha256": "d588c0a7e8a9e12516f9283978bcf6aef165bb7c3e14f47a5d6994f94a9822dc"
+    },
+    {
+      "path": "showcases/website-ai-writing/aiwriting-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 157158,
+      "bytes": 782015,
+      "oldSha256": "3c18cc8997f817cba5b4363edb5b7687ee564740f63511ce7d8535d49688704e",
+      "sha256": "eed698a9828cb5b1101cb762d6e90da00423b768eb7d8661c360d85d9d009c90"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-build.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 68230,
+      "bytes": 362718,
+      "oldSha256": "9d5f29a7c6985ac923217f5d1b3f829f254fde237f7726ef6d8f01ef18c1ac1f",
+      "sha256": "2ec42c6ea80f58768f8daf1a8a4fc2ea02203b9a83346c2bc0bb535bfa998f5d"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 117051,
+      "bytes": 572161,
+      "oldSha256": "a40c2b6b029110a79a81ccfaebcfd02f2c9dee3f0eaec333483c13bbdb2afa1b",
+      "sha256": "eb95d6c4f22b34e051cf2e98a3e4c4487117f75afd1eefc4ffe572d28bc9bbfc"
+    },
+    {
+      "path": "showcases/website-devdocs/devdocs-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 111854,
+      "bytes": 537408,
+      "oldSha256": "40ac110037d94c5caf3e7210e66cd1fc1909b754ed21a4ae0191cf6150374549",
+      "sha256": "e1809ab4821d8caa3d421b3aee48f1803e92e28a667aca1a0518c0208420530b"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-build.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 61708,
+      "bytes": 340278,
+      "oldSha256": "2be9f198345749735b403e364e7835d30fbd4521d455c817caab5db023282146",
+      "sha256": "c8b2d04aeb94fe74e200dc53bc07c3b46e1389b270782e7b109544acc369e775"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 57093,
+      "bytes": 318421,
+      "oldSha256": "5199e4d1d26e0d333a74a2e54b793ff29dccf6c88e577f9c8efd42ad18d2e485",
+      "sha256": "fa7f43e51f237426327702d9e8daedbbe20bb0787d54e6f19eb4fab582a23ca7"
+    },
+    {
+      "path": "showcases/website-homepage/homepage-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 127610,
+      "bytes": 557708,
+      "oldSha256": "daaf7e9f1f99bc8dd8ee81fe5dcca3b6f37493c0afbce097b247a834c26b7e78",
+      "sha256": "30229832de04b3db81f5b652546d483544863954f9c7e0f85849d9a830477db7"
+    },
+    {
+      "path": "showcases/website-saas/saas-build.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 99745,
+      "bytes": 551337,
+      "oldSha256": "ac0158d2581567d755dd8fd759d0b453b30fdef189f926efe8662c70f3fb41aa",
+      "sha256": "6f4ec45f6451f0b56c39cc47797b602d4fdedc2bfc2aa9368c70a9db80d7f291"
+    },
+    {
+      "path": "showcases/website-saas/saas-pentagram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 96559,
+      "bytes": 482453,
+      "oldSha256": "6017150ea044cbcb00f121f549b0e9cffce583c2a06063b0a6479b18793fbf72",
+      "sha256": "545164a70a0ecbee3e6e7da44ec7f977f9faf6571e200ad6f3d906559c06b310"
+    },
+    {
+      "path": "showcases/website-saas/saas-takram.png",
+      "kind": "showcase",
+      "oldWidth": 1440,
+      "oldHeight": 900,
+      "width": 5760,
+      "height": 3600,
+      "oldBytes": 123532,
+      "bytes": 622195,
+      "oldSha256": "5f877b12ca5fb876a92f8b44f1f7968de4366dd30c88479e7bf3f361dd2df455",
+      "sha256": "07bb48135c79411191c1663e0c26d1529e30db80eeba11e272938ea1f99123b5"
+    },
+    {
+      "path": "style-specimens/app/01-hardware-panel.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 75421,
+      "bytes": 782862,
+      "oldSha256": "17baae2788df3f48a7aceb65a9e1e929932a51f1154da6b9546343825453a6e9",
+      "sha256": "003b9f8997fd374b5986e6202a215db733124e73e9d11cd02124ffd194535e13"
+    },
+    {
+      "path": "style-specimens/app/02-liquid-glass.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 90008,
+      "bytes": 1960519,
+      "oldSha256": "1052b50f7ad652bd2d671b117da359543b3ae87f7aae64c554288838b327d1d6",
+      "sha256": "096d5463d23143886d728b68c8c4198618330ee8123ae1427fc7e9999804cae4"
+    },
+    {
+      "path": "style-specimens/app/03-playful-3d.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 94978,
+      "bytes": 1396323,
+      "oldSha256": "bd79f2fa5b86b9a5aff59060043f33c2950267038d4be0ca617f5ec826fedf8c",
+      "sha256": "92f5f3d9c6b8418bb0b00e094202a4c5c424f52f9eba6bf60d7c30957dd7b805"
+    },
+    {
+      "path": "style-specimens/app/04-friendly-fintech.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 93529,
+      "bytes": 1082068,
+      "oldSha256": "1de1ee8a5d485c338a6d5ef96a4bd16e2ec4a527db6e4dac639db0759c4c0414",
+      "sha256": "3b248db93a61db77e99581ba824e586511af0573d498928a37b6e714090d8ec2"
+    },
+    {
+      "path": "style-specimens/app/05-pro-camera.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 76334,
+      "bytes": 1147255,
+      "oldSha256": "f3edb0ff5d65e920b14475096ff4d7feae2dbe02c174ef2f0166c6cb152ecd82",
+      "sha256": "82dc0b10b5665545ccb02ecd29d152bdaf6af2040f53be3e6f5d580c26108025"
+    },
+    {
+      "path": "style-specimens/app/06-topo-outdoor.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 92581,
+      "bytes": 1169689,
+      "oldSha256": "daab07d59c5d5c9708ff6fb335caeb1376df960ccb466f44b2aa07742f73286c",
+      "sha256": "6cfbad18c4f3b71d32beaaa329dd6f11996fc3dcac4d719b03b2ddb8c36750a2"
+    },
+    {
+      "path": "style-specimens/app/07-feed-waterfall.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 83495,
+      "bytes": 1239438,
+      "oldSha256": "01995163559aaa994bbd3389f8b4d994c51c2159e2bd9312c6d1160983589a9a",
+      "sha256": "979c7c9c9807192e5561ff1b5a79d8c7259e279d1d1db6fd8262c50edb892335"
+    },
+    {
+      "path": "style-specimens/app/08-command-palette.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 56758,
+      "bytes": 765833,
+      "oldSha256": "94dfaa2adb3f182a0bf8f6a8e1999e635a7a65ba68632b0c239b79bdbf9a4d80",
+      "sha256": "0b764652fba0bf04834ccb473ce1ba66cb6bd8c0c76d63950cbf4243e948caf2"
+    },
+    {
+      "path": "style-specimens/app/09-health-color-code.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 75935,
+      "bytes": 840946,
+      "oldSha256": "6e39a9b9a9474261ce32d8abc908480246dcb6ddd379d11fa45983bc8d7c5b25",
+      "sha256": "a16cd80cfcf9868a67b985b185e5406e509f56ad0d7da8963dba23ce22bfceab"
+    },
+    {
+      "path": "style-specimens/app/10-native-polish.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 76319,
+      "bytes": 973542,
+      "oldSha256": "738a4783963c2f684df4247fb01475704edfdae3e2ad6c16fd55241268bb3fc4",
+      "sha256": "92a214418c9fe8b24dc2dd6538bf8fd118fd02a8712dd6b26021d252bdea689f"
+    },
+    {
+      "path": "style-specimens/app/11-gentle-encouraging.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 81985,
+      "bytes": 1443824,
+      "oldSha256": "03f37da5e77b8086f5c8cb0daf9ebda8750c33a6a61987fe2dc8ae8ae5df04d1",
+      "sha256": "10551fb57bf7437984a922f53f8efa74818ccf0ec81a493dffca92724f3f6b26"
+    },
+    {
+      "path": "style-specimens/app/12-editorial-reader.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 116882,
+      "bytes": 1441362,
+      "oldSha256": "e6368309e162ef14a8a111f56eb82fba47d332ac19deda2407af9f000f0d752a",
+      "sha256": "4ca55bfe9f09b2e1372a01b87fc8e479cf5665068386a77ef5f7ab67bfa00cea"
+    },
+    {
+      "path": "style-specimens/east/01-lu-jingren-bookcraft.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 70152,
+      "bytes": 925093,
+      "oldSha256": "a18a4224002862a1052ef5c97bbcb04768cc4ee7276b8af94b924a1e20030851",
+      "sha256": "02881001cba1d29d576b9a2cdd76874f2200a89b587bcf68369e913f46de4e10"
+    },
+    {
+      "path": "style-specimens/east/02-song-block-print.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 149839,
+      "bytes": 1826296,
+      "oldSha256": "ae3d457ad80fb11217daf2800f27cee6018cb5bebba49ff06ae3dc993e3ba295",
+      "sha256": "0e09151a8890b818766d266bb7e0eada51d002b137859abe620e33cfd40d1963"
+    },
+    {
+      "path": "style-specimens/east/03-republic-book-jacket.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 59094,
+      "bytes": 676508,
+      "oldSha256": "180e9beddd9104ef52ff613aa9357d3638fb2ee633b01d6ef00c0cb704fcd9ea",
+      "sha256": "4d0d90284704d5f206c18e354aff4131fa7264d17e1ed7ef7fd7f8cb8d7b4ff3"
+    },
+    {
+      "path": "style-specimens/east/04-shanghai-deco-calendar.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 78134,
+      "bytes": 713546,
+      "oldSha256": "cff470c256366f06e56a20872ce1d0036d5216df5b7f4ce6323c95a653b8e79e",
+      "sha256": "9d4150a124c95f9508f936d51eca3b751d13520a86835bd4212c32c498ae5a76"
+    },
+    {
+      "path": "style-specimens/east/05-hanzi-experimental-poster.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 55436,
+      "bytes": 579903,
+      "oldSha256": "93401c18c734872d702d8c70ec2ed053b6be67a7e73e09e501e6a098abe57795",
+      "sha256": "df6034c7c7f842f0b4b66f1faa0a0656f957aae26003245e6bfdcceb0808b414"
+    },
+    {
+      "path": "style-specimens/east/06-hk-street-signs.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 118281,
+      "bytes": 1441434,
+      "oldSha256": "a24288318c1d1065b0dd631b72197724bdc53e21f64920cf6b72cabc00e33c00",
+      "sha256": "b380bafb728c2f7a66bfba339843d1f4b366c8bce21f4b36c7f63519b605f4cf"
+    },
+    {
+      "path": "style-specimens/east/07-traditional-colors-solar-terms.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 81663,
+      "bytes": 852999,
+      "oldSha256": "e6f8e1753e9a3071b2dced70e7f2981cc0459b1698d5aba82c685297a0d1e514",
+      "sha256": "5dcc18f7c67d501c53da2c57a5672593f49a1f66968c98863a2579901af54c86"
+    },
+    {
+      "path": "style-specimens/east/08-sugiura-info-mandala.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 130342,
+      "bytes": 1569601,
+      "oldSha256": "ba5054c1e6c7b8adc438d2d03198d112e827fc10b3a75feef8771f927e38b27d",
+      "sha256": "0d88fb9f0fd47dcc9f81d2fc925ba8afe2b2e04e0b2a04cdde1a4e7eda19f210"
+    },
+    {
+      "path": "style-specimens/east/09-tanaka-geometric-poster.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 54851,
+      "bytes": 480701,
+      "oldSha256": "47266f3a69e54d4e4683c2367ba4e44fa7509ed7d9126e0d99495cab0c3a1b8d",
+      "sha256": "ec736557b2cd0cf88facd0c49b01436999357da8ab6dc22adba8146dbd905df4"
+    },
+    {
+      "path": "style-specimens/east/10-hattori-playful-offset.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 91746,
+      "bytes": 855962,
+      "oldSha256": "d046c05e1ab331fe54a6d633904a6cf5327eeadfa949895da91481bfecb2af2c",
+      "sha256": "d6fd9ea73f363c41948fe9311f4d6c631dc74124311ceb6b8c1f808d4253da81"
+    },
+    {
+      "path": "style-specimens/east/11-sato-minimal-symbol.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 46514,
+      "bytes": 423225,
+      "oldSha256": "c2cd9dcc545c3c89d4124a37b4403f54a24205f778820ec2f2d5253dacd17e81",
+      "sha256": "7af4fe92ebd701db637f083be29cccd3c11149fe8dfc520ae2d7156c1a59d2a5"
+    },
+    {
+      "path": "style-specimens/east/12-japan-magazine-dense.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 125558,
+      "bytes": 1300648,
+      "oldSha256": "27c3002c9f4b9cc551cc6a59920a5512e5a1e44a1df077ed4d4f7cf13202d02b",
+      "sha256": "8ef44849ad5dd041c4bc8176a425822e4ee78ea6af57174ef3011463ef0fa460"
+    },
+    {
+      "path": "style-specimens/info/01-personal-annual-report.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 124360,
+      "bytes": 1464434,
+      "oldSha256": "d0683fe42d498828e178cd59cf2f84f1cf541f7c58df8783bb576f44b6634e03",
+      "sha256": "b343acafc6a0a9cff0a8560d6914da1baf0148aa9c67dbfef14a49e6a33f484b"
+    },
+    {
+      "path": "style-specimens/info/02-explanation-graphics.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 112423,
+      "bytes": 1374612,
+      "oldSha256": "cea60ba8740409b39b1ff891e15c8396e1a727aba333cb99d89841bcface0ae4",
+      "sha256": "04be6dda954153a5a85a8f179ad0ce5166142c0add58b5a3a1f497486cec72a6"
+    },
+    {
+      "path": "style-specimens/info/03-cross-section-epic.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 153950,
+      "bytes": 4842472,
+      "oldSha256": "dd12e567da01086b96f9aceff66a48d6cf7d1854562cc0c5222f49ea1d872111",
+      "sha256": "4d165b3857e620e3e3a20dfdf58e7576be7a28184968f34574d2217263520f58"
+    },
+    {
+      "path": "style-specimens/info/04-magazine-pop-data.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 86801,
+      "bytes": 802348,
+      "oldSha256": "71fd894c2342c2e31073612d37114d9b0a552579f0ed5944a1efcba299a41e18",
+      "sha256": "4e3a3e67b9ec425b53e3bc7b84718010b40cd9fb63ba256789f4149d554b0807"
+    },
+    {
+      "path": "style-specimens/info/05-isotype.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 123494,
+      "bytes": 1655258,
+      "oldSha256": "7afe3cba97941bbd7904a0c8f00ed557188bb085344af21d218439d7563fac74",
+      "sha256": "9a683c6762f7acec1af12c99d448c3ae523f77af6391352dc5b7d5dd7b145a12"
+    },
+    {
+      "path": "style-specimens/info/06-data-humanism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 87739,
+      "bytes": 962927,
+      "oldSha256": "d3867b5667bc18b4506425b00778f4864e76918496faaba4b107ac20e1201d5c",
+      "sha256": "fc20c9feff929c95795a8fe0af1408f1e7246d683d6e9c7ac72762e2a10ab5e2"
+    },
+    {
+      "path": "style-specimens/info/07-scrollytelling.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 71448,
+      "bytes": 791980,
+      "oldSha256": "41abff0a3eb941b7e865c58eeb33940f96ff5886f163cc5dd4214257fde8f5f6",
+      "sha256": "0cbd70ced370922c4c3a31f31ba32653dcceb1716c9c0ca794bc2c348a7919a7"
+    },
+    {
+      "path": "style-specimens/info/08-cartographic-lead.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 85839,
+      "bytes": 993171,
+      "oldSha256": "4c73b0ab08b40387539bf092369ec9236ba009fc5ec19f6084b26f89a172bb4e",
+      "sha256": "34f293646c5c5c64d5a673c1c38a9cee5406c545e88faac6d3192090e5fd4dc0"
+    },
+    {
+      "path": "style-specimens/info/09-newsroom-chart.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 65398,
+      "bytes": 796295,
+      "oldSha256": "483d39f9628df5a059646f930210c4a5e472a38c3312a06e30a852f594ed2c60",
+      "sha256": "c878c5e6dfafbecca5a250298cb7a406a051f77a4def545f4d51c6c3771dfe4c"
+    },
+    {
+      "path": "style-specimens/info/10-computational-portrait.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 150930,
+      "bytes": 5512918,
+      "oldSha256": "9872cdc6ef5c3be1f140c4546b000706f6dd1e1c70a10f7d8613b9297197870f",
+      "sha256": "6d20976b523f8189274c38ae2878776a8a4a5c7626225e3d29ed065c40fd794c"
+    },
+    {
+      "path": "style-specimens/info/11-beautiful-information.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 94419,
+      "bytes": 1211034,
+      "oldSha256": "f3980defee4b1bb3085eab17d132d1077526379e5a1622bc0368d39e0f3536e9",
+      "sha256": "bff2ce8a94b4d1208cf767710cf23dfffc5f05c99b473dc636f9487747958816"
+    },
+    {
+      "path": "style-specimens/info/12-open-research-data.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 86806,
+      "bytes": 1061270,
+      "oldSha256": "dccb6ddf86aef0805e6a0bb2704051a247ab57185184ae13976ac3c88bfe5c99",
+      "sha256": "c887fd757404bee7dc8bde5036c48e7240af17da861f30c64a342b0b3d9b3e49"
+    },
+    {
+      "path": "style-specimens/info/13-speculative-tech-diagram.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 50160,
+      "bytes": 680438,
+      "oldSha256": "c29e907095988a0750cebea76613ab651fb4211bd56ec6a2eb534557743f5911",
+      "sha256": "3ef6b117568a536be822511ec1748f0761aaab4bd7df6c77867acacf0d68ce06"
+    },
+    {
+      "path": "style-specimens/info/14-pictogram-system.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 81737,
+      "bytes": 859286,
+      "oldSha256": "22cd68b1c0a080cbddbe2a29db845a0d6e21732be5e006de3c0ba86a89b9b59b",
+      "sha256": "f4998e112112ecf3ca7a9b00455ee7e9cc66e90caa6a4f38c76752f9b8e8a66b"
+    },
+    {
+      "path": "style-specimens/info/15-small-multiples.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 70229,
+      "bytes": 794420,
+      "oldSha256": "9bc2e0e57d6d832c480b23634ea0907c5d69cdeb525683afe36b334294548a3a",
+      "sha256": "43d5e97d4831cc4d955dd064f37e9b3b6cf5b596940f85efcdb9172855dc96ab"
+    },
+    {
+      "path": "style-specimens/info/16-topological-transit-map.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 64615,
+      "bytes": 678685,
+      "oldSha256": "7730317c9e42bf5c30022cff515ff19af81b863cab05d642ce6b1d6e077452af",
+      "sha256": "5506fe7c99c15d60b3434299f5846d704c0ade5a2b5e6ef0511ebd12eb4fcb1a"
+    },
+    {
+      "path": "style-specimens/info/17-ma-emptiness.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 21024,
+      "bytes": 220513,
+      "oldSha256": "acc39ebfaed91a54ae1e15b441e432bf05fd434b607e0c6f2837dcc818d1e462",
+      "sha256": "24fbcc44879df42582a06c3fbb6f7fe5f8931c88c98984e0cd57aa9c969ad170"
+    },
+    {
+      "path": "style-specimens/info/18-bookcraft-data.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 99155,
+      "bytes": 1173491,
+      "oldSha256": "4820a9fb03a2057cf498dcf2e459e251a40c86b9f651ef267708b26603676f34",
+      "sha256": "a8f4c25a9a0fe0dd2c4df232ed4d9b7d8dca3acae8bb0e6c8e1e2adbc9a30423"
+    },
+    {
+      "path": "style-specimens/info/19-scientific-figure-plate.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 82562,
+      "bytes": 904164,
+      "oldSha256": "b4f143d737d3a837756ce9432c55b9dc86be1ba8b0499b04946a8a2f33966625",
+      "sha256": "f0cb2f5bf8ebf19e430c33729521ebf49799ecf69627cd70ab689206e498055e"
+    },
+    {
+      "path": "style-specimens/info/20-swiss-grid-report.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 70845,
+      "bytes": 692358,
+      "oldSha256": "1df972f662d7c4f2aff7bb2e5dd824f2a0a898dec5d0eda78ac36cb05bdefd01",
+      "sha256": "a31b8ab6f44d96ff22def1819266be5c75b76447b3470108d8781d132fa80cff"
+    },
+    {
+      "path": "style-specimens/ppt/01-neo-swiss-billboard.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 69373,
+      "bytes": 724086,
+      "oldSha256": "3f8381294c83f814128740aa890c4a6d0098799ab66ab2570c42ad1822f79634",
+      "sha256": "d9d1834364ae2838abcc3f3109a7f0f4ccc0991ef159693a3444261a5e94f491"
+    },
+    {
+      "path": "style-specimens/ppt/02-black-big-number-stage.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 29916,
+      "bytes": 296405,
+      "oldSha256": "c0e23767d35937522f46fc4aa5d22f9459a4cd5b1bc466e0ad8685edb3ad67a7",
+      "sha256": "1bd17f5728bc9ab212a4a0454c340031481c26fa20a90ff7da69cf9f87524d52"
+    },
+    {
+      "path": "style-specimens/ppt/03-mono-brand-type-hero.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 51475,
+      "bytes": 434523,
+      "oldSha256": "d826de5001a9630b5d5c6d457026dfecdb21197ae209a75497446b33bdac5f0b",
+      "sha256": "b7c6edc73fbf4d28ea95eac3d585eb0512d75e09992b09b32d8676ee1e833057"
+    },
+    {
+      "path": "style-specimens/ppt/04-full-bleed-gradient-manifesto.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 77190,
+      "bytes": 1277302,
+      "oldSha256": "72dedc5717e4390dbea9335751d645bb90cab38b30a517c84288f1dc86528b5c",
+      "sha256": "3a040444df3771b642f5c376dd60fcf408f71a95ad2410f0a1dd11a76b2b8226"
+    },
+    {
+      "path": "style-specimens/ppt/05-candy-lecture-stage.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 35181,
+      "bytes": 696297,
+      "oldSha256": "4502460b3363aa3259c72928a632ce3d5b81f0679a04d0fd41d7387b4b82af66",
+      "sha256": "6cc4e2b21ab65c2efa73e07772e180fa0a392d91043f05eb834ce2157a03fcf8"
+    },
+    {
+      "path": "style-specimens/ppt/06-playful-collins-editorial.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 83057,
+      "bytes": 904139,
+      "oldSha256": "9b6b08760dabd3f6ec1f86a609ad7ef75ff238190a71f4677630eb903ab47e9d",
+      "sha256": "3bbfffd136ffaeaeea00a3b209fb1e00da4cb7bfdf2a4964e6211530e769e38a"
+    },
+    {
+      "path": "style-specimens/ppt/07-irreverent-pop.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 87248,
+      "bytes": 1008849,
+      "oldSha256": "d4043c3954b29882eef4e1533f17ecb2fbbd2bac1ada6242c9e12ac7352208e3",
+      "sha256": "40add2b0feb5e3766b1c0effdcb8e4e71ad1459031698f0ced8c2d054a4e2590"
+    },
+    {
+      "path": "style-specimens/ppt/08-y2k-inflated-wrapped.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 76749,
+      "bytes": 1211285,
+      "oldSha256": "48fb317f52eb73ad656f59db4c2ec989809e9a341ef8ee3c211724755e8e4df6",
+      "sha256": "8e35132aaa59398890cd602d44c38b854f2e09d73c3f9f8aa5824788d39f322f"
+    },
+    {
+      "path": "style-specimens/ppt/09-bento-grid.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 69785,
+      "bytes": 804466,
+      "oldSha256": "90d78334ae11ff9b22b0ea06be121a5833ac6826638857d4983313db76e3eb75",
+      "sha256": "b3982921a95abc630db3e1e9b33331d48673a1d23272a2002ebf4ba533713433"
+    },
+    {
+      "path": "style-specimens/ppt/10-dark-hairline-terminal.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 56116,
+      "bytes": 510510,
+      "oldSha256": "1f03761282e9d64528e7685dc62a52591cf23fdac63cb146a7fb1d793849cd94",
+      "sha256": "c5706fd982fc467f957ecc54f5efeab5bd4c89e1e610f9977645bd504a512255"
+    },
+    {
+      "path": "style-specimens/ppt/11-two-font-consulting.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 94912,
+      "bytes": 1470787,
+      "oldSha256": "acc405fa6573376009ccf50d8345f1d5a270b87ab75ca97b293f3909f6a1af23",
+      "sha256": "6bfdae3bf291c2d4ec93b95d3fafe56a6bed69bf294c056bda3a98979c1bec2e"
+    },
+    {
+      "path": "style-specimens/ppt/12-diagram-isotype.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 96851,
+      "bytes": 1055836,
+      "oldSha256": "ef1493cfc4901b80d63a31f9c7cff6f1580a58e8aa8f66fefc8914d0ff87dcc5",
+      "sha256": "d0c80e614def10b364ae311b425ada87c9f39109da10d930d574883c653d45a2"
+    },
+    {
+      "path": "style-specimens/ppt/13-diagrammatic-minimalism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 77262,
+      "bytes": 882965,
+      "oldSha256": "9f4c83788bd492adecbd52a1fe4140512366d14d7e66860d0d04d170bcd082bb",
+      "sha256": "887f71daa57140deff853db57045cdecf40b8373cc552c2e0cdf9f21f9cc9759"
+    },
+    {
+      "path": "style-specimens/ppt/14-narrative-sparkline.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 67301,
+      "bytes": 747855,
+      "oldSha256": "f6ff43699ed0efb8eed96470b37de886f7190138b217ec7b6dd8d679384b6b3d",
+      "sha256": "19e3440a1d07f04966c741706ce68642117fa0d54d82eb3ff5a5084f47133c42"
+    },
+    {
+      "path": "style-specimens/ppt/15-assertion-evidence.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 61037,
+      "bytes": 672775,
+      "oldSha256": "7f2dcc5b38338bb796af00c4f454a81e8817bea92582fc68b6deab190fc0e40b",
+      "sha256": "cac70095d4cd6947829f5b1d6cf69576e03c4e1ea442a37019e85432c9bb1f9e"
+    },
+    {
+      "path": "style-specimens/ppt/16-institutional-swiss.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 76585,
+      "bytes": 831723,
+      "oldSha256": "6b873145d2e56d111c3c0dd6e74ef77dab4ed5bbcc38df0eb15f29c55227be2a",
+      "sha256": "a5c631577166c46d873234f99d788732f4bb830eaf7fbc8e8456561d6fca324d"
+    },
+    {
+      "path": "style-specimens/ppt/17-editorial-longform.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 107466,
+      "bytes": 1270493,
+      "oldSha256": "b1f4906eb0272b2d1ecdf3765ab8e201da4bc793377b20c8ce467277e1501012",
+      "sha256": "22961dc9e49fde8f501f23cd809d436bdef7a2adc343577e2f6eb88a48e8e835"
+    },
+    {
+      "path": "style-specimens/ppt/18-humanist-rounded-cards.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 84719,
+      "bytes": 1094793,
+      "oldSha256": "2fb1ec3b71316923b27eab8cbab0ee57c7ff3cb71f57da46c9ca06fa376beb6a",
+      "sha256": "d117d853e5855434b8e681208239458951835c24f1d96eb87f0c84ff00e8f67d"
+    },
+    {
+      "path": "style-specimens/ppt/19-dense-research-report.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 94418,
+      "bytes": 1008649,
+      "oldSha256": "ffea87ec45533c704fcedfb6c3648f774210f85c55f754d400bccf9a4d4bd614",
+      "sha256": "3cc07173c6383996318f1772a28275fe4d806796ca29ebd71e72d379caf1661a"
+    },
+    {
+      "path": "style-specimens/ppt/20-all-text-manifesto.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 67491,
+      "bytes": 780208,
+      "oldSha256": "ddf14da94bd6bf8cd52c0aa027dd6826559ad9a8d0d6cd0b51a028b82eda4ff3",
+      "sha256": "ef03bdca38ba86ce5e2e7124b827249f6ab859895c6432dceded70e459d012eb"
+    },
+    {
+      "path": "style-specimens/sheet-app.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 724,
+      "width": 5160,
+      "height": 2896,
+      "oldBytes": 148578,
+      "bytes": 2437600,
+      "oldSha256": "6968748b54bc587e08d36635024d54cbecb164313246180a8d78e315fa2210c5",
+      "sha256": "7422867bcb6597245dc7d918d7ddf3c98f47a49cb7932719ad7bc32d22a4d2b2"
+    },
+    {
+      "path": "style-specimens/sheet-east.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 724,
+      "width": 5160,
+      "height": 2896,
+      "oldBytes": 159571,
+      "bytes": 2381319,
+      "oldSha256": "22586e2ae6a34a52ee1d29c4bc8ef7893e1a8e335435d548ab11721fb6e7265e",
+      "sha256": "3fe4e2ce7363ef29e96df3493ec7eae5253481eea1224552b8fc0cab0da9f1ba"
+    },
+    {
+      "path": "style-specimens/sheet-info.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 1186,
+      "width": 5160,
+      "height": 4744,
+      "oldBytes": 236666,
+      "bytes": 4282915,
+      "oldSha256": "d09eff02d9bff67f158aebe5eff35dce3a57fbf30041a3663dc655cbeb244355",
+      "sha256": "e0da425c22c4aae2997cbff9f7095a8d7bc7cdffecd2f93f59e7601397514fe3"
+    },
+    {
+      "path": "style-specimens/sheet-ppt.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 1186,
+      "width": 5160,
+      "height": 4744,
+      "oldBytes": 235020,
+      "bytes": 3418096,
+      "oldSha256": "3aae03870a686a3a0ff87a5eda1f3d89d945c9ce7b919a63f1ec7eb8f3ad8128",
+      "sha256": "f6a50097ca1b8870145a86d49e765db059a6023507c15653fe38167ae42be9f8"
+    },
+    {
+      "path": "style-specimens/sheet-web.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 1186,
+      "width": 5160,
+      "height": 4744,
+      "oldBytes": 240289,
+      "bytes": 3739629,
+      "oldSha256": "08f51463f68aacb88e1b4db44fce17cbe03bdb336bc75a169eade13f2618535e",
+      "sha256": "91fa6d36681d72a6e9d93d0248c241bf5c9ae1ee83dd6f4d262705a6c7b5c09b"
+    },
+    {
+      "path": "style-specimens/sheet-xhs.jpg",
+      "kind": "sheet",
+      "oldWidth": 1290,
+      "oldHeight": 600,
+      "width": 5160,
+      "height": 2400,
+      "oldBytes": 110570,
+      "bytes": 2253760,
+      "oldSha256": "a955d8c9e4c6d5c51a43393048b4cd0c37b3241efc24ced3a2f3432ed8711f9f",
+      "sha256": "4e297926f07cffca3e5e3c5e7fc0563ca6ae588680368d043e64cdf66405bb36"
+    },
+    {
+      "path": "style-specimens/web/01-editorial-brutalism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 106477,
+      "bytes": 1016412,
+      "oldSha256": "1a70e829303e58d3cf67b6e9f0c1b617a7b81411887b9e3d9e8758f5e1125f8e",
+      "sha256": "b37d687be292cb81e4648dc5a37d969d8176845fa485237ce3eb949c638c355c"
+    },
+    {
+      "path": "style-specimens/web/02-neo-brutalism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 116438,
+      "bytes": 1245246,
+      "oldSha256": "f9ba3be4c448ef11b7d2c9d8c22cfb03f6f917377daa445653c54c131506291c",
+      "sha256": "0b528adec1403fe77753f9199266f9429ae536c59e137fe9f1a0dc776b6f2a0b"
+    },
+    {
+      "path": "style-specimens/web/03-memphis-maximalism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 170654,
+      "bytes": 2409668,
+      "oldSha256": "69640e0b4f733cbdab5a301738ffeda19c399135bb4ff04f84a84dae613f5852",
+      "sha256": "451154a69d4d88308a7ff40e5c7c85effeb6654aa858137fe01add3cbcc1778d"
+    },
+    {
+      "path": "style-specimens/web/04-friendly-candy.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 65788,
+      "bytes": 726703,
+      "oldSha256": "67699fbda4dd15bf3fc446f2e4d8768e4bf8db7e173e373d9747a8b87116155e",
+      "sha256": "5345efaedc5e03231606b1b71fb8da34d2858217e29f5f11eeb0f73a55fe59ea"
+    },
+    {
+      "path": "style-specimens/web/05-pure-css-art.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 74833,
+      "bytes": 755048,
+      "oldSha256": "0df99ce1a3252897ac7b3a92832da2670e073a067ae473900b0be0c578002b04",
+      "sha256": "538e1d1c90ecff086943718987ae7ae0dca465a1b1b55df12345d4783c9ccd9a"
+    },
+    {
+      "path": "style-specimens/web/06-bold-big-type.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 68854,
+      "bytes": 628019,
+      "oldSha256": "1b19fd1e4df6e29683b3437e578a1faa27a27e114648597a35e279e4c251d324",
+      "sha256": "b5e7b1484cfcac2de69ac3eaad9ffe284ef782a50bbd2c6fdb223555d87da877"
+    },
+    {
+      "path": "style-specimens/web/07-cosmic-retro-futurism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 85819,
+      "bytes": 977902,
+      "oldSha256": "0cdfb491a5abbc5f35b9d20eeaf5efec34c5179f638378d79520afce0a2c0c90",
+      "sha256": "b1dad9aede3da4ff750b6fb3728b3998e9c316f4e9614358ae3941d95735a54b"
+    },
+    {
+      "path": "style-specimens/web/08-cinematic-sound-viz.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 89936,
+      "bytes": 1075520,
+      "oldSha256": "e147bc5a692b832d3e1c70a5364d04ede600a917f37729d0404177fba8cbf6c9",
+      "sha256": "11cd14d44deedc67ca6932251e5c1efe06fd602ffe300200683e65f9b68793ce"
+    },
+    {
+      "path": "style-specimens/web/09-pixel-side-scroller.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 60901,
+      "bytes": 556443,
+      "oldSha256": "2d363ed56b943b9234e5bceca3682900cddbbd68a0e89b31fe0eb3862ce34e37",
+      "sha256": "264ad32b997e1448b471c3939baa7a9ba288c0202d68c64522b942e16c4161ec"
+    },
+    {
+      "path": "style-specimens/web/10-bauhaus-geometric.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 70772,
+      "bytes": 642239,
+      "oldSha256": "68c714cc3bdae6ca9850ae345b8b4a5bd03f9ea5cccd94fcbdeb4810127140f5",
+      "sha256": "734a1d2b88a90f5a5e67613b4d46c72e418ab8877516a16d41aae3b173b5a233"
+    },
+    {
+      "path": "style-specimens/web/11-dark-editorial.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 58035,
+      "bytes": 1054740,
+      "oldSha256": "9a08db764f3fc67e36e253a4340e77385df80a8e91b9961ad2b2b421d9aef8e8",
+      "sha256": "cb16ee4b45c245f971a5288fd3d5030fbcb8ed5e680c7680dff72e64f7035bdf"
+    },
+    {
+      "path": "style-specimens/web/12-warm-editorial.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 77516,
+      "bytes": 934298,
+      "oldSha256": "074ad8e7194ed9526d6dc055b42a388fb1213498131e8813e83d44c7f4e04eb1",
+      "sha256": "d8bc4abe34483160c27a2aeb10c6b3046d5ad18fcdd6bfd94a1c9e6531e2abca"
+    },
+    {
+      "path": "style-specimens/web/13-glassmorphism-bento.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 73854,
+      "bytes": 1057520,
+      "oldSha256": "3f01e24b49a3095bfcf2ca32fa4926ed8fc108ab51a20f5d88420426ca0cced2",
+      "sha256": "0631a6ee00745fa864b04ae0141d6595cbe1846c48139a2e8355cc6363109ce2"
+    },
+    {
+      "path": "style-specimens/web/14-angled-fluid-gradient.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 87254,
+      "bytes": 1561625,
+      "oldSha256": "0634346b71bb0c57fe8d116368c5404b878b3eb470cc117eee3b2175d8e5cbdb",
+      "sha256": "383ef0754899684df2944ae74d873cf1b71f53a439a93660bc1109b6bd61d970"
+    },
+    {
+      "path": "style-specimens/web/15-utility-colorful-docs.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 67154,
+      "bytes": 824978,
+      "oldSha256": "9829ee9a9bac99668964381a9a652c93c5405642dd391055f4d4c9650fad2c4f",
+      "sha256": "adff07cda5cca966edfeda9e61bdf654937c17de8051da87afdc06ae6bb8cbd0"
+    },
+    {
+      "path": "style-specimens/web/16-terminal-core.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 64169,
+      "bytes": 900868,
+      "oldSha256": "467bea81d4fcadfc07843deb595dbcb66d3e066adf914f2b880b9fff977713b7",
+      "sha256": "d7f6f5c86d8e1bdcb6aea608ca684e16b626c4bc5bb657dcfcd8908454d1c3c9"
+    },
+    {
+      "path": "style-specimens/web/17-functional-brutalism.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 119761,
+      "bytes": 1447895,
+      "oldSha256": "800bb9957bce73490abbbf3049b1047ebe915df14232e33e3ee67734af33b974",
+      "sha256": "5dd7db14c0f8ec9a85468f76f667656a03d9467c54f22a05faa8286eed4596a1"
+    },
+    {
+      "path": "style-specimens/web/18-gallery-dark.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 23228,
+      "bytes": 523568,
+      "oldSha256": "8336268b8078a95c779ca052aa45e3ba180ed7410f0209007735babf53759425",
+      "sha256": "815f584ccaee4145344786fdb6da51d8f4a4ae63c1e75458a01333223365093b"
+    },
+    {
+      "path": "style-specimens/web/19-swiss-monochrome.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 68812,
+      "bytes": 697636,
+      "oldSha256": "63deec444647a10bfe5a4fae314889548c5cbc021ecb965c369eec63e5c4219d",
+      "sha256": "dc495ce7a793e40ef44fd36b2bb4f92889889a82b79789ec5db8ba9741395a40"
+    },
+    {
+      "path": "style-specimens/web/20-kenya-hara-white-gallery.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 35039,
+      "bytes": 332113,
+      "oldSha256": "ce229d702a9674a48bba239aaa862ba01cd6e0bf18f674a742b1924b323136f0",
+      "sha256": "e00b4bd7933e1be42c1c0889ac35e10853b1d94f590854be57b037d477d8c4ec"
+    },
+    {
+      "path": "style-specimens/xhs/01-specimen-journal.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 128411,
+      "bytes": 1770752,
+      "oldSha256": "ac976141dccc4c364e1d6d0e64dd77821000ac6bb86d60ab48d21343b908a6bc",
+      "sha256": "e3113afad0f5b01c8c329adb7f4174c79c91eedadc433112f56e00bd7cde5cc3"
+    },
+    {
+      "path": "style-specimens/xhs/02-sticker-notebook.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 117202,
+      "bytes": 1748509,
+      "oldSha256": "56dd53f332b251ff5154e1a9cb3300abb153ee82b786996c4a2c746efb2c10ed",
+      "sha256": "3122dab8a653c70bfa1ec649230c9406d69b1de9a14c12d61ebf13b4529c47e9"
+    },
+    {
+      "path": "style-specimens/xhs/03-index-ink.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 97791,
+      "bytes": 1238352,
+      "oldSha256": "387de4fac2be10a66854ea5b23c01399bb90edd927bc8a81eda9af1d920a9aa2",
+      "sha256": "99baef72618bde3d3cb16d760086808d17989bf744a771873a1b1423692acc50"
+    },
+    {
+      "path": "style-specimens/xhs/04-panorama-strip.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 103905,
+      "bytes": 1541983,
+      "oldSha256": "c04e416e4ccfc545017f997ef27996a3d1ee341077e3323959e87b1b77ba894b",
+      "sha256": "b119668827969a0f2507defa966aa45fcf5c6b385e7222b474dff3ce6c06d8d6"
+    },
+    {
+      "path": "style-specimens/xhs/05-daily-paper.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 125334,
+      "bytes": 3427836,
+      "oldSha256": "0ad4701ad515133021d409ad999fedd98efe491f0799a39cb8ce0c9fa86975df",
+      "sha256": "33e55ff7d1340eadf5cbf95414c81eab55addd8ae4f90f0cd76b83eb3a16b463"
+    },
+    {
+      "path": "style-specimens/xhs/06-trading-cards.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 131267,
+      "bytes": 2269757,
+      "oldSha256": "79679cc4a92a114ccf60ceba1d7967b15866c181c1aa382f5638bdb2a11f119a",
+      "sha256": "a7c793bc8551b5b8fdf05de5ecef7fc509c42402da94e24327fa83670e61910c"
+    },
+    {
+      "path": "style-specimens/xhs/07-blank-vertical.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 57747,
+      "bytes": 885536,
+      "oldSha256": "3dd9b235cace90f37723e1ef75d00a750c44be36347a2a9836389d7ed96d09b2",
+      "sha256": "7c455042989abcc0e78f18876be11a0bff5b9810db4944f2a60c4f0c0b407250"
+    },
+    {
+      "path": "style-specimens/xhs/08-area-infographic.jpg",
+      "kind": "specimen",
+      "oldWidth": 1200,
+      "oldHeight": 750,
+      "width": 4800,
+      "height": 3000,
+      "oldBytes": 132565,
+      "bytes": 1683139,
+      "oldSha256": "c4e49e9ffe7f00b93414117c608362a826ac6970ecd13cdbe56f4c19907beb7e",
+      "sha256": "df632b352a72a0797b496273fe6f3e5755a354684fdee1344f902d41889e3949"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Accipiter_nisus.webp",
+      "kind": "sticker",
+      "oldWidth": 295,
+      "oldHeight": 520,
+      "width": 607,
+      "height": 1070,
+      "oldBytes": 23678,
+      "bytes": 57478,
+      "oldSha256": "e34a3067b73069c96c0e69ddf44cfb0537e29b66c246f84123ba4866ade14b15",
+      "sha256": "11aeaa990358fe2f1d77dc1b5efc89ee0e9bd774d6c2785b03033edbb2044fbf"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Agapornis_pullarius.webp",
+      "kind": "sticker",
+      "oldWidth": 486,
+      "oldHeight": 520,
+      "width": 1001,
+      "height": 1070,
+      "oldBytes": 28328,
+      "bytes": 66268,
+      "oldSha256": "e3741167a00064fd1611b1214401b6b59166bfaf300de7d124ec29cff5edcd96",
+      "sha256": "ea698f52cd9c0f1cacc2de0c70f86dd6197b0ab2144ac9de3fa614ffc10b0f22"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Aix_galericulata.webp",
+      "kind": "sticker",
+      "oldWidth": 512,
+      "oldHeight": 520,
+      "width": 1054,
+      "height": 1070,
+      "oldBytes": 34872,
+      "bytes": 88906,
+      "oldSha256": "930c2ef415159b18f996d44da726932868b1fc0edb774cbf0322b4f715f34938",
+      "sha256": "d8c99c5e50077cf68adc4f0b819d8f70f4bf0802fc3175f3f71f80af86ac0681"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Alcedo_atthis.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 462,
+      "width": 1070,
+      "height": 950,
+      "oldBytes": 24452,
+      "bytes": 59202,
+      "oldSha256": "ce177fe8cb37e88c13fd1733cce30353bd735f6ccefbfb5ef51be0f5bd252d4a",
+      "sha256": "ae3ce79f68e4d6667c3f59ac314bd4435fd5e06049ba7ae9d68a940f7902384b"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Ara_macao.webp",
+      "kind": "sticker",
+      "oldWidth": 282,
+      "oldHeight": 520,
+      "width": 580,
+      "height": 1070,
+      "oldBytes": 18770,
+      "bytes": 47324,
+      "oldSha256": "845351a4f0520223e43eb76f35a8474acd724d2b56bb48388e2cfbd50a6369b0",
+      "sha256": "855a09fe8fa775ed47b57cffbc2871367433690695152e34a685235209ab259c"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Bubo_bubo.webp",
+      "kind": "sticker",
+      "oldWidth": 420,
+      "oldHeight": 520,
+      "width": 864,
+      "height": 1070,
+      "oldBytes": 39888,
+      "bytes": 99162,
+      "oldSha256": "9c2e2313acc5eea77b7dbfeb453f34f46b6fb79bcb10f60f4c883396cee9743a",
+      "sha256": "8b412af49ac2a646c0af2a17dcda3fba396bc635f139249655dfd02acf1ec2e4"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Cacatua_galerita.webp",
+      "kind": "sticker",
+      "oldWidth": 324,
+      "oldHeight": 520,
+      "width": 666,
+      "height": 1070,
+      "oldBytes": 16160,
+      "bytes": 47666,
+      "oldSha256": "877635df9530f4b6a17b03f88eae91e000f139fe8d51327120ba996eb5b48334",
+      "sha256": "fbb36e2558bbd0919bc4a5c6fadfeb2e29fbca4e7a3badfa71e023824525b635"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Calyptorhynchus_banksii.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 510,
+      "width": 1070,
+      "height": 1049,
+      "oldBytes": 31174,
+      "bytes": 71270,
+      "oldSha256": "0344af015c203cd9bf954b3c82f0de6e3a2b982ffe8b2dccf3dd9f4804820679",
+      "sha256": "ac1589e5000685b74837aa6ae4c3ae8cce8e7b237da0bd923dac1c009cc4a9b6"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Carpodacus_erythrinus.webp",
+      "kind": "sticker",
+      "oldWidth": 499,
+      "oldHeight": 520,
+      "width": 1026,
+      "height": 1070,
+      "oldBytes": 29236,
+      "bytes": 68258,
+      "oldSha256": "2b55aa0f3f260ce469aee98e3249fbf23a213ce97e03cf06df11fe3df20ba421",
+      "sha256": "d4714b9f045db09697c65156a560f5f2ddee7c13aad8b9b00fb08d8d23e532d1"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Chrysolophus_pictus.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 358,
+      "width": 1070,
+      "height": 736,
+      "oldBytes": 25828,
+      "bytes": 67990,
+      "oldSha256": "34d84ffcb2fa7d480c9beb6daa5ee75c3eac46eabee87fa638dc24fcda1388fe",
+      "sha256": "9d5611b1dc62fa7ef2004b965e8c6af3458c7fe4fb5afdc0a6837ef47659e654"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Coracias_caudatus.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 510,
+      "width": 1070,
+      "height": 1050,
+      "oldBytes": 31028,
+      "bytes": 71618,
+      "oldSha256": "1ce72c3b771d26e6b8fc0c32855d65a59784094a14b68d46a5a20bdd245eeb73",
+      "sha256": "23c56481bb5964a0b9fb8a22211550c6767fac262e6be9d44d6f79c9863479e1"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Ensifera_ensifera.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 483,
+      "width": 1070,
+      "height": 994,
+      "oldBytes": 20906,
+      "bytes": 46706,
+      "oldSha256": "e1377454dfdb31bc5f0067280555e2e9a3a450393c06bf0eb835118fb4bfa8ba",
+      "sha256": "ab7aea1a5d874935aa16f34f9bc81e98117ec71e6a2eab9c5d6a7fcbd8d584ba"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Eolophus_roseicapilla.webp",
+      "kind": "sticker",
+      "oldWidth": 483,
+      "oldHeight": 520,
+      "width": 993,
+      "height": 1070,
+      "oldBytes": 25960,
+      "bytes": 64116,
+      "oldSha256": "2347bf55f2422cabb435e32157f40e6b5d7a370e13b0b4d0daf079a60b43d2ec",
+      "sha256": "daa25d528683704fee8a08737e5a2b9cc71ffdc938bb474b64cf00e7b20a993f"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Grus_japonensis.webp",
+      "kind": "sticker",
+      "oldWidth": 427,
+      "oldHeight": 520,
+      "width": 879,
+      "height": 1070,
+      "oldBytes": 16018,
+      "bytes": 29872,
+      "oldSha256": "a2dbed7ec04ef32cf6d6fab329e599a4f5cc3ec5993309b75f851199ab8507c4",
+      "sha256": "10351c9f224d0229b9c7df0f59bb21fb6b81cefd34f67754f41e13799958367e"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Merops_apiaster.webp",
+      "kind": "sticker",
+      "oldWidth": 480,
+      "oldHeight": 520,
+      "width": 988,
+      "height": 1070,
+      "oldBytes": 23060,
+      "bytes": 52968,
+      "oldSha256": "8e435cc4c56ee1510ac576af5fd758f4ec0e7feb032aec1a053194c15a53f994",
+      "sha256": "6e373d351a3dc0665fa12185f45dadef213f088c0ce88d815222529caecb5ede"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Nestor_notabilis.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 470,
+      "width": 1070,
+      "height": 967,
+      "oldBytes": 40610,
+      "bytes": 105846,
+      "oldSha256": "22aa9936bb1bd056115dbd23c32ea086933580b7c3262e5538d37be2e7dddc98",
+      "sha256": "d0d1275ad8ea7aac68535b52a226ae905a38fc82b7393ec4551604942085e32e"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Platycercus_icterotis.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 414,
+      "width": 1070,
+      "height": 852,
+      "oldBytes": 24216,
+      "bytes": 56230,
+      "oldSha256": "7b2a00d09a556d5687710fc3dde40b8759d551cad842eb5618f8a4f068ccc11b",
+      "sha256": "b3c2553c4f17997680f42b4e6e05b7e25883834fc77e46deea1e0e9dec8747f7"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Psephotellus_chrysopterygius.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 473,
+      "width": 1070,
+      "height": 974,
+      "oldBytes": 27002,
+      "bytes": 62644,
+      "oldSha256": "54272c2329eab44b348bb2123a49b5307926b6edafdaa4ea6803291c813e32d5",
+      "sha256": "7d7d3daafcf02d08a777d99e2a083ead6392f0a203be964954b071580f26870e"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Psittacus_erithacus.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 417,
+      "width": 1070,
+      "height": 859,
+      "oldBytes": 28358,
+      "bytes": 66206,
+      "oldSha256": "b205e9082bc9fdd20454cc38b60c17d3eb926620810e2b12d778027e73d88c5c",
+      "sha256": "437da22b0e328fcf8b6ea2ab9caefe44340b173e24a0487c0cae66ecba32f3e6"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Trichoglossus_moluccanus.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 451,
+      "width": 1070,
+      "height": 929,
+      "oldBytes": 25454,
+      "bytes": 61100,
+      "oldSha256": "5d1a84ded782fa1e69939bef66e5e2f780e8c968a74bbfb8f6b6641ce3205c73",
+      "sha256": "48f5daa1e27b363c3802488919f4a2ab46bccb59938e45039721b1c174d37dd1"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Upupa_epops.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 484,
+      "width": 1070,
+      "height": 996,
+      "oldBytes": 25422,
+      "bytes": 60504,
+      "oldSha256": "e2b96c7e85fc351c6bcda0427b41bf3b4f497b01a25cf34800c09537d8356a0c",
+      "sha256": "5f5783fa524c4144a4b31608be41d968d0f023038bd33a54f50949234207ee4f"
+    },
+    {
+      "path": "style-specimens/xhs/_kit/stickers/Vini_kuhlii.webp",
+      "kind": "sticker",
+      "oldWidth": 520,
+      "oldHeight": 338,
+      "width": 1070,
+      "height": 695,
+      "oldBytes": 27374,
+      "bytes": 66060,
+      "oldSha256": "87a236291de052b554575344aa465cb0d4b6b3bbb989e8b11dd513641dea4876",
+      "sha256": "430f1e7692380b50553c6986850428a2c80f86707704cebe741274c1a32be5e7"
+    }
+  ],
+  "stickerSources": {
+    "repository": "https://github.com/alchaincyf/huashu-bird-sticker",
+    "commit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+    "copyright": "Copyright (c) 2026 Huashu (alchaincyf)",
+    "historicLicense": "PolyForm-Shield-1.0.0",
+    "historicLicenseUrl": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/LICENSE.md",
+    "laterLicenseRegrant": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/fc3d95816994d3497b94e1775bbff55b93fc8f69/LICENSE.md",
+    "note": "Same historical artwork; distributed upstream originals, not newly generated pictures. Original notices retained.",
+    "assets": [
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Accipiter_nisus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Accipitriformes/Accipitridae/Accipiter_nisus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 607,
+        "height": 1070,
+        "bytes": 57478,
+        "sha256": "11aeaa990358fe2f1d77dc1b5efc89ee0e9bd774d6c2785b03033edbb2044fbf",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.7486049543676663
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Agapornis_pullarius.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittaculidae/Agapornis_pullarius.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1001,
+        "height": 1070,
+        "bytes": 66268,
+        "sha256": "ea698f52cd9c0f1cacc2de0c70f86dd6197b0ab2144ac9de3fa614ffc10b0f22",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.3382228025746545
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Aix_galericulata.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Anseriformes/Anatidae/Aix_galericulata.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1054,
+        "height": 1070,
+        "bytes": 88906,
+        "sha256": "d8c99c5e50077cf68adc4f0b819d8f70f4bf0802fc3175f3f71f80af86ac0681",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.4886856470352565
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Alcedo_atthis.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Coraciiformes/Alcedinidae/Alcedo_atthis.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 950,
+        "bytes": 59202,
+        "sha256": "ae3ce79f68e4d6667c3f59ac314bd4435fd5e06049ba7ae9d68a940f7902384b",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.3668373293373293
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Ara_macao.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittacidae/Ara_macao.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 580,
+        "height": 1070,
+        "bytes": 47324,
+        "sha256": "855a09fe8fa775ed47b57cffbc2871367433690695152e34a685235209ab259c",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.5393435170030916
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Bubo_bubo.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Strigiformes/Strigidae/Bubo_bubo.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 864,
+        "height": 1070,
+        "bytes": 99162,
+        "sha256": "8b412af49ac2a646c0af2a17dcda3fba396bc635f139249655dfd02acf1ec2e4",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 2.0936996336996336
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Cacatua_galerita.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Cacatuidae/Cacatua_galerita.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 666,
+        "height": 1070,
+        "bytes": 47666,
+        "sha256": "fbb36e2558bbd0919bc4a5c6fadfeb2e29fbca4e7a3badfa71e023824525b635",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.0121181544792657
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Calyptorhynchus_banksii.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Cacatuidae/Calyptorhynchus_banksii.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 1049,
+        "bytes": 71270,
+        "sha256": "ac1589e5000685b74837aa6ae4c3ae8cce8e7b237da0bd923dac1c009cc4a9b6",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.2066704374057315
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Carpodacus_erythrinus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Passeriformes/Fringillidae/Carpodacus_erythrinus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1026,
+        "height": 1070,
+        "bytes": 68258,
+        "sha256": "d4714b9f045db09697c65156a560f5f2ddee7c13aad8b9b00fb08d8d23e532d1",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.347705667745748
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Chrysolophus_pictus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Galliformes/Phasianidae/Chrysolophus_pictus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 736,
+        "bytes": 67990,
+        "sha256": "9d5611b1dc62fa7ef2004b965e8c6af3458c7fe4fb5afdc0a6837ef47659e654",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.4478101274888984
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Coracias_caudatus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Coraciiformes/Coraciidae/Coracias_caudatus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 1050,
+        "bytes": 71618,
+        "sha256": "23c56481bb5964a0b9fb8a22211550c6767fac262e6be9d44d6f79c9863479e1",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.2532239819004525
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Ensifera_ensifera.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Apodiformes/Trochilidae/Ensifera_ensifera.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 994,
+        "bytes": 46706,
+        "sha256": "ab7aea1a5d874935aa16f34f9bc81e98117ec71e6a2eab9c5d6a7fcbd8d584ba",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 0.6989767478897914
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Eolophus_roseicapilla.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Cacatuidae/Eolophus_roseicapilla.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 993,
+        "height": 1070,
+        "bytes": 64116,
+        "sha256": "daa25d528683704fee8a08737e5a2b9cc71ffdc938bb474b64cf00e7b20a993f",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.161310187397144
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Grus_japonensis.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Gruiformes/Gruidae/Grus_japonensis.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 879,
+        "height": 1070,
+        "bytes": 29872,
+        "sha256": "10351c9f224d0229b9c7df0f59bb21fb6b81cefd34f67754f41e13799958367e",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 0.5034783522488441
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Merops_apiaster.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Coraciiformes/Meropidae/Merops_apiaster.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 988,
+        "height": 1070,
+        "bytes": 52968,
+        "sha256": "6e373d351a3dc0665fa12185f45dadef213f088c0ce88d815222529caecb5ede",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.1031757478632478
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Nestor_notabilis.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Strigopidae/Nestor_notabilis.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 967,
+        "bytes": 105846,
+        "sha256": "d0d1275ad8ea7aac68535b52a226ae905a38fc82b7393ec4551604942085e32e",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.695803327877796
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Platycercus_icterotis.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittaculidae/Platycercus_icterotis.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 852,
+        "bytes": 56230,
+        "sha256": "b3c2553c4f17997680f42b4e6e05b7e25883834fc77e46deea1e0e9dec8747f7",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.369325219868698
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Psephotellus_chrysopterygius.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittaculidae/Psephotellus_chrysopterygius.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 974,
+        "bytes": 62644,
+        "sha256": "7d7d3daafcf02d08a777d99e2a083ead6392f0a203be964954b071580f26870e",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.079321840949748
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Psittacus_erithacus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittacidae/Psittacus_erithacus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 859,
+        "bytes": 66206,
+        "sha256": "437da22b0e328fcf8b6ea2ab9caefe44340b173e24a0487c0cae66ecba32f3e6",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.2697641886490807
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Trichoglossus_moluccanus.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittaculidae/Trichoglossus_moluccanus.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 929,
+        "bytes": 61100,
+        "sha256": "48f5daa1e27b363c3802488919f4a2ab46bccb59938e45039721b1c174d37dd1",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.2142049007902667
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Upupa_epops.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Bucerotiformes/Upupidae/Upupa_epops.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 996,
+        "bytes": 60504,
+        "sha256": "5f5783fa524c4144a4b31608be41d968d0f023038bd33a54f50949234207ee4f",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 0.9416070671752491
+      },
+      {
+        "path": "style-specimens/xhs/_kit/stickers/Vini_kuhlii.webp",
+        "url": "https://raw.githubusercontent.com/alchaincyf/huashu-bird-sticker/47bb6f366641a76a482e2fb2fd26b2ac515f1a13/stickers/Psittaciformes/Psittaculidae/Vini_kuhlii.webp",
+        "sourceCommit": "47bb6f366641a76a482e2fb2fd26b2ac515f1a13",
+        "license": "PolyForm-Shield-1.0.0",
+        "width": 1070,
+        "height": 695,
+        "bytes": 66060,
+        "sha256": "430f1e7692380b50553c6986850428a2c80f86707704cebe741274c1a32be5e7",
+        "alphaMatchesThumbnail": true,
+        "visiblePixelMAE": 1.8168601122743135
+      }
+    ]
+  },
+  "renderVerification": {
+    "sourceImages": 116,
+    "socialPreviewsWith1070pxOriginals": 8,
+    "allFontRequestsCompleted": true,
+    "brokenImages": 0,
+    "canvasBackingSize": [
+      4800,
+      3000
+    ],
+    "results": [
+      {
+        "path": "showcases/website-saas/saas-build.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 723,
+        "loadedFontFaces": 4,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/08-command-palette.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 395,
+        "loadedFontFaces": 30,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/20-swiss-grid-report.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 253,
+        "loadedFontFaces": 44,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/03-memphis-maximalism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 155,
+        "loadedFontFaces": 29,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/01-specimen-journal.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 324,
+        "loadedFontFaces": 38,
+        "images": [
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          },
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "showcases/cover/cover-build.png",
+        "cssWidth": 1200,
+        "cssHeight": 510,
+        "scale": 4,
+        "textLength": 153,
+        "loadedFontFaces": 3,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/cover/cover-pentagram.png",
+        "cssWidth": 1200,
+        "cssHeight": 510,
+        "scale": 4,
+        "textLength": 142,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/cover/cover-takram.png",
+        "cssWidth": 1200,
+        "cssHeight": 510,
+        "scale": 4,
+        "textLength": 321,
+        "loadedFontFaces": 18,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/infographic/infographic-build.png",
+        "cssWidth": 1080,
+        "cssHeight": 1920,
+        "scale": 4,
+        "textLength": 762,
+        "loadedFontFaces": 4,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/infographic/infographic-pentagram.png",
+        "cssWidth": 1080,
+        "cssHeight": 1920,
+        "scale": 4,
+        "textLength": 1244,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/infographic/infographic-takram.png",
+        "cssWidth": 1080,
+        "cssHeight": 1920,
+        "scale": 4,
+        "textLength": 797,
+        "loadedFontFaces": 27,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/ppt/ppt-build.png",
+        "cssWidth": 1920,
+        "cssHeight": 1080,
+        "scale": 4,
+        "textLength": 636,
+        "loadedFontFaces": 8,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/ppt/ppt-pentagram.png",
+        "cssWidth": 1920,
+        "cssHeight": 1080,
+        "scale": 4,
+        "textLength": 722,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/ppt/ppt-takram.png",
+        "cssWidth": 1920,
+        "cssHeight": 1080,
+        "scale": 4,
+        "textLength": 782,
+        "loadedFontFaces": 15,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-nav/ainav-build.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 813,
+        "loadedFontFaces": 4,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-nav/ainav-pentagram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 887,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-nav/ainav-takram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 958,
+        "loadedFontFaces": 5,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-writing/aiwriting-build.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 1096,
+        "loadedFontFaces": 4,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-writing/aiwriting-pentagram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 1369,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-ai-writing/aiwriting-takram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 1335,
+        "loadedFontFaces": 5,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-devdocs/devdocs-build.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 909,
+        "loadedFontFaces": 6,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-devdocs/devdocs-pentagram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 1205,
+        "loadedFontFaces": 2,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-devdocs/devdocs-takram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 959,
+        "loadedFontFaces": 7,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-homepage/homepage-build.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 409,
+        "loadedFontFaces": 4,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-homepage/homepage-pentagram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 236,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-homepage/homepage-takram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 468,
+        "loadedFontFaces": 6,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-saas/saas-pentagram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 695,
+        "loadedFontFaces": 0,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "showcases/website-saas/saas-takram.png",
+        "cssWidth": 1440,
+        "cssHeight": 900,
+        "scale": 4,
+        "textLength": 830,
+        "loadedFontFaces": 5,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/01-hardware-panel.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 260,
+        "loadedFontFaces": 31,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/02-liquid-glass.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 266,
+        "loadedFontFaces": 31,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/03-playful-3d.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 171,
+        "loadedFontFaces": 47,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/04-friendly-fintech.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 292,
+        "loadedFontFaces": 64,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/05-pro-camera.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 222,
+        "loadedFontFaces": 30,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/06-topo-outdoor.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 260,
+        "loadedFontFaces": 37,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/07-feed-waterfall.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 391,
+        "loadedFontFaces": 48,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/09-health-color-code.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 226,
+        "loadedFontFaces": 30,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/10-native-polish.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 280,
+        "loadedFontFaces": 55,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/11-gentle-encouraging.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 263,
+        "loadedFontFaces": 28,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/app/12-editorial-reader.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 514,
+        "loadedFontFaces": 40,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/01-lu-jingren-bookcraft.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 306,
+        "loadedFontFaces": 63,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/02-song-block-print.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 337,
+        "loadedFontFaces": 47,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/03-republic-book-jacket.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 127,
+        "loadedFontFaces": 20,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/04-shanghai-deco-calendar.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 166,
+        "loadedFontFaces": 45,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/05-hanzi-experimental-poster.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 179,
+        "loadedFontFaces": 38,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/06-hk-street-signs.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 141,
+        "loadedFontFaces": 32,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/07-traditional-colors-solar-terms.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 277,
+        "loadedFontFaces": 92,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/08-sugiura-info-mandala.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 362,
+        "loadedFontFaces": 96,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/09-tanaka-geometric-poster.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 120,
+        "loadedFontFaces": 28,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/10-hattori-playful-offset.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 76,
+        "loadedFontFaces": 22,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/11-sato-minimal-symbol.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 107,
+        "loadedFontFaces": 32,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/east/12-japan-magazine-dense.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 535,
+        "loadedFontFaces": 73,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/01-personal-annual-report.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 774,
+        "loadedFontFaces": 65,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/02-explanation-graphics.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 235,
+        "loadedFontFaces": 61,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/03-cross-section-epic.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 358,
+        "loadedFontFaces": 34,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/04-magazine-pop-data.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 234,
+        "loadedFontFaces": 45,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/05-isotype.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 242,
+        "loadedFontFaces": 55,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/06-data-humanism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 254,
+        "loadedFontFaces": 53,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/07-scrollytelling.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 355,
+        "loadedFontFaces": 52,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/08-cartographic-lead.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 422,
+        "loadedFontFaces": 55,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/09-newsroom-chart.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 296,
+        "loadedFontFaces": 66,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/10-computational-portrait.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 228,
+        "loadedFontFaces": 43,
+        "images": [],
+        "canvas": [
+          {
+            "width": 4800,
+            "height": 3000,
+            "cssWidth": 1200,
+            "cssHeight": 750
+          }
+        ]
+      },
+      {
+        "path": "style-specimens/info/11-beautiful-information.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 442,
+        "loadedFontFaces": 54,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/12-open-research-data.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 276,
+        "loadedFontFaces": 32,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/13-speculative-tech-diagram.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 230,
+        "loadedFontFaces": 16,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/14-pictogram-system.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 257,
+        "loadedFontFaces": 47,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/15-small-multiples.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 395,
+        "loadedFontFaces": 60,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/16-topological-transit-map.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 207,
+        "loadedFontFaces": 42,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/17-ma-emptiness.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 88,
+        "loadedFontFaces": 21,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/18-bookcraft-data.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 366,
+        "loadedFontFaces": 28,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/info/19-scientific-figure-plate.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 426,
+        "loadedFontFaces": 34,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/01-neo-swiss-billboard.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 205,
+        "loadedFontFaces": 34,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/02-black-big-number-stage.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 45,
+        "loadedFontFaces": 14,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/03-mono-brand-type-hero.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 52,
+        "loadedFontFaces": 18,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/04-full-bleed-gradient-manifesto.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 106,
+        "loadedFontFaces": 6,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/05-candy-lecture-stage.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 93,
+        "loadedFontFaces": 3,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/06-playful-collins-editorial.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 101,
+        "loadedFontFaces": 24,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/07-irreverent-pop.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 172,
+        "loadedFontFaces": 20,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/08-y2k-inflated-wrapped.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 76,
+        "loadedFontFaces": 17,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/09-bento-grid.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 216,
+        "loadedFontFaces": 41,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/10-dark-hairline-terminal.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 191,
+        "loadedFontFaces": 22,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/11-two-font-consulting.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 301,
+        "loadedFontFaces": 38,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/12-diagram-isotype.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 300,
+        "loadedFontFaces": 31,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/13-diagrammatic-minimalism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 207,
+        "loadedFontFaces": 42,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/14-narrative-sparkline.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 207,
+        "loadedFontFaces": 37,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/15-assertion-evidence.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 207,
+        "loadedFontFaces": 28,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/16-institutional-swiss.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 287,
+        "loadedFontFaces": 40,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/17-editorial-longform.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 388,
+        "loadedFontFaces": 55,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/18-humanist-rounded-cards.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 284,
+        "loadedFontFaces": 35,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/19-dense-research-report.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 514,
+        "loadedFontFaces": 40,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/ppt/20-all-text-manifesto.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 144,
+        "loadedFontFaces": 40,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/01-editorial-brutalism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 375,
+        "loadedFontFaces": 56,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/02-neo-brutalism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 293,
+        "loadedFontFaces": 37,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/04-friendly-candy.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 168,
+        "loadedFontFaces": 27,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/05-pure-css-art.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 128,
+        "loadedFontFaces": 24,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/06-bold-big-type.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 160,
+        "loadedFontFaces": 18,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/07-cosmic-retro-futurism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 255,
+        "loadedFontFaces": 27,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/08-cinematic-sound-viz.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 194,
+        "loadedFontFaces": 33,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/09-pixel-side-scroller.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 181,
+        "loadedFontFaces": 31,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/10-bauhaus-geometric.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 169,
+        "loadedFontFaces": 36,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/11-dark-editorial.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 404,
+        "loadedFontFaces": 41,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/12-warm-editorial.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 348,
+        "loadedFontFaces": 59,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/13-glassmorphism-bento.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 326,
+        "loadedFontFaces": 29,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/14-angled-fluid-gradient.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 308,
+        "loadedFontFaces": 40,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/15-utility-colorful-docs.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 470,
+        "loadedFontFaces": 39,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/16-terminal-core.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 391,
+        "loadedFontFaces": 31,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/17-functional-brutalism.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 733,
+        "loadedFontFaces": 42,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/18-gallery-dark.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 127,
+        "loadedFontFaces": 15,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/19-swiss-monochrome.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 234,
+        "loadedFontFaces": 39,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/web/20-kenya-hara-white-gallery.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 193,
+        "loadedFontFaces": 32,
+        "images": [],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/02-sticker-notebook.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 218,
+        "loadedFontFaces": 82,
+        "images": [
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          },
+          {
+            "src": "_kit/stickers/Aix_galericulata.webp",
+            "loaded": true,
+            "width": 1054,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Bubo_bubo.webp",
+            "loaded": true,
+            "width": 864,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Chrysolophus_pictus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 736
+          },
+          {
+            "src": "_kit/stickers/Upupa_epops.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 996
+          },
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/03-index-ink.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 224,
+        "loadedFontFaces": 45,
+        "images": [
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          },
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          },
+          {
+            "src": "_kit/stickers/Aix_galericulata.webp",
+            "loaded": true,
+            "width": 1054,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Bubo_bubo.webp",
+            "loaded": true,
+            "width": 864,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Chrysolophus_pictus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 736
+          },
+          {
+            "src": "_kit/stickers/Upupa_epops.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 996
+          },
+          {
+            "src": "_kit/stickers/Coracias_caudatus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 1050
+          },
+          {
+            "src": "_kit/stickers/Eolophus_roseicapilla.webp",
+            "loaded": true,
+            "width": 993,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Platycercus_icterotis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 852
+          },
+          {
+            "src": "_kit/stickers/Agapornis_pullarius.webp",
+            "loaded": true,
+            "width": 1001,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Psephotellus_chrysopterygius.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 974
+          },
+          {
+            "src": "_kit/stickers/Ara_macao.webp",
+            "loaded": true,
+            "width": 580,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Merops_apiaster.webp",
+            "loaded": true,
+            "width": 988,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Ensifera_ensifera.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 994
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/04-panorama-strip.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 160,
+        "loadedFontFaces": 47,
+        "images": [
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          },
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          },
+          {
+            "src": "_kit/stickers/Coracias_caudatus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 1050
+          },
+          {
+            "src": "_kit/stickers/Eolophus_roseicapilla.webp",
+            "loaded": true,
+            "width": 993,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Agapornis_pullarius.webp",
+            "loaded": true,
+            "width": 1001,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Psephotellus_chrysopterygius.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 974
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/05-daily-paper.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 428,
+        "loadedFontFaces": 63,
+        "images": [
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Bubo_bubo.webp",
+            "loaded": true,
+            "width": 864,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Nestor_notabilis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 967
+          },
+          {
+            "src": "_kit/stickers/Ensifera_ensifera.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 994
+          },
+          {
+            "src": "_kit/stickers/Merops_apiaster.webp",
+            "loaded": true,
+            "width": 988,
+            "height": 1070
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/06-trading-cards.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 294,
+        "loadedFontFaces": 54,
+        "images": [
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          },
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          },
+          {
+            "src": "_kit/stickers/Agapornis_pullarius.webp",
+            "loaded": true,
+            "width": 1001,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Vini_kuhlii.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 695
+          },
+          {
+            "src": "_kit/stickers/Psephotellus_chrysopterygius.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 974
+          },
+          {
+            "src": "_kit/stickers/Platycercus_icterotis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 852
+          },
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          },
+          {
+            "src": "_kit/stickers/Eolophus_roseicapilla.webp",
+            "loaded": true,
+            "width": 993,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Psittacus_erithacus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 859
+          },
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Calyptorhynchus_banksii.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 1049
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/07-blank-vertical.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 173,
+        "loadedFontFaces": 33,
+        "images": [
+          {
+            "src": "_kit/stickers/Alcedo_atthis.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 950
+          },
+          {
+            "src": "_kit/stickers/Cacatua_galerita.webp",
+            "loaded": true,
+            "width": 666,
+            "height": 1070
+          }
+        ],
+        "canvas": []
+      },
+      {
+        "path": "style-specimens/xhs/08-area-infographic.jpg",
+        "cssWidth": 1200,
+        "cssHeight": 750,
+        "scale": 4,
+        "textLength": 198,
+        "loadedFontFaces": 36,
+        "images": [
+          {
+            "src": "_kit/stickers/Carpodacus_erythrinus.webp",
+            "loaded": true,
+            "width": 1026,
+            "height": 1070
+          },
+          {
+            "src": "_kit/stickers/Ensifera_ensifera.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 994
+          },
+          {
+            "src": "_kit/stickers/Trichoglossus_moluccanus.webp",
+            "loaded": true,
+            "width": 1070,
+            "height": 929
+          }
+        ],
+        "canvas": []
+      }
+    ]
+  }
+}

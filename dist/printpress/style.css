@@ -1,0 +1,3221 @@
+
+.hs-printpress .cd-mask[data-v-d3c48fd2] {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+}
+.hs-printpress .cd-box[data-v-d3c48fd2] {
+  width: 400px;
+  background: var(--paper-card, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)));
+  border: 1px solid var(--line-strong, var(--hs-border-l1,var(--dsw-alias-border-l1)));
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--dsw-alias-label-primary) 18%, transparent);
+}
+.hs-printpress .cd-title[data-v-d3c48fd2] {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: var(--cinnabar, var(--hs-accent-ink,var(--dsw-alias-brand-primary)));
+}
+.hs-printpress .cd-msg[data-v-d3c48fd2] {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-2, var(--dsw-alias-label-secondary));
+  white-space: pre-line;
+  word-break: break-all;
+}
+.hs-printpress .cd-actions[data-v-d3c48fd2] {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.hs-printpress .cd-btn[data-v-d3c48fd2] {
+  padding: 6px 16px;
+  font-size: 13px;
+  border: 1px solid var(--line-strong, var(--hs-border-l1,var(--dsw-alias-border-l1)));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink, var(--dsw-alias-label-primary));
+  cursor: pointer;
+}
+.hs-printpress .cd-btn[data-v-d3c48fd2]:hover { background: var(--cinnabar-soft, color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 6%, transparent));
+}
+.hs-printpress .cd-btn.danger[data-v-d3c48fd2] {
+  background: var(--dsw-alias-state-error-primary);
+  border-color: var(--dsw-alias-state-error-primary);
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+}
+.hs-printpress .cd-btn.danger[data-v-d3c48fd2]:hover { filter: brightness(1.08);
+}
+
+/* 朱砂左杠沿用原 `.page-title` 的 4px + 10px 内边距口径（三处原本就是这么写的），
+   字号取 20px：18px 在满宽页面上偏小、24px 又压过了工具栏的层级，20px 是五处的中间值。 */
+.hs-printpress .page-header[data-v-a7988dd4] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.hs-printpress .page-header__text[data-v-a7988dd4] { min-width: 0;
+}
+.hs-printpress .page-header__title[data-v-a7988dd4] {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--ink);
+  border-left: 4px solid var(--cinnabar);
+  padding-left: 10px;
+}
+/* 副标题与标题文字左缘对齐（4px 杠 + 10px 内边距），否则和标题错开一个身位 */
+.hs-printpress .page-header__desc[data-v-a7988dd4] {
+  margin: 4px 0 0;
+  padding-left: 14px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.hs-printpress .page-header__actions[data-v-a7988dd4] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+.hs-printpress .page-header[data-v-a7988dd4] { align-items: flex-start;
+}
+}
+.hs-printpress .app-icon[data-v-265efcf3] { display: inline-block; vertical-align: -0.22em; flex: none;
+}
+.hs-printpress .head-actions[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hs-printpress .error-text[data-v-ca393352] {
+  font-size: 12px;
+  color: var(--cinnabar);
+}
+.hs-printpress .btn-primary[data-v-ca393352] {
+  padding: 8px 20px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 6px;
+  background: var(--hs-accent,var(--dsw-alias-brand-primary));
+  color: var(--hs-on-accent,var(--dsw-alias-bg-base));
+  font-size: 14px;
+}
+.hs-printpress .btn-primary[data-v-ca393352]:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.hs-printpress .btn-danger[data-v-ca393352] {
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--dsw-alias-state-error-primary);
+  font-size: 12px;
+}
+.hs-printpress .btn-danger[data-v-ca393352]:hover {
+  border-color: var(--dsw-alias-state-error-primary);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .empty-hint[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12vh;
+}
+.hs-printpress .hint-main[data-v-ca393352] { font-size: 15px; color: var(--ink-2);
+}
+.hs-printpress .hint-sub[data-v-ca393352] { font-size: 12px; color: var(--stone); margin: 0;
+}
+.hs-printpress .dropzone[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 460px;
+  padding: 44px 24px;
+  border: 2px dashed var(--line-strong);
+  border-radius: 12px;
+  background: var(--paper-card);
+  transition: border-color 0.15s, background 0.15s;
+}
+.hs-printpress .dropzone[data-v-ca393352]:hover {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .dropzone-main[data-v-ca393352] { font-size: 15px; color: var(--ink); font-weight: 600;
+}
+.hs-printpress .dropzone-sub[data-v-ca393352] { font-size: 12px; color: var(--stone);
+}
+.hs-printpress .drag-mask[data-v-ca393352] {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);
+  pointer-events: none; /* 让 drop 落到下层根节点，遮罩只作视觉提示 */
+}
+.hs-printpress .drag-box[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 48px 72px;
+  border: 2px dashed var(--cinnabar);
+  border-radius: 14px;
+  background: var(--paper-card);
+}
+.hs-printpress .drag-main[data-v-ca393352] { font-size: 18px; font-weight: 700; color: var(--cinnabar);
+}
+.hs-printpress .drag-sub[data-v-ca393352] { font-size: 12px; color: var(--ink-2);
+}
+
+/*
+ * 工作表选择弹窗的遮罩。App.vue 里也有 .onboard-mask，但那是 scoped 的——
+ * 只作用于 App 自己的模板；这里的同名类不继承它的样式，必须自己声明，
+ * 否则弹窗没有 fixed 居中遮罩，会掉进文档流被页面布局挤到角落。
+ */
+.hs-printpress .onboard-mask[data-v-ca393352] {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.hs-printpress .sheet-dialog[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  max-height: 78vh;
+  background: var(--paper-card);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+.hs-printpress .sheet-head[data-v-ca393352] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.hs-printpress .sheet-title[data-v-ca393352] {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .sheet-sub[data-v-ca393352] { font-size: 12px; color: var(--stone); margin-top: 4px;
+}
+.hs-printpress .mode-group[data-v-ca393352] { display: flex; flex-direction: column; gap: 4px;
+}
+.hs-printpress .mode-item[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-2);
+  cursor: pointer;
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.hs-printpress .mode-item.on[data-v-ca393352] {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .sheet-toolbar[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.hs-printpress .sheet-search[data-v-ca393352] {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 13px;
+}
+.hs-printpress .sheet-count[data-v-ca393352] { font-size: 12px; color: var(--ink-2); flex-shrink: 0;
+}
+.hs-printpress .sheet-list[data-v-ca393352] {
+  flex: 1;
+  min-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.hs-printpress .sheet-row[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.hs-printpress .sheet-row.on[data-v-ca393352] { background: var(--cinnabar-soft);
+}
+.hs-printpress .sheet-check[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 190px;
+  cursor: pointer;
+}
+.hs-printpress .sheet-name[data-v-ca393352] {
+  font-size: 13px;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .sheet-meta[data-v-ca393352] { flex-shrink: 0; color: var(--stone);
+}
+.hs-printpress .sheet-preview[data-v-ca393352] {
+  flex: 1;
+  min-width: 0;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .sheet-hr[data-v-ca393352] { display: flex; align-items: center; gap: 6px; color: var(--ink-2); flex-shrink: 0;
+}
+.hs-printpress .hr-input[data-v-ca393352] {
+  width: 56px;
+  padding: 2px 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 12px;
+}
+.hs-printpress .sheet-none[data-v-ca393352] { padding: 28px; text-align: center; color: var(--stone); font-size: 13px;
+}
+.hs-printpress .import-progress[data-v-ca393352] {
+  margin-top: 14px;
+}
+.hs-printpress .progress-head[data-v-ca393352] {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.hs-printpress .progress-label[data-v-ca393352] {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.hs-printpress .progress-pct[data-v-ca393352] {
+  font-size: 12px;
+  color: var(--cinnabar);
+  font-variant-numeric: tabular-nums;
+}
+.hs-printpress .progress-track[data-v-ca393352] {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.hs-printpress .progress-fill[data-v-ca393352] {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--cinnabar);
+  transition: width 0.25s ease;
+}
+.hs-printpress .sheet-foot[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.hs-printpress .tb-spacer[data-v-ca393352] { flex: 1;
+}
+.hs-printpress .btn-ghost[data-v-ca393352] {
+  padding: 6px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.hs-printpress .btn-ghost[data-v-ca393352]:hover { border-color: var(--ink-2);
+}
+.hs-printpress .layout[data-v-ca393352] {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.hs-printpress .ds-list[data-v-ca393352] {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hs-printpress .ds-search[data-v-ca393352] {
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 12px;
+}
+.hs-printpress .ds-status-filter[data-v-ca393352] { display: flex; gap: 4px;
+}
+.hs-printpress .ds-status-filter button[data-v-ca393352] {
+  flex: 1;
+  padding: 6px 3px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink-2);
+  font-size: 12px;
+}
+.hs-printpress .ds-status-filter button span[data-v-ca393352] { font-size: 11px; opacity: 0.75;
+}
+.hs-printpress .ds-status-filter button.selected[data-v-ca393352] {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+}
+.hs-printpress .batch-row[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hs-printpress .batch-label[data-v-ca393352] {
+  font-size: 11px;
+  color: var(--stone);
+}
+
+/* 主题属性（底色/描线/圆角/内距）一律走 theme.css 的原生控件基座，这里只管布局 */
+.hs-printpress .batch-select[data-v-ca393352] {
+  font-size: 12px;
+  width: 100%;
+}
+.hs-printpress .ds-none[data-v-ca393352] {
+  margin: 0;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--stone);
+}
+.hs-printpress .ds-dropzone[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  padding: 16px 12px;
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper);
+  transition: border-color 0.15s, background 0.15s;
+}
+.hs-printpress .ds-dropzone[data-v-ca393352]:hover {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .ds-dropzone-main[data-v-ca393352] { font-size: 13px; color: var(--ink-2); font-weight: 600;
+}
+.hs-printpress .ds-dropzone-sub[data-v-ca393352] { font-size: 11px; color: var(--stone);
+}
+.hs-printpress .ds-item[data-v-ca393352] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+  text-align: left;
+}
+.hs-printpress .ds-item[data-v-ca393352]:hover { border-color: var(--line-strong);
+}
+.hs-printpress .ds-item.active[data-v-ca393352] {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .ds-name-row[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+}
+.hs-printpress .ds-name[data-v-ca393352] {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .ds-print-flag[data-v-ca393352] {
+  flex-shrink: 0;
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  background: var(--cinnabar);
+  line-height: 1.5;
+}
+
+/* 已配图标记：名字后就显示一个「图」字，与「印 N」同一行，不另起 pill */
+.hs-printpress .ds-photo-mark[data-v-ca393352] {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--warn);
+}
+.hs-printpress .ds-meta[data-v-ca393352] { font-size: 11px; color: var(--stone);
+}
+
+/* 已打印过的工作簿：淡赭弱化底色——打过的不用再看，未打的保持白纸显眼（遗漏一眼可辨） */
+.hs-printpress .ds-item.printed[data-v-ca393352] { background: var(--ok-soft);
+}
+.hs-printpress .ds-printed-flag[data-v-ca393352] {
+  flex-shrink: 0;
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ok);
+  border: 1px solid var(--ok);
+  line-height: 1.5;
+}
+.hs-printpress .ds-detail[data-v-ca393352] { flex: 1; min-width: 0;
+}
+.hs-printpress .detail-head[data-v-ca393352] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.hs-printpress .detail-title[data-v-ca393352] { font-size: 16px; font-weight: 600; color: var(--ink);
+}
+.hs-printpress .detail-sub[data-v-ca393352] { font-size: 12px; color: var(--stone); margin-top: 4px;
+}
+.hs-printpress .printed-note[data-v-ca393352] { color: var(--ok);
+}
+.hs-printpress .section-title[data-v-ca393352] {
+  font-size: 14px;
+  color: var(--ink);
+  margin: 20px 0 8px;
+  padding-left: 8px;
+  border-left: 3px solid var(--line-strong);
+}
+.hs-printpress .alias-text[data-v-ca393352] {
+  cursor: pointer;
+  color: var(--ink);
+  border-bottom: 1px dashed var(--line-strong);
+}
+.hs-printpress .alias-text[data-v-ca393352]:hover { color: var(--cinnabar);
+}
+.hs-printpress .alias-input[data-v-ca393352] {
+  padding: 2px 6px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 4px;
+  font-size: 12px;
+  width: 90px;
+  background: var(--paper-card);
+  color: var(--ink);
+}
+.hs-printpress .table-scroll[data-v-ca393352] {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+}
+.hs-printpress .row-table[data-v-ca393352] {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.hs-printpress .row-table th[data-v-ca393352], .hs-printpress .row-table td[data-v-ca393352] {
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hs-printpress .row-table th[data-v-ca393352] {
+  color: var(--ink-2);
+  background: var(--paper);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+.hs-printpress .row-table td.empty[data-v-ca393352] { color: var(--stone); font-style: italic;
+}
+.hs-printpress .row-table td.empty[data-v-ca393352]::before { content: '空'; opacity: 0.6;
+}
+
+/* ---- 可编辑数据表格 ---- */
+.hs-printpress .section-title[data-v-ca393352] { display: flex; align-items: baseline; gap: 10px;
+}
+.hs-printpress .grid-meta[data-v-ca393352] { font-size: 12px; font-weight: 400; color: var(--stone);
+}
+.hs-printpress .grid-toolbar[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.hs-printpress .tb-hint[data-v-ca393352] { font-size: 12px; color: var(--stone);
+}
+.hs-printpress .edit-grid td.cell[data-v-ca393352] {
+  cursor: text;
+  min-width: 80px;
+  transition: background 0.12s;
+}
+.hs-printpress .edit-grid td.cell[data-v-ca393352]:hover { background: var(--cinnabar-soft);
+}
+.hs-printpress .edit-grid td.cell.editing[data-v-ca393352] { padding: 2px 4px;
+}
+.hs-printpress .edit-grid td.cell.editing[data-v-ca393352]::before { content: none;
+}
+.hs-printpress .edit-grid td.cell.editing[data-v-ca393352] { font-style: normal; color: var(--ink);
+}
+
+/* 去补录直达：目标格闪烁提示（朱砂描边脉动两次） */
+.hs-printpress .edit-grid td.cell.flash[data-v-ca393352] {
+  animation: cell-flash-ca393352 1.2s ease-in-out 2;
+}
+@keyframes cell-flash-ca393352 {
+0%, 100% { box-shadow: inset 0 0 0 0 transparent;
+}
+50% { box-shadow: inset 0 0 0 2px var(--cinnabar);
+}
+}
+.hs-printpress .cell-input[data-v-ca393352] {
+  width: 100%;
+  min-width: 90px;
+  padding: 2px 6px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 4px;
+  background: var(--paper-card);
+  color: var(--ink);
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+}
+.hs-printpress .rownum-col[data-v-ca393352], .hs-printpress .op-col[data-v-ca393352] {
+  width: 44px;
+  text-align: center !important;
+  color: var(--stone);
+  background: var(--paper);
+  font-size: 11px;
+}
+
+/* ---- 列级打印开关 + 列显隐 ---- */
+.hs-printpress .col-head[data-v-ca393352] { white-space: nowrap;
+}
+/* 列名必须出省略号：th 有 max-width + overflow:hidden，名字一长就会把后面的
+   「印」和「▾」挤出可视区，两个开关都点不到 */
+.hs-printpress .th-alias[data-v-ca393352] {
+  display: inline-block;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.hs-printpress .print-toggle[data-v-ca393352] {
+  padding: 1px 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--stone);
+  font-size: 11px;
+  line-height: 1.4;
+  cursor: pointer;
+  opacity: 0.7; /* 灰度态 = 未启用 */
+  transition: color 0.12s, border-color 0.12s, background 0.12s, opacity 0.12s;
+}
+.hs-printpress .print-toggle[data-v-ca393352]:hover { border-color: var(--cinnabar); color: var(--cinnabar); opacity: 1;
+}
+.hs-printpress .print-toggle.on[data-v-ca393352] {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar);
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* 列头「▾」：默认隐身，hover 才现——列头已有「改名 / 印」两个热区，
+   第三个只该在需要时出现。opacity 而非 display，避免 hover 时列宽抖动 */
+.hs-printpress .col-menu-btn[data-v-ca393352] {
+  margin-left: 2px;
+  padding: 0 3px;
+  border: none;
+  background: transparent;
+  color: var(--stone);
+  font-size: 11px;
+  line-height: 1.4;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.12s, color 0.12s;
+}
+.hs-printpress .col-head:hover .col-menu-btn[data-v-ca393352],
+.hs-printpress .col-menu-btn.on[data-v-ca393352],
+.hs-printpress .col-menu-btn[data-v-ca393352]:focus-visible { opacity: 0.75;
+}
+.hs-printpress .col-menu-btn[data-v-ca393352]:hover { color: var(--cinnabar); opacity: 1;
+}
+
+/* 工具栏的回头路：只在真有隐藏列时出现，是用户唯一的「找回列」入口 */
+.hs-printpress .hidden-pill[data-v-ca393352] {
+  padding: 4px 10px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 12px;
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  font-size: 12px;
+}
+.hs-printpress .hidden-pill[data-v-ca393352]:hover { background: var(--cinnabar); color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+}
+
+/* 浮层菜单（Teleport 到 body）：th 的 overflow:hidden 会裁掉留在表头里的浮层 */
+.hs-printpress .col-menu[data-v-ca393352] {
+  position: fixed;
+  z-index: 200;
+  min-width: 200px;
+  padding: 4px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper-card);
+  box-shadow: var(--shadow);
+}
+.hs-printpress .cm-item[data-v-ca393352] {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  text-align: left;
+}
+.hs-printpress .cm-item[data-v-ca393352]:hover:not(:disabled) { background: var(--cinnabar-soft); color: var(--cinnabar);
+}
+.hs-printpress .cm-item[data-v-ca393352]:disabled { color: var(--stone); cursor: default;
+}
+.hs-printpress .cm-hint[data-v-ca393352] {
+  margin-top: 4px;
+  padding: 6px 10px 4px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--stone);
+}
+.hs-printpress .list-menu[data-v-ca393352] { max-height: 320px; overflow-y: auto;
+}
+.hs-printpress .cm-title[data-v-ca393352] { padding: 6px 10px 4px; font-size: 11px; color: var(--stone);
+}
+.hs-printpress .cm-check[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.hs-printpress .cm-check[data-v-ca393352]:hover { background: var(--cinnabar-soft);
+}
+.hs-printpress .cm-check-label[data-v-ca393352] {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 在菜单里就标出哪些列已激活「印」：免得用户为了看一眼又得关掉菜单 */
+.hs-printpress .cm-print-flag[data-v-ca393352] {
+  flex-shrink: 0;
+  padding: 0 5px;
+  border-radius: 8px;
+  background: var(--cinnabar);
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  font-size: 10px;
+  line-height: 1.5;
+}
+.hs-printpress .cm-restore[data-v-ca393352] { margin-top: 4px;
+}
+.hs-printpress .row-del[data-v-ca393352] {
+  padding: 1px 7px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--stone);
+  font-size: 11px;
+  cursor: pointer;
+}
+.hs-printpress .row-del[data-v-ca393352]:hover { color: var(--cinnabar); border-color: var(--cinnabar);
+}
+.hs-printpress .pager[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+.hs-printpress .pager-info[data-v-ca393352] { font-size: 12px; color: var(--ink-2);
+}
+
+/* ---- 表格字号档位（阅读体验用户自调） ---- */
+.hs-printpress .size-group[data-v-ca393352] {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.hs-printpress .size-label[data-v-ca393352] {
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--stone);
+  background: var(--paper);
+}
+.hs-printpress .size-item[data-v-ca393352] {
+  padding: 4px 10px;
+  border: none;
+  border-left: 1px solid var(--line);
+  background: var(--paper-card);
+  color: var(--ink-2);
+  font-size: 12px;
+  cursor: pointer;
+}
+.hs-printpress .size-item[data-v-ca393352]:hover { color: var(--cinnabar);
+}
+.hs-printpress .size-item.on[data-v-ca393352] {
+  background: var(--cinnabar-soft);
+  color: var(--cinnabar);
+  font-weight: 600;
+}
+.hs-printpress .page[data-size='s'] .edit-grid[data-v-ca393352] { font-size: 11px;
+}
+.hs-printpress .page[data-size='m'] .edit-grid[data-v-ca393352] { font-size: 12px;
+}
+.hs-printpress .page[data-size='l'] .edit-grid[data-v-ca393352] { font-size: 14px;
+}
+.hs-printpress .page[data-size='xl'] .edit-grid[data-v-ca393352] { font-size: 16px;
+}
+.hs-printpress .page[data-size='l'] .edit-grid td.cell[data-v-ca393352] { min-width: 100px;
+}
+.hs-printpress .page[data-size='xl'] .edit-grid td.cell[data-v-ca393352] { min-width: 120px;
+}
+.hs-printpress .cell-input[data-v-ca393352] { font-size: inherit;
+}
+.hs-printpress .size-item[data-v-ca393352], .hs-printpress .row-del[data-v-ca393352] { font-size: 12px;
+}
+
+.hs-printpress .matched-photo[data-v-79071846]{display:flex;align-items:center;justify-content:center;width:42px;height:52px;background:var(--paper);border:1px solid var(--line);border-radius:4px}.hs-printpress .matched-photo img[data-v-79071846]{width:100%;height:100%;object-fit:contain}
+.hs-printpress .photo-unavailable[data-v-79071846]{font-size:11px;color:var(--stone);text-align:center;padding:2px}
+.hs-printpress .photo-mask[data-v-79071846]{position:fixed;inset:0;z-index:2000;background:color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);display:flex;align-items:center;justify-content:center;padding:24px}
+.hs-printpress .photo-embedded .photo-panel[data-v-79071846]{width:100%;max-height:none;box-shadow:none;border:1px solid var(--line);box-sizing:border-box;background:var(--paper-card)}
+.hs-printpress .photo-embedded .photo-panel[data-v-79071846]{padding:18px}.hs-printpress .photo-embedded h2[data-v-79071846]{font-size:18px;margin:0}.hs-printpress .photo-embedded header p[data-v-79071846]{margin:6px 0}.hs-printpress .photo-embedded .photo-actions[data-v-79071846]{margin:12px 0}
+.hs-printpress .photo-panel[data-v-79071846]{width:min(880px,95vw);max-height:90vh;overflow:auto;background:var(--paper,var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)));border-radius:16px;padding:24px;box-shadow:0 24px 70px color-mix(in srgb, var(--dsw-alias-label-primary) 20%, transparent);color:var(--ink)}
+.hs-printpress header[data-v-79071846]{display:flex;justify-content:space-between;gap:20px}.hs-printpress h2[data-v-79071846]{margin:0 0 8px;font-size:22px}.hs-printpress header p[data-v-79071846],.hs-printpress .photo-note[data-v-79071846]{color:var(--stone);font-size:13px;line-height:1.7}.hs-printpress header>button[data-v-79071846]{align-self:flex-start;font-size:24px}
+.hs-printpress .photo-actions[data-v-79071846]{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:16px 0}.hs-printpress select[data-v-79071846]{max-width:250px}.hs-printpress button[data-v-79071846]{cursor:pointer}.hs-printpress button[data-v-79071846]:disabled{cursor:default;opacity:.5}.hs-printpress .photo-error[data-v-79071846]{color:var(--cinnabar)}.hs-printpress .photo-warning[data-v-79071846]{color:var(--warn);line-height:1.7;font-size:13px}
+.hs-printpress .photo-table-tools[data-v-79071846]{gap:9px}.hs-printpress .photo-search[data-v-79071846]{padding:7px 10px;min-width:210px;max-width:100%;background:var(--paper-card);border:1px solid var(--line-strong);border-radius:6px;color:var(--ink)}
+.hs-printpress .photo-results[data-v-79071846]{max-height:40vh;overflow:auto;border:1px solid var(--line-strong);border-radius:8px}.hs-printpress table[data-v-79071846]{width:100%;border-collapse:collapse;text-align:left;font-size:13px}.hs-printpress th[data-v-79071846],.hs-printpress td[data-v-79071846]{padding:9px 12px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.hs-printpress th[data-v-79071846]{position:sticky;top:0;background:var(--paper)}.hs-printpress td[data-v-79071846]:first-child{width:65px}.hs-printpress small[data-v-79071846]{display:block;color:var(--stone);margin-top:4px}.hs-printpress .photo-row[data-v-79071846]{border:0;background:transparent;color:var(--cinnabar);text-decoration:underline}.hs-printpress .photo-results>p[data-v-79071846]{padding:16px}.hs-printpress footer[data-v-79071846]{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin-top:14px}.hs-printpress details[data-v-79071846]{font-size:13px;line-height:1.8}.hs-printpress details ul[data-v-79071846]{max-height:160px;overflow:auto}
+.hs-printpress .photo-panel[data-v-79071846] .cd-mask{z-index:2200}
+.hs-printpress .photo-plan[data-v-79071846]{border:1px solid var(--warn-line);border-radius:10px;padding:16px;background:var(--warn-soft);margin:16px 0}.hs-printpress .photo-plan h3[data-v-79071846]{margin:0 0 8px;font-size:16px}.hs-printpress .photo-plan p[data-v-79071846]{font-size:13px;line-height:1.6;color:var(--stone)}.hs-printpress .photo-plan-grid[data-v-79071846]{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.hs-printpress .photo-plan-grid span[data-v-79071846]{padding:6px 10px;background:var(--paper-card);border:1px solid var(--line);border-radius:6px;font-size:13px}
+
+.hs-printpress .image-editor-mask[data-v-fa5446e2] { position: fixed; inset: 0; z-index: 2200; display: grid; place-items: center; background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);
+}
+.hs-printpress .image-editor[data-v-fa5446e2] { width: min(1060px, calc(100vw - 48px)); max-height: calc(100vh - 32px); overflow: auto; padding: 18px; box-sizing: border-box; border-radius: 12px; background: var(--paper-card, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1))); color: var(--ink, var(--dsw-alias-label-primary)); box-shadow: 0 16px 60px color-mix(in srgb, var(--dsw-alias-label-primary) 33%, transparent); outline: none;
+}
+.hs-printpress header[data-v-fa5446e2], .hs-printpress .image-tools[data-v-fa5446e2], .hs-printpress .image-coordinates[data-v-fa5446e2], .hs-printpress footer[data-v-fa5446e2] { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+}
+.hs-printpress header[data-v-fa5446e2] { justify-content: space-between;
+}
+.hs-printpress h3[data-v-fa5446e2] { margin: 0; font-size: 17px;
+}
+.hs-printpress .image-tools[data-v-fa5446e2] { margin-top: 14px;
+}
+.hs-printpress label[data-v-fa5446e2] { display: flex; gap: 6px; align-items: center; font-size: 12px;
+}
+.hs-printpress .clone-source-tools[data-v-fa5446e2] { display: inline-flex; align-items: center; gap: 6px;
+}
+.hs-printpress .tool-switch[data-v-fa5446e2] { display: inline-flex; gap: 3px; padding: 3px; border-radius: 8px; background: color-mix(in srgb, var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 13%, transparent);
+}
+.hs-printpress .tool-switch button[data-v-fa5446e2] { border-color: transparent; background: transparent;
+}
+.hs-printpress .tool-switch button[aria-pressed="true"][data-v-fa5446e2] { background: var(--paper-card, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1))); box-shadow: 0 1px 4px color-mix(in srgb, var(--dsw-alias-label-primary) 13%, transparent);
+}
+.hs-printpress .icon-only[data-v-fa5446e2] { display: inline-grid; place-items: center; min-width: 34px; min-height: 32px; padding: 5px;
+}
+.hs-printpress .coordinate-tip[data-v-fa5446e2] { font-size: 12px; color: var(--stone, var(--dsw-alias-label-secondary));
+}
+.hs-printpress input[data-v-fa5446e2] { width: 76px;
+}
+.hs-printpress input[data-v-fa5446e2], .hs-printpress select[data-v-fa5446e2] { padding: 5px; color: inherit; background: var(--paper-card, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1))); border: 1px solid var(--line-strong, var(--hs-border-l2,var(--dsw-alias-border-l2))); border-radius: 4px;
+}
+.hs-printpress button[data-v-fa5446e2] { padding: 6px 10px; background: var(--paper-card, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1))); color: inherit; border: 1px solid var(--line-strong, var(--hs-border-l2,var(--dsw-alias-border-l2))); border-radius: 5px; cursor: pointer;
+}
+.hs-printpress button[aria-pressed="true"][data-v-fa5446e2] { border-color: var(--cinnabar, var(--hs-accent-ink,var(--dsw-alias-brand-primary))); color: var(--cinnabar, var(--hs-accent-ink,var(--dsw-alias-brand-primary))); background: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 4%, transparent);
+}
+.hs-printpress button[data-v-fa5446e2]:disabled { opacity: .4; cursor: default;
+}
+.hs-printpress button.primary[data-v-fa5446e2] { background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-on-accent,var(--dsw-alias-bg-base)); border-color: transparent;
+}
+.hs-printpress .hint[data-v-fa5446e2] { font-size: 12px; color: var(--stone, var(--dsw-alias-label-secondary)); margin: 12px 0;
+}
+.hs-printpress .image-viewport[data-v-fa5446e2] { overflow: auto; height: max(160px, calc(100vh - 340px)); background: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); border-radius: 6px; padding: 16px; box-sizing: border-box;
+}
+.hs-printpress .image-board[data-v-fa5446e2] { position: relative; margin: auto; flex-shrink: 0; background: repeating-conic-gradient(var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 0% 25%, var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 0% 50%) 0 0 / 16px 16px; touch-action: none; user-select: none; cursor: crosshair;
+}
+.hs-printpress .image-board img[data-v-fa5446e2], .hs-printpress .image-board svg[data-v-fa5446e2] { position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+}
+.hs-printpress .image-board img[data-v-fa5446e2] { pointer-events: none;
+}
+.hs-printpress .selection[data-v-fa5446e2] { cursor: move;
+}
+.hs-printpress .image-coordinates[data-v-fa5446e2] { margin-top: 12px;
+}
+.hs-printpress footer[data-v-fa5446e2] { margin-top: 14px;
+}
+.hs-printpress footer span[data-v-fa5446e2] { flex: 1; font-size: 12px; color: var(--stone, var(--dsw-alias-label-secondary));
+}
+.hs-printpress .edit-error[data-v-fa5446e2] { box-sizing: border-box; height: 20px; margin: 4px 0 0; color: var(--dsw-alias-state-error-primary); font-size: 12px; line-height: 20px; white-space: nowrap; overflow: auto;
+}
+
+.hs-printpress .lasso-backdrop[data-v-da760f0b]{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;background:color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent)}.hs-printpress .lasso-dialog[data-v-da760f0b]{width:min(900px,calc(100vw - 32px));max-height:calc(100vh - 32px);display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:12px;background:var(--paper-card);box-shadow:0 12px 40px color-mix(in srgb, var(--dsw-alias-label-primary) 33%, transparent)}.hs-printpress .lasso-dialog header[data-v-da760f0b],.hs-printpress .lasso-dialog footer[data-v-da760f0b]{display:flex;align-items:center;justify-content:space-between;gap:10px}.hs-printpress .lasso-dialog footer[data-v-da760f0b]{justify-content:flex-end}.hs-printpress .lasso-dialog p[data-v-da760f0b]{font-size:13px;line-height:1.5;margin:0}.hs-printpress .lasso-viewport[data-v-da760f0b]{min-height:0;overflow:auto;text-align:center;background:repeating-conic-gradient(var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 0% 25%,var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)) 0% 50%) 0 0/16px 16px}.hs-printpress .lasso-board[data-v-da760f0b]{position:relative;display:inline-block;line-height:0;touch-action:none;cursor:crosshair}.hs-printpress .lasso-board img[data-v-da760f0b]{display:block;max-width:min(100%, 840px);max-height:60vh;width:auto;height:auto;user-select:none}.hs-printpress .lasso-board svg[data-v-da760f0b]{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}.hs-printpress .lasso-board polygon[data-v-da760f0b],.hs-printpress .lasso-board polyline[data-v-da760f0b]{fill:color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 20%, transparent);stroke:var(--hs-accent-ink,var(--dsw-alias-brand-primary));stroke-width:2px;vector-effect:non-scaling-stroke;stroke-dasharray:5 3}.hs-printpress .lasso-board polyline[data-v-da760f0b]{fill:none}.hs-printpress .lasso-error[data-v-da760f0b]{color:var(--cinnabar)}
+
+.hs-printpress .photo-processing[data-v-4fc60647] { margin: 18px 0; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper-card);
+}
+.hs-printpress .processing-heading[data-v-4fc60647], .hs-printpress .processing-actions[data-v-4fc60647] { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.hs-printpress h2[data-v-4fc60647] { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 16px;
+}
+.hs-printpress .processing-heading p[data-v-4fc60647], .hs-printpress .muted[data-v-4fc60647] { margin: 6px 0; color: var(--stone); font-size: 12px; line-height: 1.6;
+}
+.hs-printpress .processing-editor[data-v-4fc60647] { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 22px; margin-top: 18px;
+}
+.hs-printpress .sample-area[data-v-4fc60647] { min-width: 0;
+}
+.hs-printpress .model-options[data-v-4fc60647] { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; margin-top:10px;
+}
+.hs-printpress .model-option[data-v-4fc60647] { flex-direction:row; align-items:center; gap:7px;
+}
+.hs-printpress .model-option select[data-v-4fc60647] { width:auto; max-width:100%;
+}
+.hs-printpress label[data-v-4fc60647] { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: var(--ink-2);
+}
+.hs-printpress input[data-v-4fc60647]:not([type="checkbox"]), .hs-printpress select[data-v-4fc60647] { box-sizing: border-box; width: 100%; min-width: 0; padding: 7px; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--input-bg); color: var(--ink); font: inherit;
+}
+.hs-printpress input[type="range"][data-v-4fc60647] { padding: 0; accent-color: var(--cinnabar);
+}
+.hs-printpress .comparison[data-v-4fc60647] { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;
+}
+.hs-printpress figure[data-v-4fc60647] { min-width: 0; margin: 0;
+}
+.hs-printpress figcaption[data-v-4fc60647] { color: var(--stone); font-size: 12px; margin-bottom: 7px;
+}
+.hs-printpress .sample-frame[data-v-4fc60647] { display: flex; align-items: center; justify-content: center; min-height: 120px; max-height: 430px; overflow: hidden; border: 1px solid var(--line); border-radius: 7px; background: repeating-conic-gradient(var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 0% 25%, var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)) 0% 50%) 0 0 / 16px 16px; color: var(--dsw-alias-label-secondary); font-size: 12px;
+}
+.hs-printpress .sample-frame img[data-v-4fc60647] { width: 100%; height: 100%; max-height: 430px; object-fit: contain;
+}
+.hs-printpress .processing-controls[data-v-4fc60647] { display: grid; gap: 10px; align-content: start; margin: 0; padding: 12px; border: 1px solid var(--line); border-radius: 8px;
+}
+.hs-printpress legend[data-v-4fc60647] { padding: 0 6px; font-size: 12px; color: var(--stone);
+}
+.hs-printpress .control-pair[data-v-4fc60647] { display: grid; grid-template-columns: 1fr 1fr; gap: 9px;
+}
+.hs-printpress label.check[data-v-4fc60647] { flex-direction: row; align-items: center; gap: 6px;
+}
+.hs-printpress .check input[data-v-4fc60647] { margin: 0; accent-color: var(--cinnabar);
+}
+.hs-printpress .processing-actions[data-v-4fc60647] { justify-content: flex-start; margin-top: 16px;
+}
+.hs-printpress .processing-error[data-v-4fc60647] { color: var(--cinnabar); font-size: 12px; line-height: 1.6;
+}
+.hs-printpress .processing-notice[data-v-4fc60647], .hs-printpress .applied-status[data-v-4fc60647] { color: var(--jade, var(--dsw-alias-state-success-primary)); font-size: 12px; line-height: 1.6;
+}
+.hs-printpress .applied-status span[data-v-4fc60647] { color: var(--cinnabar);
+}
+.hs-printpress .automatic-setting[data-v-4fc60647] { margin: 12px 0; font-size: 12px;
+}
+.hs-printpress .preset-controls[data-v-4fc60647] { display: grid; gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--line);
+}
+@media (max-width: 820px) {
+.hs-printpress .processing-editor[data-v-4fc60647] { grid-template-columns: 1fr;
+}
+.hs-printpress .processing-controls[data-v-4fc60647] { grid-template-columns: 1fr 1fr;
+}
+}
+
+.hs-printpress .single-mask[data-v-ba87358d]{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;background:color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent)}.hs-printpress .single-dialog[data-v-ba87358d]{width:min(1080px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;background:var(--paper-card);border-radius:12px;padding:16px}.hs-printpress .single-dialog header[data-v-ba87358d]{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px}
+
+.hs-printpress .photo-review[data-v-a2e98f99]{margin:18px 0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--paper-card)}.hs-printpress header[data-v-a2e98f99],.hs-printpress .review-controls[data-v-a2e98f99],.hs-printpress footer[data-v-a2e98f99],.hs-printpress .review-row-actions[data-v-a2e98f99]{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.hs-printpress header[data-v-a2e98f99]{justify-content:space-between}.hs-printpress h2[data-v-a2e98f99]{margin:0;font-size:16px}.hs-printpress header p[data-v-a2e98f99],.hs-printpress .review-counts[data-v-a2e98f99]{color:var(--stone);font-size:12px}.hs-printpress .review-controls[data-v-a2e98f99]{margin:16px 0;align-items:end}.hs-printpress .review-controls label[data-v-a2e98f99]{display:grid;gap:5px;font-size:12px}.hs-printpress .review-controls input[data-v-a2e98f99],.hs-printpress .review-controls select[data-v-a2e98f99]{padding:7px;border:1px solid var(--line);border-radius:5px;background:var(--paper-card);color:var(--ink)}.hs-printpress .review-grid[data-v-a2e98f99]{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.hs-printpress .review-grid article[data-v-a2e98f99]{min-width:0;border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:7px}.hs-printpress .review-grid article.problematic[data-v-a2e98f99]{border:3px solid var(--cinnabar)}.hs-printpress .review-image[data-v-a2e98f99]{width:100%;min-height:180px;height:250px;display:flex;justify-content:center;align-items:center;overflow:auto;border:0;background:repeating-conic-gradient(var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)) 0% 25%,var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)) 0% 50%) 0 0/16px 16px;cursor:pointer}.hs-printpress .review-image img[data-v-a2e98f99]{max-width:100%;max-height:100%;object-fit:contain}.hs-printpress .review-image iframe[data-v-a2e98f99]{width:240px;min-width:240px;flex-shrink:0;border:0;pointer-events:none;align-self:flex-start}.hs-printpress .review-grid small[data-v-a2e98f99]{color:var(--stone)}.hs-printpress .review-issue[data-v-a2e98f99]{margin:0;font-size:12px;color:var(--dsw-alias-state-warn-primary)}.hs-printpress .review-issue.blocking[data-v-a2e98f99],.hs-printpress .review-error[data-v-a2e98f99]{color:var(--cinnabar)}.hs-printpress .review-row-actions[data-v-a2e98f99]{margin-top:auto}.hs-printpress .review-row-actions button[data-v-a2e98f99],.hs-printpress footer button[data-v-a2e98f99]{font-size:12px}.hs-printpress footer[data-v-a2e98f99]{margin-top:16px}.hs-printpress .single-mask[data-v-a2e98f99]{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;background:color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent)}.hs-printpress .single-dialog[data-v-a2e98f99]{width:min(1080px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow:auto;background:var(--paper-card);border-radius:12px;padding:16px}.hs-printpress .single-dialog header[data-v-a2e98f99]{padding:8px}
+
+.hs-printpress .photo-library-view[data-v-c92c6578]{max-width:1440px;margin:auto;padding:16px}.hs-printpress .library-heading p[data-v-c92c6578],.hs-printpress .empty-library p[data-v-c92c6578]{color:var(--stone);line-height:1.6;margin:6px 0}.hs-printpress .matching-context[data-v-c92c6578]{display:flex;gap:16px;justify-content:space-between;align-items:center;margin:16px 0;padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper-card)}.hs-printpress .empty-library[data-v-c92c6578]{text-align:center;padding:80px 20px;border:1px dashed var(--line);border-radius:16px}
+
+.hs-printpress .custom-select[data-v-cd9cea84] {
+  position: relative;
+  display: inline-block;
+}
+.hs-printpress .cs-trigger[data-v-cd9cea84] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink);
+  font-size: 13px;
+}
+.hs-printpress .cs-trigger[data-v-cd9cea84]:hover,
+.hs-printpress .cs-trigger.open[data-v-cd9cea84] {
+  border-color: var(--cinnabar);
+}
+.hs-printpress .cs-label[data-v-cd9cea84] {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .cs-trigger.badged[data-v-cd9cea84] { border-color: var(--cinnabar);
+}
+.hs-printpress .cs-trigger.badged .cs-label[data-v-cd9cea84] { flex: 1; text-align: left;
+}
+.hs-printpress .cs-option.badged[data-v-cd9cea84] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--cinnabar-soft);
+  box-shadow: inset 3px 0 var(--cinnabar);
+}
+.hs-printpress .cs-option.badged .cs-option-label[data-v-cd9cea84] { min-width: 0;
+}
+.hs-printpress .cs-badge[data-v-cd9cea84] {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 2px 6px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 4px;
+  color: var(--cinnabar);
+  background: var(--paper-card);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.hs-printpress .cs-label.placeholder[data-v-cd9cea84] {
+  color: var(--stone);
+}
+.hs-printpress .cs-arrow[data-v-cd9cea84] {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--stone);
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+.hs-printpress .cs-arrow.open[data-v-cd9cea84] {
+  transform: rotate(180deg);
+}
+.hs-printpress .cs-menu[data-v-cd9cea84] {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  box-shadow: var(--shadow);
+  z-index: 50;
+}
+.hs-printpress .cs-group-title[data-v-cd9cea84] {
+  padding: 6px 10px 4px;
+  font-size: 11px;
+  color: var(--stone);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+}
+.hs-printpress .cs-option[data-v-cd9cea84] {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 13px;
+  color: var(--ink);
+}
+.hs-printpress .cs-option[data-v-cd9cea84]:hover {
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .cs-option.selected[data-v-cd9cea84] {
+  color: var(--cinnabar);
+  font-weight: 600;
+}
+.hs-printpress .cs-option.disabled[data-v-cd9cea84] {
+  color: var(--stone);
+  cursor: default;
+}
+.hs-printpress .cs-empty[data-v-cd9cea84] {
+  padding: 10px;
+  font-size: 12px;
+  color: var(--stone);
+  text-align: center;
+}
+
+.hs-printpress .design-surface[data-v-4b1c9890] { position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.hs-printpress .design-surface-content[data-v-4b1c9890] { position: absolute; left: 0; top: 0; transform-origin: 0 0;
+}
+.hs-printpress .design-surface-error[data-v-4b1c9890] { color: var(--dsw-alias-state-error-primary); font: 12px sans-serif;
+}
+
+.hs-printpress .field-vertical[data-v-f90fe617] { display: inline-flex; flex-direction: column; vertical-align: top;
+}
+.hs-printpress .field-glyph[data-v-f90fe617] { display: flex; align-items: center; justify-content: center; width: 1em; height: 1em; line-height: 1;
+}
+.hs-printpress .field-glyph > span[data-v-f90fe617] { display: block;
+}
+.hs-printpress .field-glyph > .vertical-left[data-v-f90fe617] { transform: rotate(-90deg);
+}
+.hs-printpress .field-glyph > .vertical-right[data-v-f90fe617] { transform: rotate(90deg);
+}
+
+.hs-printpress .head-actions[data-v-ee10356f] { display: flex; align-items: center; gap: 12px;
+}
+
+/* 提示条：与底图制作页 `.notice` 同一套（整条带底色、按钮靠右） */
+.hs-printpress .notice[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+}
+.hs-printpress .notice.success[data-v-ee10356f] { background: var(--ok-soft); color: var(--ok);
+}
+.hs-printpress .notice.error[data-v-ee10356f] { background: var(--warn-soft); color: var(--warn); border-color: var(--warn-line);
+}
+/* 模板页的按钮都是类选择器（没有全局 button 元素样式），所以这里要写全，
+   并用 currentColor 跟随所在条带的配色（error 是琥珀色、success 是绿色） */
+.hs-printpress .notice-close[data-v-ee10356f] {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.hs-printpress .btn-primary[data-v-ee10356f] {
+  padding: 7px 18px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 6px;
+  background: var(--hs-accent,var(--dsw-alias-brand-primary));
+  color: var(--hs-on-accent,var(--dsw-alias-bg-base));
+  font-size: 13px;
+}
+.hs-printpress .btn-ghost[data-v-ee10356f] {
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink);
+  font-size: 13px;
+}
+.hs-printpress .btn-ghost[data-v-ee10356f]:hover { border-color: var(--cinnabar); color: var(--cinnabar);
+}
+.hs-printpress .btn-danger[data-v-ee10356f] {
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--dsw-alias-state-error-primary);
+  font-size: 12px;
+}
+.hs-printpress .btn-danger[data-v-ee10356f]:hover { border-color: var(--dsw-alias-state-error-primary); background: var(--cinnabar-soft);
+}
+.hs-printpress .layout[data-v-ee10356f] { display: flex; gap: 20px; align-items: flex-start;
+}
+.hs-printpress .side[data-v-ee10356f] { width: 230px; flex-shrink: 0;
+}
+.hs-printpress .side-title[data-v-ee10356f] {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin: 0 0 8px;
+  padding-left: 8px;
+  border-left: 3px solid var(--line-strong);
+}
+
+/* 模板列表：**8 条封顶，超出就在列表内部滚动**，不把下面的字体管理一直往下顶。
+   max-height 与条目高度共用同一个变量——改一处两边同步，不会各算各的。
+   （此前是无限增高：模板一多，字体管理要滚很久才看得到。） */
+.hs-printpress .tpl-list[data-v-ee10356f] {
+  --tpl-item-h: 56px;  /* 条目固定高度：封顶算式依赖它 */
+  --tpl-gap: 6px;
+  --tpl-visible: 8;    /* 最多露出几条 */
+  display: flex;
+  flex-direction: column;
+  gap: var(--tpl-gap);
+  margin-bottom: 20px;
+  max-height: calc(var(--tpl-visible) * var(--tpl-item-h) + (var(--tpl-visible) - 1) * var(--tpl-gap));
+  overflow-y: auto;
+  padding-right: 2px;  /* 滚动条不压卡片圆角 */
+}
+.hs-printpress .tpl-tabs[data-v-ee10356f] {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 8px;
+  padding: 3px;
+  border-radius: 7px;
+  background: var(--paper-card);
+}
+.hs-printpress .tpl-tabs button[data-v-ee10356f] {
+  flex: 1;
+  min-height: 30px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--stone);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.hs-printpress .tpl-tabs button.active[data-v-ee10356f] {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgb(40 32 20 / 12%);
+}
+
+/* 细滚动条：系统默认那根在 230px 侧栏里太喧宾夺主 */
+.hs-printpress .tpl-list[data-v-ee10356f]::-webkit-scrollbar { width: 8px;
+}
+.hs-printpress .tpl-list[data-v-ee10356f]::-webkit-scrollbar-track { background: transparent;
+}
+.hs-printpress .tpl-list[data-v-ee10356f]::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 999px;
+}
+.hs-printpress .tpl-list[data-v-ee10356f]::-webkit-scrollbar-thumb:hover { background: var(--stone);
+}
+.hs-printpress .tpl-item[data-v-ee10356f] {
+  height: var(--tpl-item-h);
+  flex-shrink: 0;  /* 必须：列表溢出时 flex 会把条目压到 min-content 高（53.6px），
+                      封顶算式就白算了——实测过，不加这行 12 条时条目会缩水 */
+  justify-content: center;  /* 固定高度后把两行居中，别都挤在顶部 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+  text-align: left;
+}
+.hs-printpress .tpl-item[data-v-ee10356f]:hover { border-color: var(--line-strong);
+}
+.hs-printpress .tpl-item.active[data-v-ee10356f] { border-color: var(--cinnabar); background: var(--cinnabar-soft);
+}
+.hs-printpress .tpl-name[data-v-ee10356f] { font-size: 13px; font-weight: 600; color: var(--ink); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .tpl-meta[data-v-ee10356f] { font-size: 11px; color: var(--stone);
+}
+.hs-printpress .side-empty[data-v-ee10356f] { font-size: 12px; color: var(--stone);
+}
+.hs-printpress .font-panel[data-v-ee10356f] { display: flex; flex-direction: column; gap: 8px;
+}
+.hs-printpress .font-actions[data-v-ee10356f] {
+  display: flex;
+  gap: 8px;
+}
+.hs-printpress .font-actions .btn-ghost[data-v-ee10356f] { flex: 1;
+}
+.hs-printpress .font-download[data-v-ee10356f] {
+  text-decoration: none;
+  text-align: center;
+  color: var(--stone);
+}
+.hs-printpress .font-download[data-v-ee10356f]:hover { border-color: var(--cinnabar); color: var(--cinnabar);
+}
+.hs-printpress .font-list[data-v-ee10356f] { display: flex; flex-direction: column; gap: 4px; max-height: 240px; overflow-y: auto;
+}
+.hs-printpress .font-row[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 12px;
+}
+.hs-printpress .font-name[data-v-ee10356f] { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .font-tag[data-v-ee10356f] { font-size: 10px; color: var(--stone); border: 1px solid var(--line); border-radius: 8px; padding: 0 6px; flex-shrink: 0;
+}
+.hs-printpress .font-del[data-v-ee10356f] {
+  border: none;
+  background: transparent;
+  color: var(--cinnabar);
+  font-size: 11px;
+  padding: 2px 4px;
+  flex-shrink: 0;
+}
+.hs-printpress .editor-empty[data-v-ee10356f] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15vh;
+}
+.hs-printpress .hint-main[data-v-ee10356f] { font-size: 15px; color: var(--ink-2);
+}
+.hs-printpress .hint-sub[data-v-ee10356f] { font-size: 12px; color: var(--stone);
+}
+.hs-printpress .editor[data-v-ee10356f] { flex: 1; min-width: 0;
+}
+
+/* 工具栏：外层仍是卡片（e2e 用 `.editor .toolbar .btn-primary` / `.toolbar button` /
+   `.toolbar .custom-select` 定位，**外层类名与 DOM 顺序都不能动**），内部改成两条显式行。
+   此前是一条 flex-wrap 长龙，折行位置随窗口宽度随机，会把「保存/删除」与「撤销/重做」劈开。 */
+.hs-printpress .toolbar[data-v-ee10356f] {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+  margin-bottom: 10px;
+}
+.hs-printpress .tb-row[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 第二行只剩「保存 / 删除」这类动作：整组靠右。数据集下拉已并入第 1 行末尾
+   （它和纸张/版式一样是「选什么」，不该和「做什么」的动作挤在同一组里） */
+.hs-printpress .tb-row-actions .btn-icon[data-v-ee10356f]:first-of-type { margin-left: 12px;
+}
+.hs-printpress .tb-row-actions .btn-primary[data-v-ee10356f] { margin-left: auto;
+}
+.hs-printpress .name-input[data-v-ee10356f] {
+  width: 140px;
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+/* ---- 多联版式控件 ---- */
+.hs-printpress .item-input[data-v-ee10356f] {
+  width: 62px;
+  padding: 6px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.hs-printpress .tb-unit[data-v-ee10356f] { font-size: 12px; color: var(--stone);
+}
+
+/* 工具栏维度标签：明确区分「纸张」（整张大纸）与「成品」（单个底图小件）两类操作 */
+.hs-printpress .tb-label[data-v-ee10356f] { font-size: 12px; color: var(--ink); font-weight: 600; white-space: nowrap;
+}
+.hs-printpress .cut-toggle[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--ink-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* 状态条带：把散落的 `.warn-line` 收进一个有边框底色的容器。
+   注意 `.warn-line` 是**测试锚点**（bg-fidelity 静态守卫 / e2e-grid / design-e2e 都钉它），
+   只能加容器、不能改名；它现在的语义是「状态行」，警告靠 `.warn-strong` 加色。 */
+.hs-printpress .status-band[data-v-ee10356f] {
+  padding: 8px 12px;
+  margin: 0 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+}
+.hs-printpress .warn-line[data-v-ee10356f] { font-size: 12px; color: var(--stone); margin: 3px 0;
+}
+.hs-printpress .warn-strong[data-v-ee10356f] { color: var(--warn);
+}
+
+/* 工作区承载画布；字段工具与属性统一由右侧 viewport 浮层承载。 */
+.hs-printpress .workbench[data-v-ee10356f] { position: relative; display: flex; gap: 16px; align-items: flex-start;
+}
+.hs-printpress .canvas-wrap[data-v-ee10356f] { flex: 1; min-width: 0; overflow: auto;
+}
+.hs-printpress .canvas-wrap.rulers-on[data-v-ee10356f] { padding: 20px 0 0 20px;
+}
+.hs-printpress .template-canvas-frame[data-v-ee10356f] { position: relative; width: max-content;
+}
+.hs-printpress .template-ruler-toggle[data-v-ee10356f] { display: inline-flex; align-items: center; gap: 4px; margin-right: 8px; font-size: 12px; color: var(--ink-2); white-space: nowrap;
+}
+.hs-printpress .template-ruler-toggle input[data-v-ee10356f] { margin: 0;
+}
+.hs-printpress .template-guide-panel[data-v-ee10356f] { margin: 0 0 10px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper-card); font-size: 12px;
+}
+.hs-printpress .template-guide-panel summary[data-v-ee10356f] { cursor: pointer; font-weight: 600;
+}
+.hs-printpress .template-guide-panel summary span[data-v-ee10356f] { margin-left: 8px; font-weight: 400; color: var(--stone);
+}
+.hs-printpress .template-guide-controls[data-v-ee10356f], .hs-printpress .template-guide-row[data-v-ee10356f] { display: flex; align-items: end; gap: 8px; margin-top: 8px;
+}
+.hs-printpress .template-guide-controls label[data-v-ee10356f] { display: flex; flex-direction: column; gap: 3px; color: var(--ink-2);
+}
+.hs-printpress .template-guide-controls input[data-v-ee10356f], .hs-printpress .template-guide-controls select[data-v-ee10356f], .hs-printpress .template-guide-row input[data-v-ee10356f] { width: 120px; min-width: 0; padding: 5px 6px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--input-bg); color: var(--ink);
+}
+.hs-printpress .template-guide-controls button[data-v-ee10356f], .hs-printpress .template-guide-row button[data-v-ee10356f] { padding: 5px 9px;
+}
+.hs-printpress .template-guide-row input[data-v-ee10356f] { width: 105px;
+}
+.hs-printpress .template-guide-row small[data-v-ee10356f] { color: var(--warn);
+}
+.hs-printpress .template-ruler[data-v-ee10356f] { position: absolute; z-index: 11; overflow: hidden; background: var(--paper-card); color: var(--stone); font-size: 9px; line-height: 1; cursor: crosshair; touch-action: none; user-select: none;
+}
+.hs-printpress .template-ruler-h[data-v-ee10356f] { left: 0; bottom: 100%; height: 18px; border-bottom: 1px solid var(--line-strong);
+}
+.hs-printpress .template-ruler-v[data-v-ee10356f] { top: 0; right: 100%; width: 18px; border-right: 1px solid var(--line-strong);
+}
+.hs-printpress .template-ruler-tick[data-v-ee10356f] { position: absolute; background: var(--line-strong); pointer-events: none;
+}
+.hs-printpress .template-ruler-h .template-ruler-tick[data-v-ee10356f] { top: 0; width: 1px; height: 4px;
+}
+.hs-printpress .template-ruler-h .template-ruler-tick.major[data-v-ee10356f] { height: 9px;
+}
+.hs-printpress .template-ruler-v .template-ruler-tick[data-v-ee10356f] { left: 0; height: 1px; width: 4px;
+}
+.hs-printpress .template-ruler-v .template-ruler-tick.major[data-v-ee10356f] { width: 9px;
+}
+.hs-printpress .template-ruler-label[data-v-ee10356f] { position: absolute; white-space: nowrap;
+}
+.hs-printpress .template-ruler-h .template-ruler-label[data-v-ee10356f] { left: 2px; top: 8px;
+}
+.hs-printpress .template-ruler-v .template-ruler-label[data-v-ee10356f] { top: 10px; left: 1px; writing-mode: vertical-rl;
+}
+.hs-printpress .canvas-view-toolbar[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+.hs-printpress .canvas-zoom-value[data-v-ee10356f] { min-width: 68px; font-variant-numeric: tabular-nums;
+}
+
+/* 拖图片进来时给明确高亮：让用户清楚「此时松手就会被当成底图」。
+   用主题变量，深色模式下自动跟着变。 */
+.hs-printpress .canvas-wrap.drop-active .canvas[data-v-ee10356f] {
+  outline: 2px dashed var(--cinnabar);
+  outline-offset: -3px;
+}
+.hs-printpress .canvas[data-v-ee10356f] {
+  position: relative;
+  width: 760px;
+  background: #fff;
+  outline: 1px solid var(--line-strong);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* 与上方 `.toolbar` 同款卡片容器。此前是无边框无底色的裸行，视觉上像工具栏「漏出来的第三行」，
+   但它其实是独立的一组（图层底图），套上卡片才有正确的层级。 */
+.hs-printpress .design-toolbar[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-card);
+}
+.hs-printpress .canvas-design[data-v-ee10356f] { position: absolute; inset: 0; cursor: pointer; overflow: hidden;
+}
+.hs-printpress .canvas-design.selected[data-v-ee10356f] { outline: 2px solid var(--cinnabar); outline-offset: -2px;
+}
+.hs-printpress .canvas-bg[data-v-ee10356f] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* 底图铺满整张纸，没有边框就完全看不出「选中了它」 */
+.hs-printpress .canvas-bg.selected[data-v-ee10356f] {
+  outline: 2px solid var(--cinnabar);
+  outline-offset: -2px;
+}
+
+/* ---- 无底图时的上传入口（工具栏的「上传底图」按钮已移除） ---- */
+/* 容器铺满画布但 pointer-events: none，只有中间那块按钮可点——
+   否则已经有字段时，这块会把纸面中央的字段一起挡住、拖都拖不动 */
+.hs-printpress .canvas-drop[data-v-ee10356f] {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+.hs-printpress .canvas-drop-btn[data-v-ee10356f] {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 20px 30px;
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 10px;
+  background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1));
+  color: var(--stone);
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.hs-printpress .canvas-drop-btn[data-v-ee10356f]:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .canvas-drop-title[data-v-ee10356f] { font-size: 14px; font-weight: 600;
+}
+.hs-printpress .canvas-drop-sub[data-v-ee10356f] { font-size: 12px;
+}
+.hs-printpress .canvas-drop-tip[data-v-ee10356f] { margin: 0; font-size: 12px; color: var(--stone);
+}
+
+/* 已经有字段了：收成底部的小胶囊，别占住纸面中央 */
+.hs-printpress .canvas-drop.drop-compact[data-v-ee10356f] { justify-content: flex-end; padding-bottom: 12px;
+}
+.hs-printpress .canvas-drop.drop-compact .canvas-drop-btn[data-v-ee10356f] {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.hs-printpress .canvas-drop.drop-compact .canvas-drop-title[data-v-ee10356f] { font-size: 12px;
+}
+.hs-printpress .canvas-drop.drop-compact .canvas-drop-sub[data-v-ee10356f] { font-size: 11px;
+}
+
+/* 有底图时鼠标进纸面的提示。底图没有按钮，删除靠「点选中 + Delete」，
+   提示得及时出现，否则用户根本不知道它还能删 */
+.hs-printpress .bg-tip[data-v-ee10356f] {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  z-index: 6;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--dsw-alias-label-primary) 62%, transparent);
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.hs-printpress .canvas:hover .bg-tip[data-v-ee10356f] { opacity: 1;
+}
+
+/* ---- 多联格子：页面上的一个成品位 ---- */
+/* 必须是 absolute 且形成包含块，字段的百分比坐标才是「相对格子」——
+   与渲染引擎输出（.cell）保持同一语义，画布所见即打印所得 */
+.hs-printpress .canvas-cell[data-v-ee10356f] {
+  position: absolute;
+  overflow: hidden;
+}
+.hs-printpress .canvas-cell.cut[data-v-ee10356f] {
+  outline: 1px dashed var(--cinnabar);
+  outline-offset: -1px;
+}
+
+/* ---- 对折桌牌：上半联只读镜像，下半联（fold-ref）为编辑参照系 ----
+   字段百分比坐标相对半页——与渲染引擎 .fold-half 输出保持同一语义 */
+.hs-printpress .canvas-fold-half[data-v-ee10356f] {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.hs-printpress .canvas-fold-half.flip[data-v-ee10356f] {
+  top: 0;
+  transform: rotate(180deg);
+  pointer-events: none; /* 镜像联只看不摸，拖拽/吸附数学全部落在下半联 */
+  opacity: 0.92;
+}
+.hs-printpress .canvas-fold-half.fold-ref[data-v-ee10356f] { top: 50%;
+}
+.hs-printpress .canvas-fold-line[data-v-ee10356f] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  border-top: 1px dashed var(--stone);
+  pointer-events: none;
+}
+
+/* 画布字段框：**必须与渲染引擎的 .pf 共用同一套定位口径**。
+   两边都靠「盒宽」算 translateX 位移（anchorRatio：center→0.5 / right→1 / left→0），
+   所以画布盒宽必须**恰好等于文字宽**，多出来的每一像素都会变成出片位置漂移。
+
+   踩过的坑（用户报「导出版本的字段会往右漂移一点点」）：
+   ① `padding: 2px 6px` + `border: 1px dashed` 让盒比文字两侧各宽 6.8px，而渲染的 .pf
+      是 padding:0 / border:0 ⇒ 左对齐偏 +6.8px、右对齐反向偏 −6.8px（实测 1.88mm）。
+   ② `max-width: 90%` 在长文本时把盒宽截到 90%（文字 827px、盒只剩 682px），
+      而 transform:translateX() 的百分比是按**盒宽**算的 ⇒ 居中长文本偏 72px、
+      右对齐偏 145px（实测 21.92mm / 41.96mm）——这才是"漂移"最刺眼的那种。
+   现在：盒宽 = 文字宽（nowrap 下 shrink-to-fit，与渲染一致）；hover / 选中态改用
+   **outline**（不参与布局）画在文字外侧。
+   —— 动这段之前先读 test/canvas-align.cjs，它钉住了「不许有 padding / max-width」。 */
+.hs-printpress .field-box[data-v-ee10356f] {
+  position: absolute;
+  white-space: nowrap;
+  line-height: normal; /* 与渲染 .pf 一致（不设 line-height 即 normal） */
+  cursor: move;
+  user-select: none;
+}
+.hs-printpress .field-box[data-v-ee10356f]:hover {
+  outline: 1px dashed var(--line-strong);
+  outline-offset: 3px;
+}
+.hs-printpress .field-box.selected[data-v-ee10356f] {
+  outline: 1px solid var(--cinnabar);
+  outline-offset: 3px;
+}
+.hs-printpress .field-resize[data-v-ee10356f] { position: absolute; right: -6px; bottom: -6px; width: 12px; height: 12px; background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); border: 1px solid var(--cinnabar); border-radius: 2px; cursor: nwse-resize; z-index: 3;
+}
+.hs-printpress .field-box.nodata[data-v-ee10356f] {
+  opacity: 0.45;
+  outline: 1px dashed var(--cinnabar);
+  outline-offset: 3px;
+}
+
+/* 失效字段：数据列不存在——朱砂警示标，一眼定位打印中心「字段不匹配」的来源 */
+.hs-printpress .field-box.stale[data-v-ee10356f] {
+  outline: 1px dashed var(--cinnabar);
+  outline-offset: 3px;
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .field-box.stale[data-v-ee10356f]::after {
+  content: '已失效';
+  position: absolute;
+  top: -15px;
+  left: -7px; /* 盒已无 padding，补偿回原来的视觉位置 */
+  padding: 0 5px;
+  border-radius: 4px;
+  background: var(--cinnabar);
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  font-size: 10px;
+  line-height: 1.5;
+}
+.hs-printpress .canvas-hint[data-v-ee10356f] {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone);
+  font-size: 13px;
+  /* 纯文字提示，别吃事件——它铺满整张纸，否则点它选不中底图 */
+  pointer-events: none;
+}
+
+/* 字段面板与属性合成 viewport 浮窗：始终贴右、随窗口尺寸重定位，内容超高时内部滚动。 */
+.hs-printpress .field-dock[data-v-ee10356f] {
+  position: fixed;
+  top: 50%;
+  right: clamp(12px, 2vw, 28px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(252px, calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper-card);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--dsw-alias-label-primary) 24%, transparent);
+  transform: translateY(-50%);
+}
+.hs-printpress .props[data-v-ee10356f] {
+  flex: 0 0 auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.hs-printpress .prop-row[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.hs-printpress .prop-label[data-v-ee10356f] { font-size: 12px; color: var(--ink-2); flex-shrink: 0;
+}
+.hs-printpress .prop-input[data-v-ee10356f] {
+  width: 120px;
+  padding: 4px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 12px;
+}
+.hs-printpress .prop-color[data-v-ee10356f] { width: 60px; height: 28px; border: 1px solid var(--line-strong); background: var(--input-bg);
+}
+.hs-printpress .btn-icon[data-v-ee10356f] { padding: 6px 10px;
+}
+.hs-printpress .btn-icon[data-v-ee10356f]:disabled { opacity: 0.4; cursor: default;
+}
+.hs-printpress .align-bar[data-v-ee10356f] {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 6px;
+  background: var(--cinnabar-soft);
+}
+
+/* ---- 字段面板：数据页启用「印」的字段，点击即加入画布 ---- */
+.hs-printpress .field-palette[data-v-ee10356f] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 6px;
+  max-height: min(42dvh, 340px);
+  overflow-y: auto;
+}
+.hs-printpress .palette-head[data-v-ee10356f] {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.hs-printpress .palette-label[data-v-ee10356f] {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--stone);
+}
+.hs-printpress .palette-toggle[data-v-ee10356f] {
+  padding: 2px 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--stone);
+  font-size: 11px;
+  cursor: pointer;
+}
+.hs-printpress .palette-toggle[data-v-ee10356f]:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+.hs-printpress .palette-chip[data-v-ee10356f] {
+  min-width: 0;
+  overflow: hidden;
+  padding: 5px 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.hs-printpress .palette-chip[data-v-ee10356f]:hover:not(:disabled) {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .palette-chip[data-v-ee10356f]:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.hs-printpress .palette-empty[data-v-ee10356f] { grid-column: 1 / -1; font-size: 12px; color: var(--stone);
+}
+.hs-printpress .align-label[data-v-ee10356f] { font-size: 12px; color: var(--cinnabar); margin-right: 4px;
+}
+.hs-printpress .btn-mini[data-v-ee10356f] { padding: 3px 10px; font-size: 12px;
+}
+.hs-printpress .snap-guide[data-v-ee10356f] {
+  position: absolute;
+  background: var(--cinnabar);
+  pointer-events: none;
+  z-index: 10;
+}
+.hs-printpress .guide-v[data-v-ee10356f] { top: 0; bottom: 0; width: 1px;
+}
+.hs-printpress .guide-h[data-v-ee10356f] { left: 0; right: 0; height: 1px;
+}
+.hs-printpress .template-guide-line[data-v-ee10356f], .hs-printpress .template-guide-drag[data-v-ee10356f] { position: absolute; pointer-events: none; z-index: 9;
+}
+.hs-printpress .template-guide-line.guide-v[data-v-ee10356f] { border-left: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .template-guide-line.guide-h[data-v-ee10356f] { border-top: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .template-guide-drag[data-v-ee10356f] { z-index: 10;
+}
+.hs-printpress .template-guide-drag.guide-v[data-v-ee10356f] { border-left: 1px dashed var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .template-guide-drag.guide-h[data-v-ee10356f] { border-top: 1px dashed var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+
+/* 多选成员：用 box-shadow 画环，这样能和 .selected 的 outline 同时显示
+   （一个元素只有一条 outline，若这里也用 outline 会把选中态盖掉）。
+   box-shadow 同样不参与布局，不会破坏盒宽口径。 */
+.hs-printpress .field-box.inmulti[data-v-ee10356f] {
+  box-shadow: 0 0 0 1px var(--cinnabar);
+}
+.hs-printpress .fill-badge[data-v-ee10356f] {
+  font-size: 11px;
+  color: var(--ok);
+  border: 1px solid var(--ok);
+  border-radius: 8px;
+  padding: 1px 8px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.hs-printpress .fill-badge.warn[data-v-ee10356f] {
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+.hs-printpress .fill-badge.warn-strong[data-v-ee10356f] {
+  color: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  border-color: var(--cinnabar);
+  background: var(--cinnabar);
+  white-space: normal;
+  line-height: 1.5;
+}
+.hs-printpress .kbd-hint[data-v-ee10356f] {
+  font-size: 11px;
+  color: var(--stone);
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+.hs-printpress .prop-check[data-v-ee10356f] { width: 16px; height: 16px; accent-color: var(--cinnabar);
+}
+.hs-printpress .prop-meta[data-v-ee10356f] { font-size: 11px; color: var(--stone);
+}
+.hs-printpress .prop-align-hint[data-v-ee10356f] { margin: -6px 0 10px; line-height: 1.5;
+}
+.hs-printpress .prop-remove[data-v-ee10356f] { width: 100%; margin-top: 4px;
+}
+
+.hs-printpress .text-color-picker[data-v-3d4864fb] { min-width: 0; display: grid; gap: 6px; font-size: 12px;
+}
+.hs-printpress .field-label[data-v-3d4864fb] { color: var(--ink-2);
+}
+.hs-printpress .color-entry[data-v-3d4864fb] { display: flex; min-width: 0; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--input-bg); overflow: hidden;
+}
+.hs-printpress .color-entry button[data-v-3d4864fb] { border: 0; color: var(--ink); background: transparent; cursor: pointer;
+}
+.hs-printpress .color-toggle[data-v-3d4864fb] { flex: 1; display: flex; align-items: center; gap: 7px; min-width: 0; min-height: 38px; padding: 5px; text-align: left;
+}
+.hs-printpress .swatch[data-v-3d4864fb] { width: 26px; height: 26px; flex-shrink: 0; border: 1px solid color-mix(in srgb, var(--hs-border-l2,var(--dsw-alias-border-l2)) 40%, transparent); border-radius: 4px;
+}
+.hs-printpress code[data-v-3d4864fb] { font: 11px ui-monospace, Consolas, monospace;
+}
+.hs-printpress .chevron[data-v-3d4864fb] { margin-left: auto;
+}
+.hs-printpress .pipette[data-v-3d4864fb] { flex: 0 0 34px; display: grid; place-items: center; border-left: 1px solid var(--line) !important; padding: 4px;
+}
+.hs-printpress .pipette[aria-pressed="true"][data-v-3d4864fb] { color: var(--cinnabar); background: var(--cinnabar-soft);
+}
+.hs-printpress button[data-v-3d4864fb]:disabled { opacity: .45; cursor: default;
+}
+.hs-printpress button[data-v-3d4864fb]:focus-visible, .hs-printpress .color-square[data-v-3d4864fb]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: -2px;
+}
+.hs-printpress .pick-hint[data-v-3d4864fb] { margin: 0; color: var(--cinnabar); line-height: 1.5;
+}
+.hs-printpress .color-panel[data-v-3d4864fb] { display: grid; gap: 9px; padding: 9px; background: var(--paper-card); border: 1px solid var(--line); border-radius: 7px;
+}
+.hs-printpress .color-square[data-v-3d4864fb] { position: relative; height: 110px; background-image: linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, transparent); border-radius: 4px; cursor: crosshair; touch-action: none;
+}
+.hs-printpress .square-marker[data-v-3d4864fb] { position: absolute; width: 9px; height: 9px; border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 1px #0009; transform: translate(-50%, -50%); pointer-events: none;
+}
+.hs-printpress .hue[data-v-3d4864fb] { width: 100%; height: 12px; margin: 2px 0; padding: 0; border: 0; border-radius: 8px; appearance: none; background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); cursor: pointer;
+}
+.hs-printpress .hue[data-v-3d4864fb]::-webkit-slider-thumb { appearance: none; width: 9px; height: 18px; border: 2px solid white; border-radius: 4px; background: transparent; box-shadow: 0 0 0 1px #0008;
+}
+.hs-printpress .hex-field[data-v-3d4864fb] { display: flex; align-items: center; gap: 6px; font-size: 11px;
+}
+.hs-printpress .hex-field input[data-v-3d4864fb] { width: 100%; min-width: 0; box-sizing: border-box; padding: 5px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--input-bg); color: var(--ink); font: 11px ui-monospace, Consolas, monospace;
+}
+.hs-printpress .presets[data-v-3d4864fb] { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;
+}
+.hs-printpress .presets button[data-v-3d4864fb] { width: 100%; height: 19px; padding: 0; border: 1px solid color-mix(in srgb, var(--hs-border-l2,var(--dsw-alias-border-l2)) 40%, transparent); border-radius: 3px; cursor: pointer;
+}
+
+.hs-printpress .asset-library[data-v-62935935] { display: flex; flex-direction: column; gap: 8px;
+}
+.hs-printpress .asset-actions[data-v-62935935] { display: flex; gap: 7px; flex-wrap: wrap;
+}
+.hs-printpress .asset-actions button[data-v-62935935] { flex: 1; font-size: 12px; padding: 7px 4px;
+}
+/* 「打开素材库文件夹」独占一行全宽：256px 侧栏里 4 个按钮并排会把文字挤成两行 */
+.hs-printpress .asset-actions .asset-open-folder[data-v-62935935] { flex: 1 1 100%;
+}
+.hs-printpress .asset-search[data-v-62935935] { width: 100%; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); font-size: 13px;
+}
+.hs-printpress .asset-filters[data-v-62935935] { display: flex; flex-wrap: wrap; gap: 5px;
+}
+.hs-printpress .chip[data-v-62935935] { font-size: 11px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink-2); cursor: pointer;
+}
+.hs-printpress .chip.on[data-v-62935935] { border-color: var(--cinnabar); color: var(--cinnabar); background: var(--paper-card);
+}
+.hs-printpress .asset-error[data-v-62935935] { color: var(--warn); font-size: 11px;
+}
+.hs-printpress .asset-purge[data-v-62935935] { border: 1px solid var(--warn-line); background: var(--warn-soft); border-radius: 7px; padding: 9px;
+}
+.hs-printpress .asset-purge p[data-v-62935935] { font-size: 11px; line-height: 1.6; margin: 0 0 8px; color: var(--ink-2);
+}
+.hs-printpress .asset-purge-actions[data-v-62935935] { display: flex; gap: 7px;
+}
+.hs-printpress .asset-purge-actions button[data-v-62935935] { flex: 1; font-size: 12px; padding: 6px;
+}
+.hs-printpress .asset-purge-actions button[data-v-62935935]:first-child { border-color: var(--warn); color: var(--warn); background: var(--paper-card);
+}
+.hs-printpress .asset-list[data-v-62935935] { display: flex; flex-direction: column; gap: 7px; max-height: calc(100vh - 360px); overflow: auto;
+}
+.hs-printpress .asset-usage[data-v-62935935]{padding:9px;margin:8px 0;border:1px solid var(--line);border-radius:7px;background:var(--paper);font-size:11px;line-height:1.6;max-height:230px;overflow:auto}
+.hs-printpress .asset-usage p[data-v-62935935]{margin:5px 0;color:var(--stone)}
+.hs-printpress .asset-usage-row[data-v-62935935]{padding:5px 0;border-top:1px solid var(--line)}
+.hs-printpress .asset-card[data-v-62935935] { display: grid; grid-template-columns: 46px 1fr auto; grid-template-areas: 'thumb meta actions' 'edit edit edit'; gap: 6px 8px; align-items: center; padding: 7px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); cursor: pointer;
+}
+.hs-printpress .asset-card.archived[data-v-62935935] { opacity: 0.6;
+}
+.hs-printpress .asset-thumb[data-v-62935935] { grid-area: thumb; width: 46px; height: 46px; border-radius: 5px; overflow: hidden; background: var(--paper-card); display: flex; align-items: center; justify-content: center;
+}
+.hs-printpress .asset-thumb img[data-v-62935935] { width: 100%; height: 100%; object-fit: cover;
+}
+.hs-printpress .asset-thumb-ph[data-v-62935935] { color: var(--stone); font-size: 16px;
+}
+.hs-printpress .asset-meta[data-v-62935935] { grid-area: meta; min-width: 0;
+}
+.hs-printpress .asset-name[data-v-62935935] { display: block; font-size: 12px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .asset-tags[data-v-62935935] { display: block; font-size: 10px; color: var(--stone); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .asset-sub[data-v-62935935] { display: block; font-size: 10px; color: var(--warn);
+}
+/* 行内操作按钮 hover 才显示：平时只留缩略图 + 名称，降噪；归档件常显（要能看到「恢复」） */
+.hs-printpress .asset-card-actions[data-v-62935935] { grid-area: actions; display: flex; gap: 2px; opacity: 0; transition: opacity 0.12s;
+}
+.hs-printpress .asset-card:hover .asset-card-actions[data-v-62935935],
+.hs-printpress .asset-card:focus-within .asset-card-actions[data-v-62935935],
+.hs-printpress .asset-card.archived .asset-card-actions[data-v-62935935] { opacity: 1;
+}
+.hs-printpress .asset-card-actions .icon-button.on[data-v-62935935] { color: var(--cinnabar);
+}
+.hs-printpress .asset-edit[data-v-62935935] { grid-area: edit; display: flex; flex-direction: column; gap: 5px; border-top: 1px solid var(--line); padding-top: 7px;
+}
+.hs-printpress .asset-edit label[data-v-62935935] { display: flex; flex-direction: column; font-size: 10px; color: var(--stone); gap: 2px;
+}
+.hs-printpress .asset-edit input[data-v-62935935] { padding: 5px 7px; border: 1px solid var(--line); border-radius: 5px; background: var(--paper); color: var(--ink); font-size: 12px;
+}
+.hs-printpress .asset-edit-actions[data-v-62935935] { display: flex; gap: 6px;
+}
+.hs-printpress .asset-edit-actions button[data-v-62935935] { flex: 1; font-size: 11px; padding: 5px;
+}
+.hs-printpress .asset-pager[data-v-62935935] { display: flex; align-items: center; justify-content: space-between; gap: 6px;
+}
+.hs-printpress .asset-pager button[data-v-62935935] { font-size: 11px; padding: 5px 9px;
+}
+/* 「原件已被删除」提示弹窗（与 ConfirmDialog 同调的宣纸墨韵）。
+   整体下移到画布工具栏那一行（撤销 / 重做 / 上移 / 下移 / 置顶 / 置底）下方：原本垂直居中，
+   窗口一矮（≲720px）弹窗顶部就压到那排按钮上。给遮罩留出上方 216px 再居中 ⇒ 顶部始终 ≥216px
+   （工具栏底 ≈211px）；弹窗比可用空间还高时改为滚动，也不会顶到按钮上。 */
+.hs-printpress .asset-missing-mask[data-v-62935935] { position: fixed; inset: 0; background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent); display: flex; align-items: center; justify-content: center; padding: 216px 20px 24px; overflow: auto; z-index: 120;
+}
+.hs-printpress .asset-missing-box[data-v-62935935] { width: 380px; max-width: calc(100vw - 40px); background: var(--paper-card); border: 1px solid var(--line-strong); border-radius: 10px; padding: 18px 20px; box-shadow: 0 8px 28px color-mix(in srgb, var(--dsw-alias-label-primary) 18%, transparent);
+}
+.hs-printpress .asset-missing-title[data-v-62935935] { margin: 0 0 8px; font-size: 15px; color: var(--cinnabar);
+}
+.hs-printpress .asset-missing-lead[data-v-62935935] { margin: 0 0 8px; font-size: 13px; line-height: 1.7; color: var(--ink-2);
+}
+.hs-printpress .asset-missing-list[data-v-62935935] { margin: 0 0 8px; padding-left: 18px; max-height: 180px; overflow: auto; font-size: 12px; line-height: 1.8; color: var(--ink);
+}
+.hs-printpress .asset-missing-hint[data-v-62935935] { margin: 0 0 14px; font-size: 12px; color: var(--stone);
+}
+.hs-printpress .asset-missing-actions[data-v-62935935] { display: flex; justify-content: flex-end;
+}
+.hs-printpress .asset-missing-actions button[data-v-62935935] { padding: 6px 16px; font-size: 13px; border: 1px solid var(--line-strong); border-radius: 6px; background: transparent; color: var(--ink); cursor: pointer;
+}
+.hs-printpress .asset-missing-actions button[data-v-62935935]:hover { background: var(--cinnabar-soft);
+}
+
+.hs-printpress .design-image-menu[data-v-22cfa293] { position: fixed; z-index: 2100; min-width: 190px; padding: 5px; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--paper-card); color: var(--ink); box-shadow: 0 6px 24px color-mix(in srgb, var(--dsw-alias-label-primary) 20%, transparent);
+}
+.hs-printpress .design-image-menu button[data-v-22cfa293] { display: block; width: 100%; border: 0; text-align: left; padding: 10px 14px;
+}
+.hs-printpress .design-image-menu button[data-v-22cfa293]:hover:not(:disabled), .hs-printpress .design-image-menu button[data-v-22cfa293]:focus-visible { background: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 7%, transparent);
+}
+.hs-printpress .design-image-menu span[data-v-22cfa293] { display: block; padding: 6px 14px; font-size: 12px;
+}
+.hs-printpress .designer-more[data-v-22cfa293] { position: relative;
+}
+.hs-printpress .designer-more summary[data-v-22cfa293] { list-style: none; cursor: pointer; padding: 6px 9px; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--paper-card); font-size: 12px; color: var(--ink);
+}
+.hs-printpress .designer-more summary[data-v-22cfa293]::-webkit-details-marker { display: none;
+}
+.hs-printpress .designer-more summary[data-v-22cfa293]:hover, .hs-printpress .designer-more[open] summary[data-v-22cfa293] { color: var(--cinnabar); border-color: var(--cinnabar);
+}
+.hs-printpress .designer-more-menu[data-v-22cfa293] { position: absolute; z-index: 50; right: 0; top: calc(100% + 5px); min-width: 152px; padding: 5px; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--paper-card); box-shadow: 0 6px 24px color-mix(in srgb, var(--dsw-alias-label-primary) 20%, transparent);
+}
+.hs-printpress .designer-more-menu button[data-v-22cfa293] { display: block; width: 100%; border: 0; text-align: left; padding: 9px 10px; white-space: nowrap;
+}
+.hs-printpress .portrait-mask[data-v-22cfa293]{position:fixed;inset:0;z-index:2000;background:color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);display:grid;place-items:center}.hs-printpress .portrait-picker[data-v-22cfa293]{width:440px;padding:24px;background:var(--paper-card);color:var(--ink);border-radius:14px;box-shadow:0 20px 60px color-mix(in srgb, var(--dsw-alias-label-primary) 20%, transparent)}.hs-printpress .portrait-picker label[data-v-22cfa293]{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:16px 0}.hs-printpress .portrait-picker select[data-v-22cfa293]{max-width:280px}.hs-printpress .portrait-picker p[data-v-22cfa293]{color:var(--stone);line-height:1.7}
+.hs-printpress .designer-view[data-v-22cfa293] { min-width: 0;
+}
+.hs-printpress button[data-v-22cfa293] { border: 1px solid var(--line-strong); background: var(--paper-card); color: var(--ink); border-radius: 5px; padding: 6px 9px; font-size: 12px;
+}
+.hs-printpress button[data-v-22cfa293]:hover:not(:disabled) { border-color: var(--cinnabar); color: var(--cinnabar);
+}
+.hs-printpress button[data-v-22cfa293]:disabled { opacity: .42; cursor: default;
+}
+.hs-printpress button.primary[data-v-22cfa293] { color: var(--hs-on-accent,var(--dsw-alias-bg-base)); background: var(--hs-accent,var(--dsw-alias-brand-primary)); border-color: var(--cinnabar);
+}
+.hs-printpress button.primary[data-v-22cfa293]:hover:not(:disabled) { color: var(--hs-on-accent,var(--dsw-alias-bg-base)); filter: none;
+}
+/* 「素材库」开关的选中态（`on` 只此一处用）。布局与间距由 PageHeader 的
+   `.page-header__actions` 统一负责，这里只管这一个按钮自己的态。 */
+.hs-printpress button.on[data-v-22cfa293] { border-color: var(--cinnabar); color: var(--cinnabar); background: var(--paper-card);
+}
+/* 下拉里塞了「名称 — 说明」，收起来时按固定宽度截断；展开的列表仍是完整文案 */
+.hs-printpress .preset-picker[data-v-22cfa293] { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--ink-2);
+}
+.hs-printpress .preset-picker select[data-v-22cfa293] { max-width: 230px; font-size: 12px;
+}
+.hs-printpress .notice[data-v-22cfa293] { padding: 10px 12px; margin-bottom: 10px; border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: center; gap: 12px; font-size: 12px;
+}
+.hs-printpress .notice button[data-v-22cfa293] { margin-left: auto; flex-shrink: 0;
+}
+.hs-printpress .notice.error[data-v-22cfa293] { background: var(--warn-soft); color: var(--warn); border-color: var(--warn-line);
+}
+.hs-printpress .notice.success[data-v-22cfa293] { background: var(--ok-soft); color: var(--ok);
+}
+.hs-printpress .context-note[data-v-22cfa293] { background: var(--paper-card); color: var(--ink-2);
+}
+/* 导出完成条：文字占满一行（路径可能很长），按钮在第二行靠右 */
+.hs-printpress .export-done[data-v-22cfa293] { flex-wrap: wrap;
+}
+.hs-printpress .export-done-text[data-v-22cfa293] { flex: 1 1 100%;
+}
+.hs-printpress .export-done-path[data-v-22cfa293] { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; color: var(--ink-2); background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 6px; overflow-wrap: anywhere;
+}
+.hs-printpress .export-done button[data-v-22cfa293] { margin-left: 0;
+}
+.hs-printpress .export-done button[data-v-22cfa293]:first-of-type { margin-left: auto;
+}
+.hs-printpress .designer-workspace[data-v-22cfa293] { --actual-tools-w: var(--tools-w, 176px); display: grid; grid-template-columns: var(--actual-tools-w) minmax(0, 1fr); gap: 12px; align-items: start; position: relative;
+}
+.hs-printpress .designer-workspace.focus-canvas[data-v-22cfa293] { grid-template-columns: minmax(0, 1fr);
+}
+.hs-printpress .designer-workspace.focus-canvas .tools-panel[data-v-22cfa293],
+.hs-printpress .designer-workspace.focus-canvas .workspace-resizer[data-v-22cfa293] { display: none;
+}
+.hs-printpress .designer-workspace.focus-canvas .canvas-scroll[data-v-22cfa293] { height: calc(100vh - 250px); max-height: none;
+}
+.hs-printpress .designer-workspace.focus-canvas .canvas-toolbar[data-v-22cfa293],
+.hs-printpress .designer-workspace.focus-canvas .canvas-status[data-v-22cfa293] { padding-right: 8px;
+}
+/* 左栏宽度拖拽柄：骑在两列之间的 gap 上（11px 热区），拖动时全局禁选中防拖出选区 */
+.hs-printpress .workspace-resizer[data-v-22cfa293] { position: absolute; top: 0; bottom: 0; left: calc(var(--actual-tools-w) + 1px); width: 10px; z-index: 30; cursor: col-resize; touch-action: none;
+}
+.hs-printpress .workspace-resizer[data-v-22cfa293]::after { content: ''; position: absolute; top: 12px; bottom: 12px; left: 4px; width: 2px; border-radius: 1px; background: transparent; transition: background .15s;
+}
+.hs-printpress .workspace-resizer[data-v-22cfa293]:hover::after, .hs-printpress .designer-workspace.tools-resizing .workspace-resizer[data-v-22cfa293]::after { background: var(--cinnabar-soft);
+}
+.hs-printpress .designer-workspace.tools-resizing[data-v-22cfa293] { user-select: none; cursor: col-resize;
+}
+/* 素材库抽屉：浮在画布左侧（覆盖而非占列），打开不再挤压画布；内部自行滚动；点外部收起 */
+/* 素材库浮层顶部让开画布工具栏那一行（撤销 / 重做 / 上移 / 下移 / 置顶 / 置底）：
+   它原本 top: 0，从工作区顶部铺下来，会把工具栏左半整排盖住。工具栏高 48px，再留 8px 间隙
+   （2026-10-11 用户要求：别遮挡那一排按钮）。 */
+.hs-printpress .designer-panel.asset-library[data-v-22cfa293] { position: absolute; top: 56px; bottom: 0; left: calc(var(--actual-tools-w) + 12px); width: 256px; z-index: 40; box-shadow: 0 6px 24px color-mix(in srgb, var(--dsw-alias-label-primary) 22%, transparent);
+}
+/* 属性面板常驻画布右侧；选中图层时收起画布设置，让选中项的操作优先可见。
+   工具条与状态栏让出面板宽度，避免缩放和保存状态被遮挡。 */
+.hs-printpress .designer-panel.inspector[data-v-22cfa293] { position: absolute; top: 0; bottom: 0; right: 0; width: 264px; z-index: 40; box-shadow: 0 6px 24px color-mix(in srgb, var(--dsw-alias-label-primary) 22%, transparent);
+}
+.hs-printpress .canvas-column.inspector-open .canvas-toolbar[data-v-22cfa293],
+.hs-printpress .canvas-column.inspector-open .canvas-status[data-v-22cfa293] { padding-right: 276px;
+}
+.hs-printpress .designer-panel[data-v-22cfa293] { border: 1px solid var(--line); border-radius: 8px; background: var(--paper-card); padding: 12px; min-width: 0; max-height: calc(100vh - 200px); overflow: auto;
+}
+.hs-printpress h3[data-v-22cfa293] { font-size: 13px; margin: 4px 0 10px; display: flex; align-items: center; justify-content: space-between;
+}
+.hs-printpress h3[data-v-22cfa293]:not(:first-child) { margin-top: 20px; padding-top: 13px; border-top: 1px solid var(--line);
+}
+.hs-printpress h3 span[data-v-22cfa293] { font-weight: 400; font-size: 10px; color: var(--stone);
+}
+.hs-printpress h4[data-v-22cfa293] { font-size: 12px; margin: 14px 0 8px;
+}
+.hs-printpress .tool-grid[data-v-22cfa293], .hs-printpress .property-grid[data-v-22cfa293] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px;
+}
+.hs-printpress .add-tools button[data-v-22cfa293] { display: inline-flex; align-items: center; justify-content: center; gap: 3px; min-width: 0; min-height: 34px; padding: 6px 3px; white-space: nowrap;
+}
+.hs-printpress .add-tools button[data-v-22cfa293] .app-icon { width: 16px; height: 16px;
+}
+.hs-printpress .style-actions button[data-v-22cfa293] { min-width: 0; padding: 6px 3px; white-space: nowrap; font-size: 11px;
+}
+.hs-printpress .projects-panel[data-v-22cfa293] { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line);
+}
+.hs-printpress .projects-panel summary[data-v-22cfa293], .hs-printpress .board-settings > summary[data-v-22cfa293] { display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--ink); font-size: 13px; font-weight: 600; list-style: none;
+}
+.hs-printpress .projects-panel summary[data-v-22cfa293]::-webkit-details-marker, .hs-printpress .board-settings > summary[data-v-22cfa293]::-webkit-details-marker { display: none;
+}
+.hs-printpress .projects-panel summary[data-v-22cfa293]::after, .hs-printpress .board-settings > summary[data-v-22cfa293]::after { content: '›'; margin-left: auto; color: var(--stone); font-size: 18px; line-height: 1; transition: transform .15s;
+}
+.hs-printpress .projects-panel[open] summary[data-v-22cfa293]::after, .hs-printpress .board-settings[open] > summary[data-v-22cfa293]::after { transform: rotate(90deg);
+}
+.hs-printpress .panel-count[data-v-22cfa293] { margin-left: auto; color: var(--stone); font-size: 11px; font-weight: 400;
+}
+.hs-printpress .projects-panel summary[data-v-22cfa293]::after { margin-left: 0;
+}
+.hs-printpress .projects-panel .panel-count[data-v-22cfa293] + * { margin-left: 0;
+}
+.hs-printpress .projects-panel[open] .project-list[data-v-22cfa293] { margin-top: 8px;
+}
+.hs-printpress .board-settings > summary[data-v-22cfa293] { min-height: 28px; margin-bottom: 10px;
+}
+.hs-printpress .board-settings:not([open]) > summary[data-v-22cfa293] { margin-bottom: 0;
+}
+.hs-printpress .board-settings > summary[data-v-22cfa293]:focus-visible, .hs-printpress .projects-panel summary[data-v-22cfa293]:focus-visible, .hs-printpress .layer-actions button[data-v-22cfa293]:focus-visible, .hs-printpress .icon-button[data-v-22cfa293]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px;
+}
+.hs-printpress .gradient-editor[data-v-22cfa293] { display: grid; gap: 7px; margin: 8px 0;
+}
+.hs-printpress .gradient-editor > label[data-v-22cfa293] { margin-bottom: 0;
+}
+.hs-printpress .gradient-stop[data-v-22cfa293] { display: grid; grid-template-columns: minmax(42px, auto) 34px minmax(40px, 1fr) minmax(40px, 1fr); align-items: center; gap: 5px; color: var(--ink-2); font-size: 11px;
+}
+.hs-printpress .gradient-stop input[type="color"][data-v-22cfa293] { height: 30px; padding: 2px;
+}
+.hs-printpress .gradient-stop input[type="number"][data-v-22cfa293] { padding: 6px 3px;
+}
+.hs-printpress .gradient-actions[data-v-22cfa293] { display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+}
+.hs-printpress .gradient-actions button[data-v-22cfa293] { min-width: 0; padding: 6px 3px; white-space: nowrap; font-size: 11px;
+}
+.hs-printpress .image-quick-actions[data-v-22cfa293] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-bottom: 10px;
+}
+.hs-printpress .image-quick-actions button[data-v-22cfa293] { min-width: 0; padding: 7px 3px; white-space: nowrap;
+}
+.hs-printpress .align-grid[data-v-22cfa293] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px;
+}
+.hs-printpress .align-grid button[data-v-22cfa293] { display: flex; align-items: center; justify-content: center; gap: 2px; min-width: 0; padding: 7px 2px; font-size: 10px; white-space: nowrap;
+}
+.hs-printpress .muted[data-v-22cfa293], .hs-printpress .locked-note[data-v-22cfa293] { font-size: 11px; color: var(--stone); line-height: 1.7; margin: 8px 0;
+}
+.hs-printpress .locked-note[data-v-22cfa293] { color: var(--warn);
+}
+.hs-printpress .project-list[data-v-22cfa293] { max-height: 190px; overflow: auto;
+}
+.hs-printpress .project-row[data-v-22cfa293] { display: flex; align-items: center; margin: 3px 0; border-radius: 5px; border: 1px solid var(--line);
+}
+.hs-printpress .project-row.current[data-v-22cfa293] { border-color: var(--cinnabar);
+}
+.hs-printpress .project-open[data-v-22cfa293] { flex: 1; min-width: 0; text-align: left; border: 0; background: transparent; padding: 7px;
+}
+.hs-printpress .project-open b[data-v-22cfa293], .hs-printpress .project-open small[data-v-22cfa293] { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .project-open b[data-v-22cfa293] { font-weight: 500;
+}
+.hs-printpress .project-open small[data-v-22cfa293] { font-size: 10px; color: var(--stone); margin-top: 4px;
+}
+.hs-printpress .icon-button[data-v-22cfa293] { display: inline-grid; place-items: center; flex: none; min-width: 28px; min-height: 28px; padding: 4px; border: 0; background: transparent; font-size: 12px;
+}
+.hs-printpress .layer-actions[data-v-22cfa293] { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin-bottom: 8px;
+}
+.hs-printpress .layer-actions button[data-v-22cfa293] { display: grid; place-items: center; min-width: 0; min-height: 32px; padding: 5px 2px;
+}
+.hs-printpress .layer-actions button[data-v-22cfa293]:last-child:hover:not(:disabled) { color: var(--warn); border-color: var(--warn);
+}
+.hs-printpress .layer-list[data-v-22cfa293] { max-height: 290px; overflow: auto; margin-bottom: 8px;
+}
+.hs-printpress .layer-row[data-v-22cfa293] { display: flex; align-items: center; min-height: 32px; border: 1px solid transparent; border-bottom-color: var(--line); border-radius: 4px; cursor: pointer; position: relative;
+}
+.hs-printpress .layer-row.selected[data-v-22cfa293] { border-color: var(--cinnabar); background: var(--cinnabar-soft);
+}
+.hs-printpress .layer-row.hidden .layer-name[data-v-22cfa293] { opacity: .45;
+}
+.hs-printpress .layer-row[draggable="true"] .layer-name[data-v-22cfa293] { cursor: grab;
+}
+.hs-printpress .layer-row.layer-dragging[data-v-22cfa293] { opacity: .45;
+}
+.hs-printpress .layer-row.layer-drop-above[data-v-22cfa293]::before, .hs-printpress .layer-row.layer-drop-below[data-v-22cfa293]::after { content: ''; position: absolute; left: 0; right: 0; height: 3px; background: var(--cinnabar); border-radius: 2px; z-index: 2; pointer-events: none;
+}
+.hs-printpress .layer-row.layer-drop-above[data-v-22cfa293]::before { top: -2px;
+}
+.hs-printpress .layer-row.layer-drop-below[data-v-22cfa293]::after { bottom: -2px;
+}
+.hs-printpress .layer-order-hint[data-v-22cfa293] { margin-bottom: 6px; line-height: 1.6;
+}
+.hs-printpress .group-row[data-v-22cfa293] { margin-top: 6px; background: var(--paper); font-weight: 600;
+}
+.hs-printpress .group-member[data-v-22cfa293] { margin-left: 12px; border-left-color: var(--line-strong);
+}
+.hs-printpress .layer-name[data-v-22cfa293] { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12px;
+}
+/* 行内操作层：hover 覆盖在名称上方（实底、不挤压布局），锁/开仍常显在行尾 */
+.hs-printpress .layer-row-actions[data-v-22cfa293] { position: absolute; right: 28px; top: 0; bottom: 0; display: none; align-items: center; gap: 1px; padding: 0 2px; background: var(--paper-card); border-radius: 4px;
+}
+.hs-printpress .layer-row.group-member .layer-row-actions[data-v-22cfa293], .hs-printpress .layer-row.selected .layer-row-actions[data-v-22cfa293] { background: var(--paper);
+}
+.hs-printpress .layer-row:hover .layer-row-actions[data-v-22cfa293], .hs-printpress .layer-row:focus-within .layer-row-actions[data-v-22cfa293] { display: inline-flex;
+}
+.hs-printpress .layer-row-actions .icon-button[data-v-22cfa293] { font-size: 11px; padding: 2px; min-width: 24px; min-height: 24px;
+}
+.hs-printpress .adopted-flag[data-v-22cfa293] { font-size: 11px; color: var(--warn); line-height: 1;
+}
+/* 徽标一律 nowrap + inline-block：表格/弹性布局按 min-content 分列宽，中文徽标可断字，
+   窄窗口下「仅编辑」会被拆成两行（同 I-14 的 .det-flag）。 */
+.hs-printpress .layer-flag[data-v-22cfa293] { flex: none; display: inline-block; white-space: nowrap; font-size: 11px; line-height: 1.4; padding: 0 5px; border-radius: 999px; color: var(--cinnabar); background: var(--cinnabar-soft); border: 1px solid currentColor;
+}
+.hs-printpress .canvas-column[data-v-22cfa293] { min-width: 0; position: relative; --inspector-reserve: 276px;
+}
+.hs-printpress .canvas-column[data-v-22cfa293]:not(.inspector-open) { --inspector-reserve: 0px;
+}
+.hs-printpress .canvas-toolbar[data-v-22cfa293] { display: flex; align-items: center; gap: 7px; overflow-x: auto; scrollbar-width: thin; background: var(--paper-card); border: 1px solid var(--line); padding: 8px; border-radius: 8px 8px 0 0;
+}
+.hs-printpress .canvas-toolbar > button[data-v-22cfa293], .hs-printpress .canvas-toolbar > label[data-v-22cfa293] { flex: 0 0 auto; white-space: nowrap;
+}
+.hs-printpress .canvas-toolbar[data-v-22cfa293]::-webkit-scrollbar { height: 6px;
+}
+.hs-printpress .canvas-toolbar[data-v-22cfa293]::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 6px;
+}
+.hs-printpress .order-button[data-v-22cfa293] { display: inline-flex; align-items: center; justify-content: center; gap: 3px;
+}
+.hs-printpress .toolbar-spacer[data-v-22cfa293] { flex: 1;
+}
+.hs-printpress .canvas-scroll[data-v-22cfa293] { overflow-x: hidden; overflow-y: auto; min-height: 410px; height: calc(100vh - 315px); max-height: 860px; padding: 30px; padding-right: calc(30px + var(--inspector-reserve)); background-color: var(--line); background-image: radial-gradient(var(--stone) .6px, transparent .6px); background-size: 12px 12px;
+}
+.hs-printpress .canvas-horizontal-scroll[data-v-22cfa293] { height: 20px; margin-right: var(--inspector-reserve); overflow-x: scroll; overflow-y: hidden; background: var(--paper-card); border: 1px solid var(--line); box-sizing: border-box; scrollbar-color: var(--stone) var(--paper-card);
+}
+.hs-printpress .canvas-horizontal-track[data-v-22cfa293] { height: 1px; pointer-events: none;
+}
+.hs-printpress .canvas-horizontal-scroll[data-v-22cfa293]::-webkit-scrollbar { height: 14px;
+}
+.hs-printpress .canvas-horizontal-scroll[data-v-22cfa293]::-webkit-scrollbar-thumb { background: var(--stone); border: 3px solid var(--paper-card); border-radius: 8px;
+}
+.hs-printpress .canvas-horizontal-scroll[data-v-22cfa293]::-webkit-scrollbar-track { background: var(--paper-card);
+}
+.hs-printpress .canvas-navigator[data-v-22cfa293] { position: absolute; left: 18px; bottom: 56px; z-index: 25; overflow: hidden; box-sizing: content-box; border: 2px solid var(--paper-card); background: white; box-shadow: 0 3px 16px #0005; cursor: crosshair; touch-action: none;
+}
+.hs-printpress .canvas-navigator[data-v-22cfa293] > :first-child { pointer-events: none;
+}
+.hs-printpress .navigator-viewport[data-v-22cfa293] { position: absolute; box-sizing: border-box; border: 2px solid var(--cinnabar); background: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 12%, transparent); pointer-events: none;
+}
+/* 拖入高亮：用 outline 而不是 border —— 不参与布局，画布尺寸不会被拖动过程改变 */
+.hs-printpress .canvas-scroll.drop-active[data-v-22cfa293] { outline: 2px dashed var(--cinnabar); outline-offset: -4px;
+}
+.hs-printpress .drop-hint[data-v-22cfa293] { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; background: var(--paper-card); opacity: .88; color: var(--cinnabar); font-size: 13px; font-weight: 600; pointer-events: none;
+}
+/* 画布内就地编辑：尺寸/字号/行距全部由 inline style 按图层数据给出，这里只做「把浏览器默认外观清干净」，
+   否则 textarea 自带的 border/padding 会让编辑中的字比出片时偏一点。outline 不占布局。 */
+.hs-printpress .inline-text-editor[data-v-22cfa293] { position: absolute; box-sizing: border-box; margin: 0; padding: 0; border: 0; background: transparent; resize: none; overflow: hidden; transform-origin: center center; pointer-events: auto; caret-color: currentColor; outline: 1px dashed var(--cinnabar); outline-offset: 2px;
+}
+.hs-printpress .design-stage.pixel-picking[data-v-22cfa293], .hs-printpress .design-stage.pixel-picking[data-v-22cfa293] * { cursor: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M4 20l1-4L16 5l3 3L8 19z%22 fill=%22%23fff%22 stroke=%22%231b2730%22 stroke-width=%221.6%22/%3E%3Cpath d=%22M14 7l3 3m-5-5l3-3 5 5-3 3%22 fill=%22%2371d3e8%22 stroke=%22%231b2730%22 stroke-width=%221.6%22/%3E%3C/svg%3E") 3 20, crosshair !important;
+}
+.hs-printpress .design-stage[data-v-22cfa293] { position: relative; flex-shrink: 0; background: #fff; box-shadow: 0 3px 16px #0003; margin: 0 auto; isolation: isolate;
+}
+.hs-printpress .record-field-overlay[data-v-22cfa293] { position:absolute; inset:0; pointer-events:none; overflow:hidden;
+}
+.hs-printpress .record-field[data-v-22cfa293] { position:absolute; white-space:nowrap; line-height:normal;
+}
+.hs-printpress .layer-hit[data-v-22cfa293] { position: absolute; cursor: move; touch-action: none; outline: 1px solid transparent; transform-origin: center; user-select: none;
+}
+.hs-printpress .layer-hit[data-v-22cfa293]:hover { outline-color: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 53%, transparent);
+}
+.hs-printpress .layer-hit.chosen[data-v-22cfa293] { outline: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary)); z-index: 2;
+}
+.hs-printpress .layer-hit.locked[data-v-22cfa293] { cursor: default;
+}
+.hs-printpress .layer-hit.locked.chosen[data-v-22cfa293] { outline: 1px dashed var(--hs-border-l2,var(--dsw-alias-border-l2));
+}
+.hs-printpress .layer-hit.line-hit[data-v-22cfa293], .hs-printpress .layer-hit.line-hit[data-v-22cfa293]:hover, .hs-printpress .layer-hit.line-hit.chosen[data-v-22cfa293], .hs-printpress .layer-hit.line-hit.locked.chosen[data-v-22cfa293] { outline: none;
+}
+.hs-printpress .layer-hit.line-hit.chosen[data-v-22cfa293] { z-index: 2;
+}
+.hs-printpress .layer-hit.line-hit[data-v-22cfa293]::after { content: ''; display: none; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed var(--hs-accent-ink,var(--dsw-alias-brand-primary)); transform: translateY(-50%); pointer-events: none;
+}
+.hs-printpress .layer-hit.line-hit[data-v-22cfa293]:hover::after, .hs-printpress .layer-hit.line-hit.chosen[data-v-22cfa293]::after { display: block;
+}
+.hs-printpress .layer-hit.line-hit.locked[data-v-22cfa293]::after { border-color: var(--hs-border-l2,var(--dsw-alias-border-l2));
+}
+.hs-printpress .resize-handle[data-v-22cfa293] { position: absolute; padding: 0; width: 11px; height: 11px; background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); border: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary)); border-radius: 2px; touch-action: none;
+}
+.hs-printpress .resize-handle.corner-se[data-v-22cfa293] { right: -6px; bottom: -6px; cursor: nwse-resize;
+}
+.hs-printpress .resize-handle.corner-sw[data-v-22cfa293] { left: -6px; bottom: -6px; cursor: nesw-resize;
+}
+.hs-printpress .resize-handle.corner-ne[data-v-22cfa293] { right: -6px; top: -6px; cursor: nesw-resize;
+}
+.hs-printpress .resize-handle.corner-nw[data-v-22cfa293] { left: -6px; top: -6px; cursor: nwse-resize;
+}
+.hs-printpress .resize-handle.line-resize-handle[data-v-22cfa293] { top: 50%; right: -6px; transform: translateY(-50%); cursor: ew-resize;
+}
+.hs-printpress .snap-guide[data-v-22cfa293] { position: absolute; pointer-events: none; z-index: 10;
+}
+.hs-printpress .snap-guide.vertical[data-v-22cfa293] { top: 0; bottom: 0; border-left: 1px dashed var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .snap-guide.horizontal[data-v-22cfa293] { left: 0; right: 0; border-top: 1px dashed var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .persistent-guide[data-v-22cfa293] { position: absolute; pointer-events: none; z-index: 9;
+}
+.hs-printpress .persistent-guide.vertical[data-v-22cfa293] { top: 0; bottom: 0; border-left: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+.hs-printpress .persistent-guide.horizontal[data-v-22cfa293] { left: 0; right: 0; border-top: 1px solid var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+}
+/* 布局网格：只画在画布内，pointer-events:none 保证它不吃任何鼠标事件。
+   线的疏密与颜色全由 inline 的 backgroundImage 给出（见 gridOverlayStyle）。 */
+.hs-printpress .grid-overlay[data-v-22cfa293] { position: absolute; inset: 0; pointer-events: none;
+}
+/*
+ * 标尺贴在画布**外缘**（bottom/right: 100%），与画布共用同一个 pxPerMm。
+ * overflow:hidden 让超出画布末缘的半格刻度不至于糊出边界；crosshair 提示「这里可以拖」。
+ */
+.hs-printpress .ruler[data-v-22cfa293] { position: absolute; overflow: hidden; background: var(--paper-card); color: var(--stone); font-size: 9px; line-height: 1; cursor: crosshair; touch-action: none; user-select: none;
+}
+.hs-printpress .ruler-h[data-v-22cfa293] { left: 0; bottom: 100%; height: 18px; border-bottom: 1px solid var(--line-strong);
+}
+.hs-printpress .ruler-v[data-v-22cfa293] { top: 0; right: 100%; width: 18px; border-right: 1px solid var(--line-strong);
+}
+.hs-printpress .ruler-tick[data-v-22cfa293] { position: absolute; background: var(--line-strong);
+}
+.hs-printpress .ruler-h .ruler-tick[data-v-22cfa293] { top: 0; width: 1px; height: 4px;
+}
+.hs-printpress .ruler-h .ruler-tick.major[data-v-22cfa293] { height: 9px;
+}
+.hs-printpress .ruler-v .ruler-tick[data-v-22cfa293] { left: 0; height: 1px; width: 4px;
+}
+.hs-printpress .ruler-v .ruler-tick.major[data-v-22cfa293] { width: 9px;
+}
+.hs-printpress .ruler-label[data-v-22cfa293] { position: absolute; white-space: nowrap;
+}
+.hs-printpress .ruler-h .ruler-label[data-v-22cfa293] { left: 2px; top: 8px;
+}
+/* 竖排数字：18px 宽的竖条里横排数字放不下，旋转后既省地方又一眼能读 */
+.hs-printpress .ruler-v .ruler-label[data-v-22cfa293] { top: 10px; left: 1px; writing-mode: vertical-rl;
+}
+.hs-printpress .snap-targets[data-v-22cfa293] { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px;
+}
+.hs-printpress .snap-targets label.inline[data-v-22cfa293] { margin: 3px 0;
+}
+.hs-printpress .canvas-status[data-v-22cfa293] { display: flex; justify-content: space-between; gap: 12px; padding: 9px; background: var(--paper-card); border: 1px solid var(--line); border-radius: 0 0 8px 8px; font-size: 11px; color: var(--ink-2);
+}
+.hs-printpress .unsaved[data-v-22cfa293] { color: var(--cinnabar);
+}
+.hs-printpress .shortcut-note[data-v-22cfa293] { font-size: 11px; color: var(--stone); line-height: 1.7; margin: 8px 0;
+}
+.hs-printpress .inspector label[data-v-22cfa293], .hs-printpress .tools-panel label[data-v-22cfa293] { display: flex; flex-direction: column; gap: 5px; color: var(--ink-2); font-size: 11px; margin-bottom: 9px;
+}
+.hs-printpress .inspector .property-grid > label[data-v-22cfa293] { margin-bottom: 2px;
+}
+.hs-printpress .color-adjust[data-v-22cfa293] { margin: 14px 0; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.hs-printpress .color-adjust summary[data-v-22cfa293] { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 12px; font-weight: 600; list-style: none;
+}
+.hs-printpress .color-adjust summary[data-v-22cfa293]::-webkit-details-marker { display: none;
+}
+.hs-printpress .color-adjust summary[data-v-22cfa293]::after { content: '›'; margin-left: auto; color: var(--stone); font-size: 18px; line-height: 1; transition: transform .15s;
+}
+.hs-printpress .color-adjust[open] summary[data-v-22cfa293]::after { transform: rotate(90deg);
+}
+.hs-printpress .color-adjust summary span[data-v-22cfa293] { color: var(--cinnabar); font-size: 11px; font-weight: 400;
+}
+.hs-printpress .color-adjust summary[data-v-22cfa293]:focus-visible, .hs-printpress .adjust-reset-field[data-v-22cfa293]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px;
+}
+.hs-printpress .adjust-list[data-v-22cfa293] { display: grid; gap: 8px; margin: 10px 0;
+}
+.hs-printpress .adjust-row[data-v-22cfa293] { display: grid; grid-template-columns: 42px minmax(0, 1fr) 38px 26px; gap: 4px; align-items: center; font-size: 11px;
+}
+.hs-printpress .inspector .adjust-row label[data-v-22cfa293] { margin: 0; white-space: nowrap;
+}
+.hs-printpress .adjust-row input[type="range"][data-v-22cfa293] { width: 100%; min-width: 0; margin: 0;
+}
+.hs-printpress .adjust-row output[data-v-22cfa293] { text-align: right; font-variant-numeric: tabular-nums;
+}
+.hs-printpress .adjust-reset-field[data-v-22cfa293] { width: 26px; height: 26px; padding: 0; font-size: 16px; line-height: 1;
+}
+.hs-printpress .inspector input[data-v-22cfa293], .hs-printpress .inspector select[data-v-22cfa293], .hs-printpress .inspector textarea[data-v-22cfa293], .hs-printpress .tools-panel input[data-v-22cfa293], .hs-printpress .tools-panel select[data-v-22cfa293], .hs-printpress .tools-panel textarea[data-v-22cfa293] { width: 100%; min-width: 0; border: 1px solid var(--line-strong); background: var(--input-bg); color: var(--ink); border-radius: 4px; padding: 6px; font: inherit; font-size: 12px;
+}
+.hs-printpress .inspector .color-field[data-v-22cfa293], .hs-printpress .tools-panel .color-field[data-v-22cfa293] { gap: 6px;
+}
+.hs-printpress .text-color-property[data-v-22cfa293] { grid-column: 1 / -1;
+}
+.hs-printpress .inspector .color-control[data-v-22cfa293], .hs-printpress .tools-panel .color-control[data-v-22cfa293] { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 40px; padding: 4px 10px 4px 5px; box-sizing: border-box; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--input-bg); transition: border-color .15s, box-shadow .15s;
+}
+.hs-printpress .inspector .color-control[data-v-22cfa293]:focus-within, .hs-printpress .tools-panel .color-control[data-v-22cfa293]:focus-within { border-color: var(--cinnabar); box-shadow: 0 0 0 2px var(--cinnabar-soft);
+}
+.hs-printpress .inspector .color-control input[type="color"][data-v-22cfa293], .hs-printpress .tools-panel .color-control input[type="color"][data-v-22cfa293] { flex: 0 0 34px; width: 34px; height: 30px; padding: 2px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper-card); cursor: pointer;
+}
+.hs-printpress .inspector .color-value[data-v-22cfa293], .hs-printpress .tools-panel .color-value[data-v-22cfa293] { color: var(--ink); font: 11px ui-monospace, Consolas, monospace; letter-spacing: .04em;
+}
+.hs-printpress .inspector .color-open[data-v-22cfa293], .hs-printpress .tools-panel .color-open[data-v-22cfa293] { margin-left: auto; color: var(--stone); font-size: 16px; line-height: 1;
+}
+.hs-printpress .inspector textarea[data-v-22cfa293] { resize: vertical; line-height: 1.6;
+}
+.hs-printpress label.inline[data-v-22cfa293] { display: flex; flex-direction: row; align-items: center; gap: 4px; font-size: 11px; margin: 0;
+}
+.hs-printpress label.inline input[data-v-22cfa293] { width: auto; margin: 3px;
+}
+.hs-printpress .inspector label.inline[data-v-22cfa293], .hs-printpress .tools-panel label.inline[data-v-22cfa293] { margin: 8px 0;
+}
+.hs-printpress fieldset[data-v-22cfa293] { border: 0; margin: 0; padding: 0; min-width: 0;
+}
+.hs-printpress fieldset[data-v-22cfa293]:disabled { opacity: .55;
+}
+.hs-printpress .guide-panel[data-v-22cfa293] { padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 14px 0;
+}
+.hs-printpress .guide-panel summary[data-v-22cfa293] { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--ink);
+}
+.hs-printpress .guide-panel summary span[data-v-22cfa293] { margin-left: 6px; font-weight: 400; color: var(--stone);
+}
+.hs-printpress .guide-list[data-v-22cfa293] { margin-top: 8px; max-height: 170px; overflow: auto;
+}
+.hs-printpress .guide-row[data-v-22cfa293] { display: flex; gap: 5px; align-items: center; margin: 5px 0; font-size: 11px;
+}
+.hs-printpress .guide-row input[data-v-22cfa293] { flex: 1; width: 65px; padding: 5px 3px;
+}
+.hs-printpress .guide-outside[data-v-22cfa293] { color: var(--warn); flex-shrink: 0; font-size: 10px;
+}
+.hs-printpress .export-mask[data-v-22cfa293] { position: fixed; inset: 0; z-index: 130; background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent); display: flex; align-items: center; justify-content: center;
+}
+.hs-printpress .reference-sample-note[data-v-22cfa293] { padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper-card); font-size: 12px;
+}
+.hs-printpress .reference-sample-note p[data-v-22cfa293] { color: var(--stone); line-height: 1.6; margin: 6px 0;
+}
+.hs-printpress .export-dialog[data-v-22cfa293] { width: 410px; padding: 24px; border-radius: 10px; background: var(--paper-card); border: 1px solid var(--line-strong); box-shadow: var(--shadow);
+}
+.hs-printpress .export-dialog h3[data-v-22cfa293] { font-size: 16px; margin: 0 0 12px;
+}
+.hs-printpress .export-dialog p[data-v-22cfa293] { font-size: 12px; line-height: 1.8; color: var(--ink-2);
+}
+.hs-printpress .export-dialog label[data-v-22cfa293]:not(.inline) { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 12px; margin: 14px 0;
+}
+.hs-printpress .export-dialog .export-dimensions[data-v-22cfa293] { font-size: 14px; font-weight: 600; color: var(--ink); padding: 10px 12px; background: var(--paper); border-radius: 6px; margin: 18px 0 12px;
+}
+.hs-printpress .export-dialog .export-error[data-v-22cfa293] { color: var(--warn); background: var(--warn-soft); padding: 8px 10px; border-radius: 5px;
+}
+.hs-printpress .export-actions[data-v-22cfa293] { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; flex-wrap: wrap;
+}
+/* 导入检查页：字体冲突要逐条给处理方式，比导出对话框宽一些，内容多了自己滚 */
+.hs-printpress .package-import[data-v-22cfa293] { width: 520px; max-height: 84vh; overflow: auto;
+}
+.hs-printpress .psd-report[data-v-22cfa293] { margin: 14px 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px;
+}
+.hs-printpress .psd-report h4[data-v-22cfa293] { margin: 0;
+}
+.hs-printpress .psd-report ul[data-v-22cfa293] { max-height: 220px; overflow: auto; margin: 8px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: var(--ink-2);
+}
+.hs-printpress .psd-report .psd-text-option[data-v-22cfa293] { display: flex; justify-content: flex-start; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.6;
+}
+.hs-printpress .psd-text-option input[data-v-22cfa293] { flex: none; margin-top: 3px;
+}
+.hs-printpress .package-fonts[data-v-22cfa293] { margin: 14px 0 0;
+}
+.hs-printpress .package-fonts h4[data-v-22cfa293] { font-size: 12px; margin: 0 0 8px; color: var(--ink-2);
+}
+.hs-printpress .package-font-row[data-v-22cfa293] { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; padding: 6px 0; border-top: 1px solid var(--line);
+}
+.hs-printpress .package-font-name[data-v-22cfa293] { font-weight: 600;
+}
+.hs-printpress .package-font-missing[data-v-22cfa293] { color: var(--warn);
+}
+@media (max-width: 1180px) {
+.hs-printpress .designer-workspace[data-v-22cfa293] { --actual-tools-w: min(260px, var(--tools-w, 176px)); grid-template-columns: var(--actual-tools-w) minmax(0, 1fr); gap: 8px;
+}
+.hs-printpress .designer-panel.asset-library[data-v-22cfa293] { width: 230px; left: calc(var(--actual-tools-w) + 8px);
+}
+.hs-printpress .designer-panel.inspector[data-v-22cfa293] { width: 236px;
+}
+.hs-printpress .canvas-column[data-v-22cfa293] { --inspector-reserve: 248px;
+}
+.hs-printpress .canvas-column.inspector-open .canvas-toolbar[data-v-22cfa293], .hs-printpress .canvas-column.inspector-open .canvas-status[data-v-22cfa293] { padding-right: 248px;
+}
+.hs-printpress .designer-panel[data-v-22cfa293] { padding: 9px;
+}
+.hs-printpress .order-button span[data-v-22cfa293] { display: none;
+}
+.hs-printpress .page-header[data-v-22cfa293] { align-items: flex-start;
+}
+}
+
+.hs-printpress .output-progress[data-v-70ad2334]{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;margin:12px 0;border:1px solid var(--line);border-radius:8px;background:var(--paper-card)}
+.hs-printpress .preview-paging[data-v-70ad2334]{display:flex;gap:8px;align-items:center;font-size:12px}
+.hs-printpress .preview-page-input[data-v-70ad2334] { width: 58px; padding: 5px 6px; box-sizing: border-box; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--input-bg); color: var(--ink); font: inherit; text-align: center;
+}
+.hs-printpress .preview-page-input[data-v-70ad2334]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 1px;
+}
+.hs-printpress .preview-page-input[data-v-70ad2334]:disabled { opacity: .5;
+}
+.hs-printpress .print-header[data-v-70ad2334] { margin-bottom: 8px;
+}
+.hs-printpress .print-header[data-v-70ad2334] .page-header__text { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px;
+}
+.hs-printpress .print-header[data-v-70ad2334] .page-header__desc { margin: 0; padding: 0; line-height: 1.4;
+}
+.hs-printpress .print-header[data-v-70ad2334] .page-header__actions { gap: 8px;
+}
+.hs-printpress .toolbar[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-card);
+}
+.hs-printpress .toolbar-row[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  min-width: 0;
+}
+.hs-printpress .toolbar-row-output[data-v-70ad2334] {
+  padding: 10px 0 2px;
+}
+.hs-printpress .toolbar-row-template[data-v-70ad2334] { flex: 1 1 380px;
+}
+.hs-printpress .output-settings[data-v-70ad2334] { min-width: 0; max-width: 100%;
+}
+.hs-printpress .output-settings[data-v-70ad2334]:not([open]) { flex: 0 1 auto;
+}
+.hs-printpress .output-settings[open][data-v-70ad2334] { flex: 1 0 100%; border-top: 1px solid var(--line); padding-top: 8px;
+}
+.hs-printpress .output-settings summary[data-v-70ad2334] { cursor: pointer; padding: 5px 9px; border: 1px solid var(--cinnabar); border-radius: 6px; background: var(--cinnabar-soft); color: var(--cinnabar); font-size: 12px; font-weight: 600;
+}
+.hs-printpress .output-settings summary[data-v-70ad2334]:hover { filter: brightness(.96);
+}
+.hs-printpress .output-settings summary[data-v-70ad2334]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px;
+}
+.hs-printpress .output-settings:not([open]) summary[data-v-70ad2334] { max-width: min(42vw, 520px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.hs-printpress .output-settings summary span[data-v-70ad2334] { color: var(--stone); font-weight: 400;
+}
+.hs-printpress .output-settings .format-note[data-v-70ad2334] { padding-top: 8px;
+}
+.hs-printpress .toolbar-control[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.hs-printpress .toolbar-name-fields[data-v-70ad2334],
+.hs-printpress .toolbar-actions[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hs-printpress .toolbar-name-plus[data-v-70ad2334] { color: var(--stone); font-size: 13px;
+}
+.hs-printpress .toolbar-actions[data-v-70ad2334] { margin-left: 0;
+}
+.hs-printpress .image-quality[data-v-70ad2334] { font-size: 13px; color: var(--stone);
+}
+.hs-printpress .image-quality input[data-v-70ad2334] { width: 60px; box-sizing: border-box; padding: 6px; border: 1px solid var(--line-strong); border-radius: 5px; color: var(--ink); background: var(--paper-card);
+}
+.hs-printpress .format-note[data-v-70ad2334] { margin: 0; color: var(--stone); font-size: 12px;
+}
+.hs-printpress .tb-label[data-v-70ad2334] {
+  font-size: 13px;
+  color: var(--stone);
+}
+.hs-printpress .scope-bar[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-card);
+}
+.hs-printpress .scope-note[data-v-70ad2334] { font-size: 12px; color: var(--stone);
+}
+.hs-printpress .range-count[data-v-70ad2334] { color: var(--ink-2); font-weight: 600;
+}
+.hs-printpress .tb-spacer[data-v-70ad2334] { flex: 1;
+}
+.hs-printpress .print-summary[data-v-70ad2334]{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin-bottom:8px;border:1px solid var(--line);border-radius:8px;background:var(--paper-card)}
+.hs-printpress .print-summary .range-bar[data-v-70ad2334]{margin:0;border:0;background:transparent;flex:0 1 auto}
+.hs-printpress .print-summary .range-bar .tb-spacer[data-v-70ad2334]{display:none}
+.hs-printpress .photo-preflight[data-v-70ad2334]{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:8px 12px;min-width:0;flex:1 1 auto;border-left:1px solid var(--line)}
+.hs-printpress .photo-preflight-error[data-v-70ad2334]{font-size:12px;color:var(--cinnabar)}
+.hs-printpress .photo-count[data-v-70ad2334]{padding:2px 8px;border:1px solid var(--line-strong);border-radius:6px;background:var(--paper);color:var(--ink);font-size:12px;cursor:pointer}
+.hs-printpress .photo-count.blocking[data-v-70ad2334]{border-color:var(--cinnabar);color:var(--cinnabar)}
+.hs-printpress .photo-issues[data-v-70ad2334]{flex-basis:100%;border-top:1px solid var(--line);padding-top:8px}
+.hs-printpress .photo-issues-head[data-v-70ad2334]{display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.hs-printpress .photo-issues-list[data-v-70ad2334]{max-height:230px;overflow:auto;margin-top:6px}
+.hs-printpress .photo-issue-row[data-v-70ad2334]{display:flex;align-items:center;gap:10px;padding:5px 0;border-top:1px solid var(--line);font-size:12px;overflow-wrap:anywhere}
+.hs-printpress .photo-edit-error[data-v-70ad2334]{padding:8px 12px;margin:0}
+.hs-printpress .photo-edit[data-v-70ad2334]{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--paper)}
+.hs-printpress .photo-edit-person[data-v-70ad2334]{font-size:12px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hs-printpress .photo-edit-hint[data-v-70ad2334],.hs-printpress .photo-edit-status[data-v-70ad2334]{font-size:12px;color:var(--stone)}
+.hs-printpress .photo-edit-status[data-v-70ad2334]{margin-left:auto;white-space:nowrap}
+.hs-printpress .photo-edit-controls[data-v-70ad2334]{display:flex;align-items:center;gap:6px}
+.hs-printpress .bound-ds[data-v-70ad2334] {
+  font-size: 13px;
+  color: var(--ink-2);
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+}
+.hs-printpress .rebind-result[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 6px;
+  background: var(--cinnabar-soft);
+}
+.hs-printpress .rebind-result.ok[data-v-70ad2334] {
+  border-color: var(--ok);
+  background: var(--ok-soft);
+}
+.hs-printpress .mismatch-bar[data-v-70ad2334] {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-soft);
+  align-items: flex-start;
+}
+.hs-printpress .btn[data-v-70ad2334] {
+  padding: 6px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--paper-card);
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+.hs-printpress .btn[data-v-70ad2334]:hover:not(:disabled) {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+.hs-printpress .btn[data-v-70ad2334]:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.hs-printpress .btn-primary[data-v-70ad2334] {
+  background: var(--hs-accent,var(--dsw-alias-brand-primary));
+  border-color: var(--cinnabar);
+  color: var(--hs-on-accent,var(--dsw-alias-bg-base));
+}
+.hs-printpress .btn-primary[data-v-70ad2334]:hover:not(:disabled) {
+  color: var(--hs-on-accent,var(--dsw-alias-bg-base));
+  opacity: 1;
+}
+@media (max-width: 1120px) {
+.hs-printpress .toolbar-actions[data-v-70ad2334] { margin-left: 0;
+}
+}
+@media (max-width: 680px) {
+.hs-printpress .toolbar[data-v-70ad2334] { padding: 10px;
+}
+.hs-printpress .toolbar-row[data-v-70ad2334] { align-items: flex-start;
+}
+.hs-printpress .toolbar-control[data-v-70ad2334] { align-items: flex-start; flex-direction: column;
+}
+.hs-printpress .toolbar-actions[data-v-70ad2334] { width: 100%;
+}
+.hs-printpress .toolbar-actions .btn[data-v-70ad2334] { flex: 1 1 auto;
+}
+.hs-printpress .photo-preflight[data-v-70ad2334] { border-left:0; border-top:1px solid var(--line); flex-basis:100%;
+}
+.hs-printpress .photo-edit-status[data-v-70ad2334] { margin-left:0;
+}
+}
+.hs-printpress .btn-mini[data-v-70ad2334] {
+  padding: 3px 10px;
+  font-size: 12px;
+}
+.hs-printpress .row-actions[data-v-70ad2334] {
+  white-space: nowrap;
+}
+.hs-printpress .row-actions .btn-mini + .btn-mini[data-v-70ad2334] {
+  margin-left: 6px;
+}
+.hs-printpress .empty-hint[data-v-70ad2334] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10vh;
+}
+.hs-printpress .hint-main[data-v-70ad2334] {
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.hs-printpress .hint-sub[data-v-70ad2334] {
+  font-size: 12px;
+  color: var(--stone);
+}
+.hs-printpress .preview-wrap[data-v-70ad2334] {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper-card);
+  overflow: hidden;
+}
+.hs-printpress .preview-bar[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.hs-printpress .preview-meta[data-v-70ad2334] {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+/* 底图输出分辨率：出片前唯一能提前判断「印出来清不清」的数 */
+.hs-printpress .preview-dpi[data-v-70ad2334] {
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  color: var(--stone);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .preview-dpi.dpi-good[data-v-70ad2334] { color: var(--ok); border-color: var(--ok); background: var(--ok-soft);
+}
+.hs-printpress .preview-dpi.dpi-ok[data-v-70ad2334] { color: var(--stone);
+}
+.hs-printpress .preview-dpi.dpi-low[data-v-70ad2334] { color: var(--cinnabar); border-color: var(--cinnabar); background: var(--cinnabar-soft);
+}
+.hs-printpress .preview-stage[data-v-70ad2334] { display: grid; min-width: 0; max-width: 100%; margin: 0 auto; align-items: center; background: var(--paper);
+}
+.hs-printpress .preview-stage.has-paging[data-v-70ad2334] { grid-template-columns: 50px minmax(0, 1fr) 50px;
+}
+.hs-printpress .preview-page-arrow[data-v-70ad2334] { display: grid; place-items: center; justify-self: center; width: 36px; height: 44px; padding: 6px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--paper-card); color: var(--ink-2); cursor: pointer;
+}
+.hs-printpress .preview-page-arrow svg[data-v-70ad2334] { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.hs-printpress .preview-page-arrow[data-v-70ad2334]:hover:not(:disabled) { color: var(--cinnabar); border-color: var(--cinnabar);
+}
+.hs-printpress .preview-page-arrow[data-v-70ad2334]:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px;
+}
+.hs-printpress .preview-page-arrow[data-v-70ad2334]:disabled { opacity: .35; cursor: default;
+}
+.hs-printpress .preview-scroll[data-v-70ad2334] {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+  padding: 16px;
+  background: var(--paper);
+}
+.hs-printpress .preview-holder[data-v-70ad2334] {
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.hs-printpress .preview-frame[data-v-70ad2334] {
+  display: block;
+  background: #fff;
+  transform-origin: top left;
+}
+.hs-printpress .history-trigger[data-v-70ad2334] { display: inline-flex; align-items: center; gap: 7px;
+}
+.hs-printpress .history-trigger span[data-v-70ad2334] { min-width: 18px; padding: 1px 5px; border-radius: 9px; background: var(--cinnabar-soft); color: var(--cinnabar); text-align: center; font-size: 11px;
+}
+.hs-printpress .modal-mask.history-mask[data-v-70ad2334] { z-index: 110;
+}
+.hs-printpress .modal.history-modal[data-v-70ad2334] { width: min(1120px, calc(100vw - 32px)); max-height: 86vh;
+}
+.hs-printpress .history-head[data-v-70ad2334] { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px;
+}
+.hs-printpress .history-head .modal-title[data-v-70ad2334] { margin: 0;
+}
+.hs-printpress .history-count[data-v-70ad2334] { margin: 4px 0 0; color: var(--stone); font-size: 12px;
+}
+.hs-printpress .history-table-wrap[data-v-70ad2334] { min-height: 0; overflow: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.hs-printpress .history-table-wrap .job-table[data-v-70ad2334] { min-width: 940px;
+}
+.hs-printpress .history-select[data-v-70ad2334] { width: 38px; text-align: center !important;
+}
+.hs-printpress .history-select input[data-v-70ad2334] { width: 15px; height: 15px; accent-color: var(--cinnabar);
+}
+.hs-printpress .history-empty[data-v-70ad2334] { padding: 20px; text-align: center;
+}
+.hs-printpress .job-table[data-v-70ad2334] {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.hs-printpress .job-table th[data-v-70ad2334] {
+  text-align: left;
+  padding: 7px 10px;
+  border-bottom: 2px solid var(--line-strong);
+  color: var(--stone);
+  font-weight: 500;
+}
+.hs-printpress .job-table td[data-v-70ad2334] {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-2);
+}
+.hs-printpress .job-del[data-v-70ad2334] { color: var(--cinnabar);
+}
+.hs-printpress .det-row[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+.hs-printpress .det-stats[data-v-70ad2334] {
+  font-size: 12px;
+  color: var(--stone);
+}
+.hs-printpress .det-flag[data-v-70ad2334] {
+  display: inline-block;        /* 让 padding/border 生效可预测；inline-block 不会换行成块 */
+  white-space: nowrap;         /* 关键：禁止徽标文本被拆行；
+                                       否则窗口缩小、表格列压到一字宽时，「完成」会拆成「完」/「成」两行 */
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink-2);
+  vertical-align: middle;
+}
+.hs-printpress .st-ok[data-v-70ad2334] {
+  color: var(--ok);
+  border-color: var(--ok);
+}
+.hs-printpress .st-failed[data-v-70ad2334] {
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+.hs-printpress .st-canceled[data-v-70ad2334] {
+  color: var(--stone);
+}
+.hs-printpress .modal-mask[data-v-70ad2334] {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--hs-bg-base,var(--dsw-alias-bg-base)) 76%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.hs-printpress .modal[data-v-70ad2334] {
+  width: 460px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-card);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+.hs-printpress .modal-title[data-v-70ad2334] {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--cinnabar);
+}
+.hs-printpress .modal-sub[data-v-70ad2334] {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.hs-printpress .issue-list[data-v-70ad2334] {
+  overflow-y: auto;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 4px 2px;
+  margin-bottom: 14px;
+}
+.hs-printpress .issue-label[data-v-70ad2334] {
+  font-size: 13px;
+  color: var(--ink);
+  min-width: 90px;
+}
+
+/* 去补录直达：出错单元格行号 chips */
+.hs-printpress .fix-row[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 2px 6px 14px;
+  border-bottom: 1px dashed var(--line);
+}
+.hs-printpress .fix-row[data-v-70ad2334]:last-child { border-bottom: none;
+}
+.hs-printpress .fix-label[data-v-70ad2334] {
+  font-size: 12px;
+  color: var(--stone);
+  min-width: 78px;
+}
+.hs-printpress .fix-chip[data-v-70ad2334] {
+  padding: 2px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-size: 12px;
+  cursor: pointer;
+}
+.hs-printpress .fix-chip[data-v-70ad2334]:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+.hs-printpress .fix-chip.ph[data-v-70ad2334] { border-style: dashed;
+}
+.hs-printpress .fix-chip.ov[data-v-70ad2334] { border-style: dotted;
+}
+.hs-printpress .fix-more[data-v-70ad2334] {
+  font-size: 12px;
+  color: var(--stone);
+}
+.hs-printpress .modal-actions[data-v-70ad2334] {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---- 出片范围（行级勾选） ---- */
+.hs-printpress .st-partial[data-v-70ad2334] {
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+.hs-printpress .partial-tag[data-v-70ad2334] {
+  margin-left: 6px;
+  padding: 0 6px;
+  border: 1px solid var(--cinnabar);
+  border-radius: 8px;
+  font-size: 11px;
+  color: var(--cinnabar);
+  white-space: nowrap;
+}
+
+/* ---- 多联回退提示（配了多联但纸张放不下，已自动按单页出片） ---- */
+.hs-printpress .layout-warn[data-v-70ad2334] {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  background: var(--warn-soft);
+  border: 1px solid var(--warn-line);
+  border-radius: 4px;
+}
+.hs-printpress .lw-tag[data-v-70ad2334] {
+  flex: none;
+  padding: 0 6px;
+  font-size: 11px;
+  color: var(--warn);
+  border: 1px solid var(--warn-line);
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.hs-printpress .modal-wide[data-v-70ad2334] { width: 560px;
+}
+.hs-printpress .scope-toolbar[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.hs-printpress .scope-input[data-v-70ad2334] {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--ink);
+  font-size: 13px;
+}
+.hs-printpress .scope-list[data-v-70ad2334] {
+  overflow-y: auto;
+  max-height: 46vh;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 4px 2px;
+  margin-bottom: 14px;
+}
+.hs-printpress .scope-row[data-v-70ad2334] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hs-printpress .scope-row[data-v-70ad2334]:hover { background: var(--paper);
+}
+.hs-printpress .scope-row.on[data-v-70ad2334] { background: var(--cinnabar-soft);
+}
+.hs-printpress .scope-no[data-v-70ad2334] {
+  flex-shrink: 0;
+  min-width: 64px;
+  font-size: 12px;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.hs-printpress .scope-text[data-v-70ad2334] {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hs-printpress .scope-count[data-v-70ad2334] {
+  font-size: 12px;
+  color: var(--stone);
+}
+.hs-printpress .toast[data-v-70ad2334] {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  z-index: 120;
+}
+.hs-printpress .fade-enter-active[data-v-70ad2334],
+.hs-printpress .fade-leave-active[data-v-70ad2334] {
+  transition: opacity 0.2s;
+}
+.hs-printpress .fade-enter-from[data-v-70ad2334],
+.hs-printpress .fade-leave-to[data-v-70ad2334] {
+  opacity: 0;
+}
+
+.hs-printpress .pp-heading-actions[data-v-b3dbcaa4] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.hs-printpress .pp-import-error[data-v-b3dbcaa4] {
+  font-size: 12px;
+  color: var(--dsw-alias-state-error-primary);
+  max-width: 320px;
+  overflow-wrap: anywhere;
+}
+.hs-printpress .pp-brand-logo[data-v-b3dbcaa4] {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+}
+.hs-printpress {
+  --paper: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --paper-card: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1));
+  --ink: var(--dsw-alias-label-primary);
+  --ink-2: var(--dsw-alias-label-secondary);
+  --line: var(--hs-border-l1,var(--dsw-alias-border-l1));
+  --line-strong: var(--hs-border-l2,var(--dsw-alias-border-l2));
+  --cinnabar: var(--hs-accent-ink,var(--dsw-alias-brand-primary));
+  --cinnabar-soft: color-mix(in srgb, var(--hs-accent-ink,var(--dsw-alias-brand-primary)) 10%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --stone: var(--dsw-alias-label-secondary);
+  --ok: var(--dsw-alias-state-success-primary);
+  --ok-soft: color-mix(in srgb, var(--dsw-alias-state-success-primary) 8%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --warn: var(--dsw-alias-state-warn-primary);
+  --warn-soft: color-mix(in srgb, var(--dsw-alias-state-warn-primary) 8%, var(--hs-bg-base,var(--dsw-alias-bg-base)));
+  --warn-line: var(--dsw-alias-state-warn-primary);
+  --shadow: 0 2px 12px color-mix(in srgb, var(--dsw-alias-label-primary) 8%, transparent);
+  --input-bg: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --jade: var(--dsw-alias-state-success-primary);
+  --pp-checker-light: var(--hs-bg-base,var(--dsw-alias-bg-base));
+  --pp-checker-dark: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2));
+  --design-stage-max: max(480px, calc(100dvh - 380px));
+  color: var(--ink);
+  background: var(--paper);
+  min-width: 0;
+  font: 14px/1.65 system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  isolation: isolate;
+  container-type: inline-size;
+}
+.hs-printpress * { box-sizing: border-box; }
+.hs-printpress button, .hs-printpress input, .hs-printpress select, .hs-printpress textarea { font: inherit; color: var(--ink); }
+.hs-printpress button { min-height: 36px; cursor: pointer; border: 1px solid var(--line-strong); background: var(--paper-card); border-radius: 8px; padding: 7px 12px; }
+.hs-printpress button:hover:not(:disabled) { background: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); border-color: var(--line-strong); }
+.hs-printpress button:focus-visible, .hs-printpress input:focus-visible, .hs-printpress select:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; }
+.hs-printpress button:disabled { opacity: .5; cursor: default; }
+.hs-printpress :is(input,select,textarea) { border: 1px solid var(--line-strong); border-radius: 7px; background: var(--input-bg); padding: 7px 10px; }
+.hs-printpress select option { color: var(--ink); background: var(--input-bg); }
+.hs-printpress :is(input[type=checkbox],input[type=radio]) { width: auto; min-height: auto; accent-color: var(--cinnabar); }
+.hs-printpress .btn-primary { border-color: var(--cinnabar); background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-bg-base,var(--dsw-alias-bg-base)); }
+.hs-printpress .btn-primary:hover:not(:disabled) { background: var(--hs-accent,var(--dsw-alias-brand-primary)); opacity: 1; }
+.hs-printpress .btn-danger { color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .pp-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 0 20px; }
+.hs-printpress .pp-heading h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 620; margin: 0; }
+.hs-printpress .pp-version { font: 12px/1.5 ui-monospace, Consolas, monospace; color: var(--ink-2); padding: 3px 8px; border: 1px solid var(--line); border-radius: 5px; }
+.hs-printpress .pp-heading p { color: var(--ink-2); margin: 6px 0 0; }
+.hs-printpress .pp-data-directory { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; }
+.hs-printpress .pp-nav { display: flex; align-items: center; gap: 4px; border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 20px; overflow-x: auto; }
+.hs-printpress .pp-nav button { flex: none; display: inline-flex; gap: 8px; align-items: center; min-height: 44px; background: transparent; border-color: transparent; }
+.hs-printpress .pp-nav button[aria-selected=true] { background: var(--cinnabar-soft); border-color: var(--line); color: var(--cinnabar); font-weight: 600; }
+.hs-printpress .pp-local-note { margin-left: auto; padding-left: 16px; color: var(--ink-2); font-size: 12px; white-space: nowrap; }
+.hs-printpress .pp-view { min-width: 0; }
+/* Pages whose header row was removed by the adapter keep their own container padding,
+   which would otherwise read as an empty band above the content. Collapse the top
+   padding on exactly those pages so everything below actually moves up. */
+.hs-printpress .pp-view > .photo-library-view { padding-top: 0; }
+.hs-printpress .pp-view > .page { padding-top: 0; }
+.hs-printpress .pp-error { color: var(--dsw-alias-state-error-primary); padding: 12px; border: 1px solid currentColor; border-radius: 8px; }
+.hs-printpress .pp-portal { position: relative; z-index: 60; }
+.hs-printpress .pp-linked-work { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 18px; margin-bottom: 16px; background: var(--paper-card); border: 1px solid var(--line-strong); border-radius: 10px; }
+.hs-printpress .pp-linked-copy { min-width: 0; }
+.hs-printpress .pp-linked-label { display: block; color: var(--ink-2); font-size: 12px; margin-bottom: 4px; }
+.hs-printpress .pp-linked-copy strong { display: block; overflow-wrap: anywhere; }
+.hs-printpress .pp-linked-copy p { margin: 5px 0 0; color: var(--ink-2); font-size: 12px; }
+.hs-printpress .pp-linked-copy .pp-linked-warning { color: var(--warn); }
+.hs-printpress .pp-linked-actions { display: flex; gap: 8px; flex-wrap: wrap; flex: none; }
+.hs-printpress .pp-linked-actions button { min-height: 44px; }
+.hs-printpress .pp-status { color: var(--ok); padding: 12px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--ok-soft); }
+.hs-printpress .host-image-capability { display: grid; gap: 5px; margin-top: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); color: var(--ink-2); font-size: 12px; }
+.hs-printpress .host-image-capability strong { color: var(--ink); font-weight: 600; }
+.hs-printpress .host-image-capability p { margin: 0; line-height: 1.65; }
+.hs-printpress :is(input,select,textarea) { min-height: 36px; }
+.hs-printpress :is(input[type=checkbox],input[type=radio],input[type=range],input[type=color],.resize-handle,.field-resize,.presets button) { min-height: 0; min-width: 0; }
+.hs-printpress :is(input,textarea)::placeholder { color: var(--ink-2); opacity: .8; }
+.hs-printpress :is(input,select,textarea):hover:not(:disabled) { border-color: var(--line-strong); }
+.hs-printpress :is(input,select,textarea,button,summary):focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 2px; }
+.hs-printpress :is(.page-header,.canvas-toolbar,.canvas-status,.designer-panel,.photo-processing,.photo-review,.processing-controls,.toolbar,.design-toolbar) { border-color: var(--line); }
+.hs-printpress .page-header { margin: 0 0 16px; justify-content: flex-end; }
+.hs-printpress .page-header__actions { gap: 8px; }
+/* 模板排版：头部行已整个搬进工作台顶栏，页面内容自然从最顶开始，侧栏留在原位，
+   工具栏也不再需要向左扩（原来是为了避开侧栏宽度造成的空白）。 */
+/* 底图制作：头部只剩右侧按钮、左半片空着。按钮原地不动，只把左侧工具面板提上去占住
+   那块空白；右侧画布保持原偏移，不与按钮重叠。 */
+.hs-printpress { --pp-header-lift: 50px; }
+.hs-printpress .designer-workspace > .designer-panel.tools-panel { margin-top: calc(-1 * var(--pp-header-lift)); }
+.hs-printpress .designer-panel { background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); box-shadow: var(--shadow); }
+.hs-printpress .canvas-scroll { background-color: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); background-image: radial-gradient(var(--hs-border-l1,var(--dsw-alias-border-l1)) .6px, transparent .6px); }
+.hs-printpress :is(.canvas-toolbar,.canvas-status,.canvas-horizontal-scroll),.hs-printpress .canvas-horizontal-scroll::-webkit-scrollbar-track { background: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); }
+.hs-printpress :is(.image-viewport,.lasso-viewport,.review-image,.sample-frame,.image-board) { background-color: var(--hs-bg-layer-2,var(--dsw-alias-bg-layer-2)); }
+.hs-printpress :is(.review-image,.sample-frame,.image-board,.lasso-viewport) { background-image: repeating-conic-gradient(var(--pp-checker-dark) 0% 25%,var(--pp-checker-light) 0% 50%); background-size: 16px 16px; }
+.hs-printpress :is(.image-editor,.single-dialog,.lasso-dialog,.portrait-picker,.export-dialog,.modal,.cd-dialog,.asset-missing-dialog,.gd-dialog) { color: var(--ink); background-color: var(--hs-bg-layer-1,var(--dsw-alias-bg-layer-1)); border: 1px solid var(--line-strong); box-shadow: var(--shadow); }
+.hs-printpress :is(.processing-error,.review-error,.edit-error,.lasso-error,.design-surface-error) { color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .btn-danger { color: var(--dsw-alias-state-error-primary); border-color: var(--dsw-alias-state-error-primary); }
+.hs-printpress .btn-danger:hover:not(:disabled) { background: color-mix(in srgb,var(--dsw-alias-state-error-primary) 8%,var(--paper)); }
+.hs-printpress :is(.btn-primary,button.primary) { background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-on-accent,var(--dsw-alias-bg-base)); border-color: var(--cinnabar); }
+.hs-printpress :is(.btn-primary,button.primary):hover:not(:disabled) { background: var(--hs-accent,var(--dsw-alias-brand-primary)); color: var(--hs-on-accent,var(--dsw-alias-bg-base)); opacity: 1; filter: none; box-shadow: 0 0 0 2px var(--cinnabar-soft); }
+.hs-printpress .inline-text-editor { min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
+/* Keep compact tool controls, but let the existing workspace own page geometry. */
+.hs-printpress .pp-view > .page { padding: 0; }
+.hs-printpress .pp-view .page-header { margin-top: 0; }
+.hs-printpress .pp-view :is(.modal-mask,.cd-mask,.guide-mask) { z-index: 100; }
+@container (max-width: 720px) {
+  .hs-printpress .pp-heading { align-items: flex-start; flex-wrap: wrap; }
+  .hs-printpress .pp-linked-work { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .hs-printpress .pp-linked-actions { width: 100%; }
+  .hs-printpress .pp-local-note { display: none; }
+  .hs-printpress .pp-view { overflow-x: auto; }
+}
+@media (pointer: fine) and (min-width: 721px) {
+  .hs-printpress button { min-height: 34px; padding: 6px 10px; font-size: 13px; }
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button) { min-height: 34px; padding: 6px 11px; font-size: 13px; }
+  .hs-printpress .pp-linked-actions .btn-primary { min-height: 36px; }
+  .hs-printpress :is(.pp-nav,.pp-linked-actions) { gap: 6px; }
+  .hs-printpress :is(.icon-only,.order-button,.layer-actions button) { min-height: 30px; min-width: 30px; padding: 5px; }
+}
+@media (pointer: coarse), (max-width: 720px) {
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button,.processing-actions button,.page-header__actions button) { min-height: 44px; min-width: 44px; }
+}
+@container (max-width: 720px) {
+  .hs-printpress :is(.pp-nav button,.pp-data-directory,.pp-linked-actions button,.processing-actions button,.page-header__actions button) { min-height: 44px; min-width: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .hs-printpress * { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

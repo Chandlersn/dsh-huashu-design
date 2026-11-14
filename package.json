@@ -1,0 +1,77 @@
+{
+  "name": "dsh-huashu-design",
+  "version": "0.6.2",
+  "description": "花叔设计工作台：多主题配色、原生分图层工程与图片编辑，创作、编辑、回存和批量出片共用一条流程。",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": "./lib/host.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src/client.js",
+    "src/themes.js",
+    "src/work-preview.js",
+    "src/inline-text-editor.js",
+    "src/printpress",
+    "dist/printpress",
+    "dist/marked-LICENSE.md",
+    "scripts/build-client.mjs",
+    "scripts/build-printpress.mjs",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "upstream/SKILL.md",
+    "upstream/references",
+    "upstream/assets",
+    "upstream/scripts",
+    "upstream/demos",
+    "upstream/LICENSE",
+    "upstream/README.md",
+    "upstream/SECURITY.md",
+    "upstream/package.json",
+    "upstream-manifest.json",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.60.0",
+    "pptxgenjs": "^4.0.1"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build-printpress.mjs && node scripts/build-client.mjs",
+    "check": "node scripts/build-printpress.mjs --check && node scripts/build-client.mjs --check && node --check lib/host.js && node --check lib/core.js && node --check lib/printpress.js && node --check lib/work-editor.js && node --check lib/work-preview.js && node --check src/work-preview.js && node --check src/inline-text-editor.js && node --check lib/host-images.js && node --check src/themes.js && node --check lib/printpress-worker.cjs && node --check src/client.js && node --check lib/client.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "marked": "15.0.12"
+  }
+}

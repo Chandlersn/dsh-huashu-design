@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+pnpm-store/
+
+# Build/intermediate output that can be regenerated
+artifacts/
+*.tgz
+
+# The upstream snapshot is fetched, not committed: it is a full clone with its
+# own 200MB+ history, and its binary assets belong in the upstream repository
+# rather than in every fork of this adapter.
+upstream/.git/
+upstream/node_modules/
+
+# Local environment
+.env
+.env.local
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor / OS noise
+.idea/
+.vscode/
+*.swp
