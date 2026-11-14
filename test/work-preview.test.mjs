@@ -1,4 +1,4 @@
-import test from 'node:test';
+﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
@@ -44,7 +44,7 @@ test('registered HTML renders a copy with original identity and no injected CSP,
   assert.deepEqual(result, { kind: 'html', workId: f.item.id, title: f.item.title, html: f.content, assetMap: {}, sourcePath: f.item.sourcePath, warnings: [] });
   assert.equal(await fs.readFile(f.file, 'utf8'), f.content);
   assert.equal(await fs.readFile(f.operations.libraryPath, 'utf8'), library);
-  assert.doesNotMatch(result.html, /Content-Security-Policy|postMessage|guizang-design/);
+  assert.doesNotMatch(result.html, /Content-Security-Policy|postMessage|data-[a-z]+-design-|window\.__[a-z]+Preview/);
 });
 
 test('registered HTM self-source is editable inline while an external source stays preview-only', async t => {

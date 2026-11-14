@@ -1,4 +1,4 @@
-import test from 'node:test';
+﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
@@ -33,7 +33,8 @@ test('Huashu owns HTML preview, thumbnails and source writes without loosening f
   const preview = await response.json();
   assert.equal(preview.kind, 'html'); assert.equal(preview.workId, item.id); assert.equal(preview.sourcePath, file);
   assert.match(preview.html, /data:image\/png;base64,/); assert.match(preview.html, /window.localInteraction=true/);
-  assert.doesNotMatch(preview.html, /guizang-design/);
+  // The preview must not inline another workbench's injection artifacts.
+  assert.doesNotMatch(preview.html, /data-[a-z]+-design-|window\.__[a-z]+Preview/);
   assert.equal(await fs.readFile(file, 'utf8'), original, 'preview generation must not change the actual source');
   const thumbnailUrl = origin + `/huashu-design/works/${item.id}/thumbnail`;
   assert.equal((await fetch(thumbnailUrl)).status, 401);
