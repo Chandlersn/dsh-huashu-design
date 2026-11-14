@@ -1,4 +1,4 @@
-﻿# Dependencies
+# Dependencies
 node_modules/
 pnpm-store/
 
@@ -6,10 +6,11 @@ pnpm-store/
 artifacts/
 *.tgz
 
-# The upstream snapshot is fetched, not committed: it is a full clone with its
-# own 200MB+ history, and its binary assets belong in the upstream repository
-# rather than in every fork of this adapter.
-upstream/
+# The upstream snapshot IS committed so a clone is immediately usable: the
+# workbench shows an empty style library without its 92 specimens and handbooks.
+# Only the nested clone metadata is excluded, since that history belongs to the
+# upstream repository and would double the checkout size.
+upstream/.git/
 upstream/node_modules/
 
 # Local environment
