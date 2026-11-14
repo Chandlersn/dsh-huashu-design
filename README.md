@@ -153,6 +153,8 @@ Windows 用户可从 [Print-Workshop Releases](https://github.com/Chandlersn/Pri
 
 插件沿用桌面版的数据目录及其独占锁，运行缓存独立保存。桌面版正在使用同一数据目录时，关闭占用它的程序后再重试；自定义数据目录不可用或配置在启动过程中变化时会报错，不会静默切换到另一份数据。自动发现目前仅支持 Windows 和与插件内置清单完全匹配的版本。
 
+安装版自带 MODNet 模型可用于快速抠图：无宿主抠图服务时使用本地快速模型。已通过隔离人像测试验证预览和应用；高质量模型及人脸对齐不在本桥接的本地兜底范围内。
+
 ### 构建
 
 Host 直接加载 JavaScript；Client 作者源码在 `src/client.js`，批印坊面板源码在 `src/printpress/`，经 esbuild 打包到 `lib/client.js` 与 `dist/printpress/`。修改后先构建，`check` 会重算产物并拒绝过期文件，避免安装成功却仍显示旧界面。
@@ -168,7 +170,7 @@ npm run check
 
 未设置该变量时构建会直接报错并说明原因，不会静默产出一个空面板。
 
-`npm test` 覆盖适配器逻辑与 HTTP 面；其中依赖批印坊源码树与 Electron 的用例在缺少 `HUASHU_PRINTPRESS_ROOT` 时自动跳过。
+`npm test` 覆盖适配器逻辑与 HTTP 面；其中依赖批印坊源码树与 Electron 的用例在缺少 `HUASHU_PRINTPRESS_ROOT` 时自动跳过。安装版 MODNet 推理测试还需将 `HUASHU_PRINTPRESS_TEST_PORTRAIT` 指向本机人像测试图片；未设置时该项会标记为跳过。
 
 Node 导出脚本依赖 `playwright`、`pdf-lib`、`pptxgenjs`，随插件声明。Python 脚本、浏览器与 FFmpeg 按对应模块准备；Windows 本机使用 `py -3`，不要假设 `python` 已配置。云端配音等需用户自己的服务与凭据。
 
