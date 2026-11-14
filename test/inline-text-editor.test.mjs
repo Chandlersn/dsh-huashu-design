@@ -14,9 +14,9 @@ import { createWorkPreview } from '../lib/work-preview.js';
 // dependency is introduced. The rest of the fixture supplies only UI events,
 // focus and Selection, which xmldom intentionally does not implement.
 const require = createRequire(import.meta.url);
-const pyfRoot = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT || 'D:\\个人开发\\PYF';
+const checkoutRoot = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT;
 let dom;
-for (const location of [process.env.HUASHU_DOM_TEST_MODULE, '@xmldom/xmldom', path.join(pyfRoot, 'node_modules', '@xmldom', 'xmldom')].filter(Boolean)) {
+for (const location of [process.env.HUASHU_DOM_TEST_MODULE, '@xmldom/xmldom', path.join(checkoutRoot, 'node_modules', '@xmldom', 'xmldom')].filter(Boolean)) {
   try { dom = require(location); break; } catch { /* Try only explicit known dependency locations. */ }
 }
 const domTest = { skip: dom ? false : 'set HUASHU_DOM_TEST_MODULE to an existing @xmldom/xmldom installation' };
@@ -326,9 +326,15 @@ test('dispose preserves the isolated draft, removes listeners, and prevents late
 // Real-article acceptance: render the three registered WeChat drafts through
 // the actual preview backend, then edit the h1 through the production engine.
 // The inlined data: images/head policy must never leak into the saved source.
-test('real registered articles edit through the inlined preview without flattening their original assets', domTest, async () => {
-  const articleDir = path.resolve(process.env.HUASHU_WECHAT_ARTICLE_DIR || 'D:/个人开发/new-tools/docs/wechat-memphis/design-demos');
+test('real registered articles edit through the inlined preview without flattening their original assets', domTest, async (t) => {
+  // The sample articles are a local fixture set, not part of this package, so
+  // skip honestly instead of failing on a missing directory.
+  const articleDir = process.env.HUASHU_WECHAT_ARTICLE_DIR || '';
   const names = ['dir-1.html', 'dir-2.html', 'dir-3.html'];
+  if (!articleDir || !names.every(name => fs.existsSync(path.join(articleDir, name)))) {
+    t.skip('set HUASHU_WECHAT_ARTICLE_DIR to a folder containing dir-1..3.html');
+    return;
+  }
   const sha = bytes => createHash('sha256').update(bytes).digest('hex');
   const before = await Promise.all(names.map(async name => sha(await fs.readFile(path.join(articleDir, name)))));
   const home = await fs.mkdtemp(path.join(os.tmpdir(), 'huashu-real-inline-'));

@@ -7,7 +7,7 @@ import { createServer } from 'node:http';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const pyfRoot = process.env.HUASHU_PRINTPRESS_ROOT || 'D:/个人开发/PYF';
+const checkoutRoot = process.env.HUASHU_PRINTPRESS_ROOT;
 const esbuild = await import('esbuild');
 
 // bridge.js imports '@printpress-domain/user-error.cjs', which is a build-time
@@ -17,7 +17,7 @@ const built = await esbuild.build({
   absWorkingDir: root,
   stdin: { contents: await fs.readFile(path.join(root, 'src/printpress/bridge.js'), 'utf8'), resolveDir: path.join(root, 'src/printpress'), sourcefile: 'bridge.js', loader: 'js' },
   bundle: true, format: 'esm', platform: 'browser', target: ['es2022'], write: false,
-  alias: { '@printpress-domain': path.join(pyfRoot, 'electron') }
+  alias: { '@printpress-domain': path.join(checkoutRoot, 'electron') }
 });
 const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'huashu-bridge-test-'));
 const modulePath = path.join(temp, 'bridge.mjs');

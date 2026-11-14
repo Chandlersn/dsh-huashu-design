@@ -7,7 +7,7 @@ import { createHandoffQueue, editorMode, outputModeFor, workPreviewUrl, publishL
 import { adaptDesignerView } from '../src/printpress/designer-adapter.js';
 import { adaptPrintpressUI, adaptPhotoProcessingPanel, hostThemeValue } from '../src/printpress/ui-adapter.js';
 
-const root = process.env.HUASHU_PRINTPRESS_ROOT || 'D:/个人开发/PYF';
+const root = process.env.HUASHU_PRINTPRESS_ROOT;
 const original = await readFile(path.join(root, 'src/views/BackgroundDesignerView.vue'), 'utf8');
 const adapted = adaptDesignerView(adaptPrintpressUI(original, '/views/BackgroundDesignerView.vue'));
 const compiler = createRequire(path.join(root, 'package.json'))('@vue/compiler-sfc');
@@ -135,7 +135,7 @@ test('transport sends same-origin handoff without forcing layers and retains str
   } finally { globalThis.fetch = previous; }
 });
 
-test('actual PYF adapter and workbench compile with Vue macros and template bindings', async () => {
+test('actual PrintPress adapter and workbench compile with Vue macros and template bindings', async () => {
   const workbench = await readFile(new URL('../src/printpress/Workbench.vue', import.meta.url), 'utf8');
   for (const [name, source] of [['BackgroundDesignerView', adapted], ['Workbench', workbench]]) {
     const { descriptor, errors } = compiler.parse(source, { filename: name + '.vue' });
@@ -311,7 +311,7 @@ test('template page moves only 新建模板 to the workbench header beside 打�
 
 test('photo library drops the redundant 前往底图制作 shortcut and its header row', async () => {
   const input = await readFile(path.join(root, 'src/views/PhotoLibraryView.vue'), 'utf8');
-  assert.match(input, /前往底图制作/, 'the source still has the button (PYF is untouched)');
+  assert.match(input, /前往底图制作/, 'the source still has the button (the checkout is untouched)');
   const view = adaptPrintpressUI(input, '/views/PhotoLibraryView.vue');
   assert.doesNotMatch(view, /前往底图制作/, 'the shortcut is gone');
   assert.doesNotMatch(view, /<PageHeader/, 'the whole empty row is removed, not just the button');

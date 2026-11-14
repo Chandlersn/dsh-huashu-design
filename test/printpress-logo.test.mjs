@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 
-const printpressRoot = process.env.HUASHU_PRINTPRESS_ROOT || 'D:/个人开发/PYF';
+const printpressRoot = process.env.HUASHU_PRINTPRESS_ROOT;
 const requirePrintpress = createRequire(path.join(printpressRoot, 'package.json'));
 const compiler = requirePrintpress('@vue/compiler-sfc');
 const vue = requirePrintpress('vue');

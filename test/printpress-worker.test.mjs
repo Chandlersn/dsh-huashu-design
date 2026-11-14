@@ -16,8 +16,8 @@ import { createHostImages } from '../lib/host-images.js'
 const require = createRequire(import.meta.url)
 const { MAX_INPUT_BYTES, validateRequest, createNdjsonReader, resolveMedia, FORBIDDEN_OPERATIONS, createHostImageRpc, normalizeHostCapabilities, hostImageIdentity, scopePhotoStorage } = require('../lib/printpress-worker.cjs')
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const PYF = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT || 'D:\\个人开发\\PYF'
-const ELECTRON = process.env.HUASHU_PRINTPRESS_TEST_ELECTRON || path.join(PYF, 'node_modules', 'electron', 'dist', process.platform === 'win32' ? 'electron.exe' : 'electron')
+const PRESSPRESS_CHECKOUT = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT
+const ELECTRON = process.env.HUASHU_PRINTPRESS_TEST_ELECTRON || path.join(PRESSPRESS_CHECKOUT, 'node_modules', 'electron', 'dist', process.platform === 'win32' ? 'electron.exe' : 'electron')
 const TEMP_PREFIX = 'huashu-printpress-worker-'
 const tempDirectory = () => fs.mkdtempSync(path.join(os.tmpdir(), TEMP_PREFIX))
 function removeTemporary(directory) {
@@ -132,7 +132,7 @@ test('media resolution keeps original asset routes and rejects traversal/junctio
   } finally { removeTemporary(directory) }
 })
 
-function client({ directory, dataDir = path.join(directory, 'data'), observe = false, entry, env: extraEnv = {}, root = PYF } = {}) {
+function client({ directory, dataDir = path.join(directory, 'data'), observe = false, entry, env: extraEnv = {}, root = PRESSPRESS_CHECKOUT } = {}) {
   const env = { ...process.env, HUASHU_PRINTPRESS_ROOT: root, PRINTPRESS_DATA_DIR: dataDir, HUASHU_PRINTPRESS_USER_DATA: path.join(directory, 'runtime'), ...extraEnv }
   for (const key of ['ELECTRON_RUN_AS_NODE', 'NODE_OPTIONS', 'PRINTPRESS_ASSET_DIR']) delete env[key]
   for (const [key, value] of Object.entries(env)) if (value === undefined) delete env[key]
@@ -212,14 +212,14 @@ function client({ directory, dataDir = path.join(directory, 'data'), observe = f
   }
 }
 
-const realElectron = { skip: fs.existsSync(ELECTRON) && fs.existsSync(path.join(PYF, 'electron', 'api.cjs')) ? false : 'set HUASHU_PRINTPRESS_TEST_ROOT to a PYF checkout with Electron installed', timeout: 120000 }
+const realElectron = { skip: fs.existsSync(ELECTRON) && fs.existsSync(path.join(PRESSPRESS_CHECKOUT, 'electron', 'api.cjs')) ? false : 'set HUASHU_PRINTPRESS_TEST_ROOT to a PrintPress checkout with Electron installed', timeout: 120000 }
 
 test('real Electron serves existing operations, isolates caches, locks data, prints and cancels concurrently', realElectron, async t => {
   const directory = tempDirectory(), service = client({ directory, observe: true }), others = []
   try {
     const ready = await service.start()
-    assert.equal(ready.root, fs.realpathSync(PYF)); assert.equal(ready.dataDir, path.join(directory, 'data'))
-    assert.equal(ready.version, JSON.parse(fs.readFileSync(path.join(PYF, 'package.json'), 'utf8')).version)
+    assert.equal(ready.root, fs.realpathSync(PRESSPRESS_CHECKOUT)); assert.equal(ready.dataDir, path.join(directory, 'data'))
+    assert.equal(ready.version, JSON.parse(fs.readFileSync(path.join(PRESSPRESS_CHECKOUT, 'package.json'), 'utf8')).version)
     assert.ok(ready.operations.includes('dataset:inspect')); assert.ok(ready.operations.includes('photo:processingCancel'))
     assert.ok(!ready.operations.includes('app:installUpdate'))
     assert.equal((await service.call('app:ping')).version, ready.version)
@@ -292,7 +292,7 @@ test('real Electron serves existing operations, isolates caches, locks data, pri
     })
 
     await t.test('media handles real original assets and rejects file URLs/traversal/junctions', async () => {
-      const image = fs.readFileSync(path.join(PYF, 'test', 'fixtures', 'tiny.png')).toString('base64')
+      const image = fs.readFileSync(path.join(PRESSPRESS_CHECKOUT, 'test', 'fixtures', 'tiny.png')).toString('base64')
       const imported = await service.call('design:importBytes', [{ base64: image, name: '测试底图.png' }])
       const result = await service.request('media', { url: `pp://media/${imported.id}` })
       assert.equal(result.ok, true, JSON.stringify(result)); assert.equal(result.data.mime, 'image/png')
@@ -319,7 +319,7 @@ test('real Electron serves existing operations, isolates caches, locks data, pri
       const result = await service.call('print:exportPdf', [{ datasetId: dataset.id, templateId: template.id, savePath: pdfPath, rows: [0] }])
       assert.equal(result.canceled, false)
       assert.equal(fs.readFileSync(pdfPath).subarray(0, 5).toString(), '%PDF-')
-      const { countPdfPagesFromFile } = require(path.join(PYF, 'electron', 'pdf-merge.cjs'))
+      const { countPdfPagesFromFile } = require(path.join(PRESSPRESS_CHECKOUT, 'electron', 'pdf-merge.cjs'))
       assert.equal(countPdfPagesFromFile(pdfPath), 1)
       assert.ok(result.jobId)
       assert.ok(service.stderr.includes('PRINTPRESS_TEST_WINDOW_CREATED'))
@@ -348,7 +348,7 @@ test('real Electron serves existing operations, isolates caches, locks data, pri
       // Disable import bootstrapping so this test does not load face/AI models.
       await service.call('photo:processingOptions', [{ datasetId: dataset.id, autoProcess: false }])
       const folder = path.join(directory, '照片'); fs.mkdirSync(folder)
-      fs.copyFileSync(path.join(PYF, 'test', 'fixtures', 'tiny.png'), path.join(folder, '001.png'))
+      fs.copyFileSync(path.join(PRESSPRESS_CHECKOUT, 'test', 'fixtures', 'tiny.png'), path.join(folder, '001.png'))
       const taskId = 'worker-photo-processing'
       await service.call('photo:importFolder', [{ datasetId: dataset.id, column: '编号', folder }])
       const report = await service.call('photo:report', [{ datasetId: dataset.id, column: '编号' }])
@@ -405,7 +405,7 @@ test('real Electron reads original bootstrap settings while keeping independent 
 })
 
 function withExifOrientation(jpeg, orientation) {
-  // Valid little-endian TIFF IFD0 tag, matching the existing PYF JPEG fixtures.
+  // Valid little-endian TIFF IFD0 tag, matching the existing PrintPress JPEG fixtures.
   const exif = Buffer.from('45786966000049492a0008000000010012010300010000000100000000000000', 'hex')
   exif.writeUInt16LE(orientation, 24)
   const marker = Buffer.alloc(4); marker[0] = 255; marker[1] = 225; marker.writeUInt16BE(exif.length + 2, 2)
@@ -429,10 +429,10 @@ function normalizedPixels(bytes) {
 
 test('real Electron host images are honest in strict mode, use reverse RPC, preserve restore colors, and clean pending EOF', realElectron, async () => {
   const directory = tempDirectory(), guard = path.join(directory, 'no-local-models.cjs')
-  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PYF, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto\noriginal.status = () => { throw new Error('TEST_FORBIDDEN_LOCAL_STATUS') }\noriginal.processPhoto = args => { if (args.recipe?.cutout || args.recipe?.faceAlign || args.analyzeReference) throw new Error('TEST_FORBIDDEN_LOCAL_AI'); return native(args) }\noriginal.analyzePhoto = () => { throw new Error('TEST_FORBIDDEN_LOCAL_FACE') }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
+  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PRESSPRESS_CHECKOUT, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto\noriginal.status = () => { throw new Error('TEST_FORBIDDEN_LOCAL_STATUS') }\noriginal.processPhoto = args => { if (args.recipe?.cutout || args.recipe?.faceAlign || args.analyzeReference) throw new Error('TEST_FORBIDDEN_LOCAL_AI'); return native(args) }\noriginal.analyzePhoto = () => { throw new Error('TEST_FORBIDDEN_LOCAL_FACE') }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
   const service = client({ directory, entry: guard, env: { HUASHU_PRINTPRESS_LOCAL_FAST_FALLBACK: '0' } }), registry = createHostImages(), seen = new Set()
-  const { pngFromPixels } = require(path.join(PYF, 'electron', 'psd-import.cjs'))
-  const { normalizeRecipe, VERSION } = require(path.join(PYF, 'electron', 'photo-processing-pixels.cjs'))
+  const { pngFromPixels } = require(path.join(PRESSPRESS_CHECKOUT, 'electron', 'psd-import.cjs'))
+  const { normalizeRecipe, VERSION } = require(path.join(PRESSPRESS_CHECKOUT, 'electron', 'photo-processing-pixels.cjs'))
   const color = [201, 41, 17, 255], original = Buffer.alloc(64 * 64 * 4)
   for (let n = 0; n < 64 * 64; n++) original.set(color, n * 4)
   const originalPng = pngFromPixels({ width: 64, height: 64, data: original })
@@ -541,12 +541,12 @@ test('real Electron host images are honest in strict mode, use reverse RPC, pres
   } finally { registry.dispose(); await service.dispose(); removeTemporary(directory) }
 })
 
-const PORTRAIT = process.env.HUASHU_PRINTPRESS_TEST_PORTRAIT || path.join(PYF, '.workbuddy-ai', 'tmp', 'portrait-sample.jpg')
-const realFastModel = { ...realElectron, skip: realElectron.skip || (!fs.existsSync(path.join(PYF, 'build', 'models', 'modnet.onnx')) || !fs.existsSync(PORTRAIT) ? 'set an existing portrait fixture and install the original MODNet model to verify fast fallback' : false) }
+const PORTRAIT = process.env.HUASHU_PRINTPRESS_TEST_PORTRAIT || path.join(PRESSPRESS_CHECKOUT, '.workbuddy-ai', 'tmp', 'portrait-sample.jpg')
+const realFastModel = { ...realElectron, skip: realElectron.skip || (!fs.existsSync(path.join(PRESSPRESS_CHECKOUT, 'build', 'models', 'modnet.onnx')) || !fs.existsSync(PORTRAIT) ? 'set an existing portrait fixture and install the original MODNet model to verify fast fallback' : false) }
 
 test('real Electron uses only the existing MODNet fast fallback, reports its actual source, and prefers a host provider', realFastModel, async () => {
   const directory = tempDirectory(), guard = path.join(directory, 'fast-only.cjs')
-  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PYF, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto, status = original.status\noriginal.status = () => ({...status(), qualityReady:true,faceReady:true})\noriginal.processPhoto = args => { if (args.recipe?.cutout && args.model !== 'fast') throw new Error('TEST_FORBIDDEN_QUALITY'); if (args.recipe?.faceAlign || args.analyzeReference) throw new Error('TEST_FORBIDDEN_LOCAL_FACE'); return native(args) }\noriginal.analyzePhoto = () => { throw new Error('TEST_FORBIDDEN_LOCAL_FACE') }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
+  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PRESSPRESS_CHECKOUT, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto, status = original.status\noriginal.status = () => ({...status(), qualityReady:true,faceReady:true})\noriginal.processPhoto = args => { if (args.recipe?.cutout && args.model !== 'fast') throw new Error('TEST_FORBIDDEN_QUALITY'); if (args.recipe?.faceAlign || args.analyzeReference) throw new Error('TEST_FORBIDDEN_LOCAL_FACE'); return native(args) }\noriginal.analyzePhoto = () => { throw new Error('TEST_FORBIDDEN_LOCAL_FACE') }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
   const service = client({ directory, entry: guard, env: { HUASHU_PRINTPRESS_LOCAL_FAST_FALLBACK: '1' } })
   try {
     const ready = await service.start(), capability = (await service.request('imageCapabilities')).data
@@ -596,9 +596,9 @@ test('real Electron importImage preserves PNG/JPEG and EXIF bytes, converts WebP
   const directory = tempDirectory(), service = client({ directory })
   try {
     await service.start()
-    const jpeg = fs.readFileSync(path.join(PYF, 'test', 'fixtures', 'design-portrait.jpg'))
+    const jpeg = fs.readFileSync(path.join(PRESSPRESS_CHECKOUT, 'test', 'fixtures', 'design-portrait.jpg'))
     const inputs = [
-      ['tiny.png', fs.readFileSync(path.join(PYF, 'test', 'fixtures', 'tiny.png')), 'image/png'],
+      ['tiny.png', fs.readFileSync(path.join(PRESSPRESS_CHECKOUT, 'test', 'fixtures', 'tiny.png')), 'image/png'],
       ['portrait.jpg', jpeg, 'image/jpeg'],
       ['pixel.webp', Buffer.from('UklGRhwAAABXRUJQVlA4TA8AAAAvAUAAAAcQ9Y/+ByKi/wEA', 'base64'), 'image/png'],
     ]
@@ -629,10 +629,10 @@ test('real Electron importImage preserves PNG/JPEG and EXIF bytes, converts WebP
 
 test('real Electron EXIF JPEG is oriented once in host canonical pixels and local-fast transport', realElectron, async () => {
   const directory = tempDirectory(), guard = path.join(directory, 'orientation-guard.cjs')
-  const jpeg = withExifOrientation(fs.readFileSync(path.join(PYF, 'test', 'fixtures', 'design-portrait.jpg')), 6)
+  const jpeg = withExifOrientation(fs.readFileSync(path.join(PRESSPRESS_CHECKOUT, 'test', 'fixtures', 'design-portrait.jpg')), 6)
   // Transport-only stub: require original JPEG + O=6 at the local adapter, then
   // use real native non-AI pixels. The separate real MODNet test covers inference.
-  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PYF, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto, expected = Buffer.from(${JSON.stringify(jpeg.toString('base64'))}, 'base64')\noriginal.status = () => ({ready:true,qualityReady:false,faceReady:false})\noriginal.processPhoto = args => { if (args.recipe?.cutout) { if (!Buffer.from(args.buffer).equals(expected) || args.asset.orientation !== 6 || args.model !== 'fast') throw new Error('TEST_DOUBLE_ORIENTED_LOCAL_INPUT'); return native({...args, recipe:{...args.recipe,cutout:false}}) } return native(args) }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
+  fs.writeFileSync(guard, `const original = require(${JSON.stringify(path.join(PRESSPRESS_CHECKOUT, 'electron', 'photo-processing-host.cjs'))})\nconst native = original.processPhoto, expected = Buffer.from(${JSON.stringify(jpeg.toString('base64'))}, 'base64')\noriginal.status = () => ({ready:true,qualityReady:false,faceReady:false})\noriginal.processPhoto = args => { if (args.recipe?.cutout) { if (!Buffer.from(args.buffer).equals(expected) || args.asset.orientation !== 6 || args.model !== 'fast') throw new Error('TEST_DOUBLE_ORIENTED_LOCAL_INPUT'); return native({...args, recipe:{...args.recipe,cutout:false}}) } return native(args) }\nrequire(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker()\n`)
   const service = client({ directory, entry: guard, env: { HUASHU_PRINTPRESS_LOCAL_FAST_FALLBACK: '1' } }), registry = createHostImages()
   const readAsset = async asset => {
     const media = await service.request('media', { url: `pp://media/${asset.id}` })
@@ -657,7 +657,7 @@ test('real Electron EXIF JPEG is oriented once in host canonical pixels and loca
     assert.equal(local.analysis.source, 'local-fast')
     assert.deepEqual((await readAsset(local.restoreAsset)).data, baseline.data, 'local fallback receives original bytes/O=6 and its final restore is rotated once')
 
-    const { pngFromPixels } = require(path.join(PYF, 'electron', 'psd-import.cjs'))
+    const { pngFromPixels } = require(path.join(PRESSPRESS_CHECKOUT, 'electron', 'psd-import.cjs'))
     registry.register({ id: 'exif-test-provider', title: '方向测试服务', capabilities: { cutout: true, faceAlign: false }, async process(input) {
       assert.deepEqual([input.width, input.height], [3, 2], 'host input is canonical display coordinates, without another EXIF rotation')
       const rgba = normalizedPixels(Buffer.from(input.imageBase64, 'base64'))
@@ -695,7 +695,7 @@ test('missing root emits a structured fatal frame without a window or data', rea
 // the 4th inspect with "待导入文件过多" (HTTP 400 in the workbench). The worker
 // must evict its own oldest sessions so repeated imports never fail.
 test('real Electron evicts stale import sessions so repeated inspections keep succeeding', realElectron, async t => {
-  const psd = path.join(PYF, '.workbuddy-ai', 'tmp', 'psd-fixtures', 'text-simple.psd')
+  const psd = path.join(PRESSPRESS_CHECKOUT, '.workbuddy-ai', 'tmp', 'psd-fixtures', 'text-simple.psd')
   if (!fs.existsSync(psd)) { t.skip('PSD fixture is unavailable'); return }
   const directory = tempDirectory(), service = client({ directory })
   try {
