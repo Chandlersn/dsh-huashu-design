@@ -7,10 +7,19 @@ import { createHandoffQueue, editorMode, outputModeFor, workPreviewUrl, publishL
 import { adaptDesignerView } from '../src/printpress/designer-adapter.js';
 import { adaptPrintpressUI, adaptPhotoProcessingPanel, hostThemeValue } from '../src/printpress/ui-adapter.js';
 
-const root = process.env.HUASHU_PRINTPRESS_ROOT;
-const original = await readFile(path.join(root, 'src/views/BackgroundDesignerView.vue'), 'utf8');
-const adapted = adaptDesignerView(adaptPrintpressUI(original, '/views/BackgroundDesignerView.vue'));
-const compiler = createRequire(path.join(root, 'package.json'))('@vue/compiler-sfc');
+const root = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT;
+let original, adapted, compiler;
+if (root) {
+  try {
+    original = await readFile(path.join(root, 'src/views/BackgroundDesignerView.vue'), 'utf8');
+    adapted = adaptDesignerView(adaptPrintpressUI(original, '/views/BackgroundDesignerView.vue'));
+    compiler = createRequire(path.join(root, 'package.json'))('@vue/compiler-sfc');
+  } catch (error) {
+    if (error.code !== 'ENOENT' && error.code !== 'MODULE_NOT_FOUND') throw error;
+  }
+}
+const sourceTest = { skip: adapted ? false : 'PrintPress source checkout is required' };
+const compilerTest = { skip: adapted && compiler ? false : 'PrintPress source checkout and Vue compiler are required' };
 const request = () => ({ item: { id: 'work-1', title: 'Poster' }, designRef: { id: 'design-1', revision: 4 }, artboard: { w: 120, h: 160 }, mode: 'layers', openImageEditor: false });
 const ref = value => ({ value });
 const createInScope = (code, scope) => new Function(...Object.keys(scope), code)(...Object.values(scope));
@@ -135,7 +144,7 @@ test('transport sends same-origin handoff without forcing layers and retains str
   } finally { globalThis.fetch = previous; }
 });
 
-test('actual PrintPress adapter and workbench compile with Vue macros and template bindings', async () => {
+test('actual PrintPress adapter and workbench compile with Vue macros and template bindings', compilerTest, async () => {
   const workbench = await readFile(new URL('../src/printpress/Workbench.vue', import.meta.url), 'utf8');
   for (const [name, source] of [['BackgroundDesignerView', adapted], ['Workbench', workbench]]) {
     const { descriptor, errors } = compiler.parse(source, { filename: name + '.vue' });
@@ -148,7 +157,7 @@ test('actual PrintPress adapter and workbench compile with Vue macros and templa
   assert.throws(() => adaptDesignerView(original.replace('async function consumeRequest(request)', 'async function consumeChanged(request)')), /consumer changed/);
 });
 
-test('accepted handoff uses null template context and opens crop after the busy load finishes', async () => {
+test('accepted handoff uses null template context and opens crop after the busy load finishes', sourceTest, async () => {
   const harness = consumerHarness();
   await harness.open({ openImageEditor: true });
   assert.equal(harness.replacements.length, 1);
@@ -159,7 +168,7 @@ test('accepted handoff uses null template context and opens crop after the busy 
   assert.deepEqual(harness.results, [{ status: 'opened', designRef: { id: 'design-1', revision: 4 } }]);
 });
 
-test('canceling the original draft confirmation leaves the previous draft and binding untouched', async () => {
+test('canceling the original draft confirmation leaves the previous draft and binding untouched', sourceTest, async () => {
   const harness = consumerHarness({ dirty: true });
   await harness.open();
   assert.equal(harness.replacements.length, 0);
@@ -169,7 +178,7 @@ test('canceling the original draft confirmation leaves the previous draft and bi
   assert.deepEqual(harness.results, [{ status: 'canceled' }]);
 });
 
-test('unapplied modal defers handoff and failed loading reports failure without replacing the draft', async () => {
+test('unapplied modal defers handoff and failed loading reports failure without replacing the draft', sourceTest, async () => {
   const waiting = consumerHarness();
   waiting.scope.modalOpen.value = true;
   const pending = await waiting.open();
@@ -186,7 +195,7 @@ test('unapplied modal defers handoff and failed loading reports failure without 
   assert.equal(failed.scope.busy.value, false);
 });
 
-test('a deleted pinned revision falls back to the latest saved design instead of alarming', async () => {
+test('a deleted pinned revision falls back to the latest saved design instead of alarming', sourceTest, async () => {
   const calls = [];
   const getDesign = async (id, revision) => {
     calls.push({ id, revision });
@@ -201,7 +210,7 @@ test('a deleted pinned revision falls back to the latest saved design instead of
   assert.equal(fresh.scope.error.value, '', 'no spurious warning reaches the status bar');
 });
 
-test('a non-Huashu consumer still requires its exact saved revision', async () => {
+test('a non-Huashu consumer still requires its exact saved revision', sourceTest, async () => {
   const bothFail = consumerHarness({ getDesign: async () => { throw new Error('底图版本不存在或尚未提交'); } });
   await bothFail.open({ origin: 'print' });
   assert.equal(bothFail.replacements.length, 0);
@@ -235,7 +244,7 @@ function modalWatchHarness({ request = null } = {}) {
   };
 }
 
-test('closing an unrelated import dialog never replays a stale work handoff', () => {
+test('closing an unrelated import dialog never replays a stale work handoff', sourceTest, () => {
   const stale = { origin: 'huashu', designRef: { id: 'design-1', revision: 4 }, item: { id: 'work-1' } };
   const h = modalWatchHarness({ request: stale });
   // The import check page opens and closes. The stale request predates it and
@@ -245,7 +254,7 @@ test('closing an unrelated import dialog never replays a stale work handoff', ()
   assert.equal(h.consumeCalls, 0, 'no getDesign on a stale revision after closing the import check');
 });
 
-test('a handoff arriving during a modal is replayed exactly once when that modal closes', () => {
+test('a handoff arriving during a modal is replayed exactly once when that modal closes', sourceTest, () => {
   const next = { origin: 'huashu', designRef: { id: 'design-2', revision: 9 }, item: { id: 'work-2' } };
   const h = modalWatchHarness();
   h.openModal();
@@ -263,7 +272,7 @@ function exposedHarness() {
   return { scope, api: createInScope('return (' + adapted.slice(start, end) + ');', scope) };
 }
 
-test('exposed save rejects busy/dialog state and finishes text before the original save lifecycle', async () => {
+test('exposed save rejects busy/dialog state and finishes text before the original save lifecycle', sourceTest, async () => {
   const { scope, api } = exposedHarness();
   scope.busy.value = true;
   await assert.rejects(api.saveForHuashu(), /正在处理/);
@@ -278,7 +287,7 @@ test('exposed save rejects busy/dialog state and finishes text before the origin
   await assert.rejects(api.saveForHuashu(), /Write failed/);
 });
 
-test('template page moves only 新建模板 to the workbench header beside 打开数据目录', async () => {
+test('template page moves only 新建模板 to the workbench header beside 打开数据目录', compilerTest, async () => {
   const input = await readFile(path.join(root, 'src/views/TemplateView.vue'), 'utf8');
   const view = adaptPrintpressUI(input, '/views/TemplateView.vue');
   assert.doesNotMatch(view, /<PageHeader/, 'the empty header row is gone so the template list starts at the top');
@@ -309,7 +318,7 @@ test('template page moves only 新建模板 to the workbench header beside 打�
   assert.match(css, /\.designer-workspace > \.designer-panel\.tools-panel \{ margin-top: calc\(-1 \* var\(--pp-header-lift\)\)/);
 });
 
-test('photo library drops the redundant 前往底图制作 shortcut and its header row', async () => {
+test('photo library drops the redundant 前往底图制作 shortcut and its header row', compilerTest, async () => {
   const input = await readFile(path.join(root, 'src/views/PhotoLibraryView.vue'), 'utf8');
   assert.match(input, /前往底图制作/, 'the source still has the button (the checkout is untouched)');
   const view = adaptPrintpressUI(input, '/views/PhotoLibraryView.vue');
@@ -328,7 +337,7 @@ test('photo library drops the redundant 前往底图制作 shortcut and its head
   assert.match(css, /\.pp-view > \.page \{ padding-top: 0; \}/, 'headerless page containers start at the top');
 });
 
-test('five-page header adapter removes repeated heading and description while keeping action slots', async () => {
+test('five-page header adapter removes repeated heading and description while keeping action slots', compilerTest, async () => {
   const source = await readFile(path.join(root, 'src/components/PageHeader.vue'), 'utf8');
   const result = adaptPrintpressUI(source, '/components/PageHeader.vue');
   const { descriptor } = compiler.parse(result);
@@ -343,7 +352,7 @@ test('five-page header adapter removes repeated heading and description while ke
   }
 });
 
-test('dataset page moves its import action into the workbench header row', async () => {
+test('dataset page moves its import action into the workbench header row', compilerTest, async () => {
   const input = await readFile(path.join(root, 'src/views/DatasetView.vue'), 'utf8');
   const view = adaptPrintpressUI(input, '/views/DatasetView.vue');
   assert.doesNotMatch(view, /<PageHeader title="数据">/, 'the dataset page no longer spends a row on its own header');
@@ -372,7 +381,7 @@ test('dataset page moves its import action into the workbench header row', async
   assert.equal(exposed.importing, true, 'the header button and its state follow the live refs');
 });
 
-test('capability UI compiles and reflects host or local-fast status without unsupported model choices', async () => {
+test('capability UI compiles and reflects host or local-fast status without unsupported model choices', compilerTest, async () => {
   const input = await readFile(path.join(root, 'src/components/PhotoProcessingPanel.vue'), 'utf8');
   const result = adaptPhotoProcessingPanel(input);
   const { descriptor, errors } = compiler.parse(result, { filename: 'PhotoProcessingPanel.vue' });
@@ -388,7 +397,7 @@ test('capability UI compiles and reflects host or local-fast status without unsu
   assert.match(descriptor.template.content, /:disabled="!faceReady && !recipe.faceAlign"/);
 });
 
-test('missing host providers reject AI preview but permit ordinary image processing', async () => {
+test('missing host providers reject AI preview but permit ordinary image processing', sourceTest, async () => {
   const input = await readFile(path.join(root, 'src/components/PhotoProcessingPanel.vue'), 'utf8');
   const source = adaptPhotoProcessingPanel(input);
   const recipe = ref({ cutout: true, faceAlign: false }), modelReady = ref(false), qualityReady = ref(false), faceReady = ref(false);
@@ -423,7 +432,7 @@ test('missing host providers reject AI preview but permit ordinary image process
   assert.equal(scope.error.value, '');
 });
 
-test('host color mapping adapts controls and backdrops without recoloring artwork or picker spectra', async () => {
+test('host color mapping preserves artwork and picker spectra', () => {
   assert.match(hostThemeValue('background', '#fff', '.canvas-drop-btn'), /dsw-alias-bg-layer/);
   assert.match(hostThemeValue('background', '#b03a2e12', '.design-image-menu button:hover'), /dsw-alias-brand-primary/);
   assert.match(hostThemeValue('background', '#17130f88', '.image-editor-mask'), /dsw-alias-bg-base/);
@@ -431,6 +440,9 @@ test('host color mapping adapts controls and backdrops without recoloring artwor
   for (const selector of ['.canvas', '.design-stage[data-v-demo]', '.preview-frame', '.canvas-navigator', '.field-text', '.color-square', '.hue::-webkit-slider-thumb']) {
     assert.equal(hostThemeValue('background', '#fff', selector), '#fff', selector);
   }
+});
+
+test('host color mapping compiles real PrintPress styles', compilerTest, async () => {
   const { descriptor } = compiler.parse(adapted);
   assert.match(descriptor.scriptSetup.content, /background: '#ffffff'/);
   const names = ['views/DatasetView', 'views/PhotoLibraryView', 'views/BackgroundDesignerView', 'views/TemplateView', 'views/PrintCenterView', 'components/PhotoProcessingPanel', 'components/DesignImageEditor', 'components/PageHeader'];

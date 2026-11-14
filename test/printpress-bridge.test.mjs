@@ -7,7 +7,9 @@ import { createServer } from 'node:http';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const checkoutRoot = process.env.HUASHU_PRINTPRESS_ROOT;
+const checkoutRoot = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT;
+const domainFile = checkoutRoot && path.join(checkoutRoot, 'electron', 'user-error.cjs');
+const hasDomain = domainFile ? await fs.access(domainFile).then(() => true, () => false) : false;
 const esbuild = await import('esbuild');
 
 // bridge.js imports '@printpress-domain/user-error.cjs', which is a build-time
@@ -17,7 +19,11 @@ const built = await esbuild.build({
   absWorkingDir: root,
   stdin: { contents: await fs.readFile(path.join(root, 'src/printpress/bridge.js'), 'utf8'), resolveDir: path.join(root, 'src/printpress'), sourcefile: 'bridge.js', loader: 'js' },
   bundle: true, format: 'esm', platform: 'browser', target: ['es2022'], write: false,
-  alias: { '@printpress-domain': path.join(checkoutRoot, 'electron') }
+  plugins: hasDomain ? [] : [{ name: 'missing-domain-fixture', setup(build) {
+    build.onResolve({ filter: /^@printpress-domain\/user-error\.cjs$/ }, () => ({ path: 'user-error', namespace: 'fixture' }));
+    build.onLoad({ filter: /.*/, namespace: 'fixture' }, () => ({ contents: 'export const toUserMessage = error => error.message;', loader: 'js' }));
+  } }],
+  ...(hasDomain ? { alias: { '@printpress-domain': path.join(checkoutRoot, 'electron') } } : {})
 });
 const temp = await fs.mkdtemp(path.join(os.tmpdir(), 'huashu-bridge-test-'));
 const modulePath = path.join(temp, 'bridge.mjs');

@@ -46,7 +46,7 @@ test('embedded engine shares one writer and runs real CSV, layout, PDF and PNG o
   await runtime.operation('call', { name: 'dataset:updateCell', args: [{ datasetId: dataset.id, rowIndex: 0, key: '姓名', value: '张三丰' }] });
   assert.equal((await runtime.operation('call', { name: 'dataset:get', args: [dataset.id] })).rows[0]['姓名'], '张三丰');
   for (const key of ['编号', '姓名']) await runtime.operation('call', { name: 'dataset:setColumnPrint', args: [{ datasetId: dataset.id, key, printOn: true }] });
-  const png = await fs.readFile(path.join(starts[0].root, 'test/fixtures/tiny.png'));
+  const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVR4nGP4oCDwn3uV9n8GEY1L//e5Nf0HAEamCJHokv97AAAAAElFTkSuQmCC', 'base64');
   const background = await runtime.operation('call', { name: 'template:uploadBackgroundBytes', args: [{ dataBase64: png.toString('base64'), fileName: '测试底图.png' }] });
   assert.ok(background.background);
   const media = await runtime.media(background.background);

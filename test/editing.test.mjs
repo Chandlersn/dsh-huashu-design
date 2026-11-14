@@ -96,7 +96,7 @@ test('parallel saves through different operations and export ids share a canonic
   const rejected = results.find(result => result.status === 'rejected');
   assert.equal(rejected.reason.code, 'REVISION_CONFLICT');
   assert.equal(rejected.reason.status, 409);
-  assert.equal(await fs.readFile(file, 'utf8'), 'first edit');
+  assert.equal(await fs.readFile(file, 'utf8'), results[0].status === 'fulfilled' ? 'first edit' : 'second edit');
 });
 
 test('exports require an explicit source association; same-path upsert retains it and its canonical project', async t => {

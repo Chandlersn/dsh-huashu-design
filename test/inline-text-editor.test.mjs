@@ -16,7 +16,7 @@ import { createWorkPreview } from '../lib/work-preview.js';
 const require = createRequire(import.meta.url);
 const checkoutRoot = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT;
 let dom;
-for (const location of [process.env.HUASHU_DOM_TEST_MODULE, '@xmldom/xmldom', path.join(checkoutRoot, 'node_modules', '@xmldom', 'xmldom')].filter(Boolean)) {
+for (const location of [process.env.HUASHU_DOM_TEST_MODULE, '@xmldom/xmldom', checkoutRoot && path.join(checkoutRoot, 'node_modules', '@xmldom', 'xmldom')].filter(Boolean)) {
   try { dom = require(location); break; } catch { /* Try only explicit known dependency locations. */ }
 }
 const domTest = { skip: dom ? false : 'set HUASHU_DOM_TEST_MODULE to an existing @xmldom/xmldom installation' };

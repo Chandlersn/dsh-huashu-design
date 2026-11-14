@@ -80,7 +80,7 @@ test('real layered project publishes, reopens, edits and returns to the same Hua
 
 test('raster handoff opens image tools, keeps the original and never advertises recovered text layers', { timeout: 90000 }, async t => {
   const { root, operations, runtime, call } = await fixture(t);
-  const png = await fs.readFile(path.join((await runtime.status()).root, 'test/fixtures/tiny.png'));
+  const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVR4nGP4oCDwn3uV9n8GEY1L//e5Nf0HAEamCJHokv97AAAAAElFTkSuQmCC', 'base64');
   const original = path.join(root, 'original.png'); await fs.writeFile(original, png);
   const { item } = await operations.operation('add', { title: 'Flat picture', path: original, module: 'infographic' });
   const opened = await runtime.operation('handoff', { workId: item.id, filePath: path.join(root, 'not-registered.png') });

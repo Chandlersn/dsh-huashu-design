@@ -4,10 +4,16 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 
-const printpressRoot = process.env.HUASHU_PRINTPRESS_ROOT;
-const requirePrintpress = createRequire(path.join(printpressRoot, 'package.json'));
-const compiler = requirePrintpress('@vue/compiler-sfc');
-const vue = requirePrintpress('vue');
+const printpressRoot = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT;
+let compiler, vue;
+try {
+  const requirePrintpress = createRequire(printpressRoot ? path.join(printpressRoot, 'package.json') : import.meta.url);
+  compiler = requirePrintpress('@vue/compiler-sfc');
+  vue = requirePrintpress('vue');
+} catch (error) {
+  if (error.code !== 'MODULE_NOT_FOUND') throw error;
+}
+const vueTest = { skip: compiler && vue ? false : 'Vue compiler and runtime are required' };
 const [logo, workbench, standalone, generator, buildScript] = await Promise.all([
   readFile(new URL('../src/printpress/PrintpressLogo.vue', import.meta.url), 'utf8'),
   readFile(new URL('../src/printpress/Workbench.vue', import.meta.url), 'utf8'),
@@ -27,12 +33,12 @@ function elements(node, result = []) {
   return result;
 }
 const attributes = node => Object.fromEntries((node.props || []).filter(prop => prop.type === 6).map(prop => [prop.name, prop.value?.content ?? true]));
-const descriptor = parse(logo, 'PrintpressLogo.vue');
-const work = parse(workbench, 'Workbench.vue');
-const svgFile = parse(`<template>${standalone}</template>`, 'StandaloneLogo.vue');
+const descriptor = compiler && parse(logo, 'PrintpressLogo.vue');
+const work = compiler && parse(workbench, 'Workbench.vue');
+const svgFile = compiler && parse(`<template>${standalone}</template>`, 'StandaloneLogo.vue');
 const logoNodes = () => elements(descriptor.template.ast);
 
-test('logo and Workbench compile with the actual Vue SFC and template compilers', () => {
+test('logo and Workbench compile with the actual Vue SFC and template compilers', vueTest, () => {
   for (const [name, value] of [['PrintpressLogo', descriptor], ['Workbench', work]]) {
     const script = value.script || value.scriptSetup ? compiler.compileScript(value, { id: `logo-${name}` }) : undefined;
     const template = compiler.compileTemplate({ source: value.template.content, filename: name + '.vue', id: `logo-${name}`, compilerOptions: { bindingMetadata: script?.bindings } });
@@ -42,7 +48,7 @@ test('logo and Workbench compile with the actual Vue SFC and template compilers'
   }
 });
 
-test('the real Vue render function emits an inline 32px SVG rather than an image link', () => {
+test('the real Vue render function emits an inline 32px SVG rather than an image link', vueTest, () => {
   const compiled = compiler.compileTemplate({ source: descriptor.template.content, filename: 'PrintpressLogo.vue', id: 'logo-runtime', compilerOptions: { mode: 'function', prefixIdentifiers: true, hoistStatic: false, cacheHandlers: false } });
   assert.deepEqual(compiled.errors, []);
   const render = new Function('Vue', compiled.code)(vue);
@@ -55,7 +61,7 @@ test('the real Vue render function emits an inline 32px SVG rather than an image
   assert.equal(vnode.props.focusable, 'false');
 });
 
-test('accent, original glyph and host border inherit theme tokens without fixed color overrides', () => {
+test('accent, original glyph and host border inherit theme tokens without fixed color overrides', vueTest, () => {
   const nodes = logoNodes(), [svg] = nodes;
   assert.equal(svg.tag, 'svg');
   const background = nodes.find(node => node.tag === 'rect');
@@ -75,7 +81,7 @@ test('accent, original glyph and host border inherit theme tokens without fixed 
   assert.equal(descriptor.styles.length, 0, 'the logo does not reset or cache the inherited theme variables');
 });
 
-test('the themed logo traces the original P + stacked-sheets silhouette, not a new mark', () => {
+test('the themed logo traces the original P + stacked-sheets silhouette, not a new mark', vueTest, () => {
   const nodes = logoNodes(), paths = nodes.filter(node => node.tag === 'path');
   assert.equal(paths.length, 1, 'one even-odd compound path carries the whole glyph');
   const d = attributes(paths[0]).d;
@@ -92,7 +98,7 @@ test('the themed logo traces the original P + stacked-sheets silhouette, not a n
   assert.match(generator, /evenodd/);
 });
 
-test('Workbench keeps exactly one original-shape, theme-adaptive logo and no picker', () => {
+test('Workbench keeps exactly one original-shape, theme-adaptive logo and no picker', vueTest, () => {
   const nodes = elements(work.template.ast);
   const references = nodes.filter(node => node.tag === 'PrintpressLogo');
   assert.equal(references.length, 1, 'only the finalized vector mark remains');
@@ -122,7 +128,7 @@ test('the final logo is generated from the original PNG shape and the build fing
   assert.doesNotMatch(workbench, /printpress-logo-original\.png/, 'no bundled copy of the original PNG remains');
 });
 
-test('Workbench CSS stays scoped to the single logo and compiles cleanly', () => {
+test('Workbench CSS stays scoped to the single logo and compiles cleanly', vueTest, () => {
   assert.equal(work.styles.length, 1);
   const style = work.styles[0];
   assert.equal(style.scoped, true);
@@ -137,7 +143,7 @@ test('Workbench CSS stays scoped to the single logo and compiles cleanly', () =>
   assert.match(compiled.code, /\.pp-brand-logo\[data-v-logo-test\]/);
 });
 
-test('standalone editable SVG uses the same geometry and supplies its own light/dark fallback palette', () => {
+test('standalone editable SVG uses the same geometry and supplies its own light/dark fallback palette', vueTest, () => {
   const nodes = elements(svgFile.template.ast), root = nodes.find(node => node.tag === 'svg');
   assert.equal(attributes(root).viewBox, '0 0 48 48');
   assert.equal(attributes(root).role, 'img');
@@ -154,7 +160,7 @@ test('standalone editable SVG uses the same geometry and supplies its own light/
   assert.match(standalone, /var\(--hs-on-accent,var\(--pp-logo-on-accent\)\)/);
 });
 
-test('both vector deliverables contain only self-contained geometry and no external assets or fonts', () => {
+test('both vector deliverables contain only self-contained geometry and no external assets or fonts', vueTest, () => {
   assert.ok(logoNodes().every(node => ['svg', 'path', 'rect'].includes(node.tag)));
   assert.ok(elements(svgFile.template.ast).every(node => ['svg', 'title', 'style', 'path', 'rect'].includes(node.tag)));
   for (const source of [logo, standalone]) assert.doesNotMatch(source, /<(?:img|image|use|foreignObject|script|text)\b|\b(?:href|src)\s*=|url\s*\(|@import|font-family|data:/i);

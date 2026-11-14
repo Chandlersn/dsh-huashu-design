@@ -16,7 +16,7 @@ import { createHostImages } from '../lib/host-images.js'
 const require = createRequire(import.meta.url)
 const { MAX_INPUT_BYTES, validateRequest, createNdjsonReader, resolveMedia, FORBIDDEN_OPERATIONS, createHostImageRpc, normalizeHostCapabilities, hostImageIdentity, scopePhotoStorage } = require('../lib/printpress-worker.cjs')
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const PRESSPRESS_CHECKOUT = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT
+const PRESSPRESS_CHECKOUT = process.env.HUASHU_PRINTPRESS_TEST_ROOT || process.env.HUASHU_PRINTPRESS_ROOT || ''
 const ELECTRON = process.env.HUASHU_PRINTPRESS_TEST_ELECTRON || path.join(PRESSPRESS_CHECKOUT, 'node_modules', 'electron', 'dist', process.platform === 'win32' ? 'electron.exe' : 'electron')
 const TEMP_PREFIX = 'huashu-printpress-worker-'
 const tempDirectory = () => fs.mkdtempSync(path.join(os.tmpdir(), TEMP_PREFIX))
@@ -212,7 +212,7 @@ function client({ directory, dataDir = path.join(directory, 'data'), observe = f
   }
 }
 
-const realElectron = { skip: fs.existsSync(ELECTRON) && fs.existsSync(path.join(PRESSPRESS_CHECKOUT, 'electron', 'api.cjs')) ? false : 'set HUASHU_PRINTPRESS_TEST_ROOT to a PrintPress checkout with Electron installed', timeout: 120000 }
+const realElectron = { skip: PRESSPRESS_CHECKOUT && fs.existsSync(ELECTRON) && fs.existsSync(path.join(PRESSPRESS_CHECKOUT, 'electron', 'api.cjs')) ? false : 'set HUASHU_PRINTPRESS_TEST_ROOT to a PrintPress checkout with Electron installed', timeout: 120000 }
 
 test('real Electron serves existing operations, isolates caches, locks data, prints and cancels concurrently', realElectron, async t => {
   const directory = tempDirectory(), service = client({ directory, observe: true }), others = []
@@ -401,6 +401,53 @@ test('real Electron reads original bootstrap settings while keeping independent 
     assert.equal(fs.existsSync(path.join(directory, 'must-not-migrate')), false)
     await service.stop()
     assert.equal(fs.existsSync(path.join(customData, 'data-dir.lock.json')), false)
+  } finally { await service.dispose(); removeTemporary(directory) }
+})
+
+test('packaged mode resolves desktop data and refuses a second writer', realElectron, async () => {
+  const directory = tempDirectory(), appData = path.join(directory, 'appdata')
+  const desktop = path.join(appData, 'printpress'), data = path.join(desktop, 'data')
+  const opts = { directory, observe: true, env: { HUASHU_PRINTPRESS_TEST_APP_DATA: appData, HUASHU_PRINTPRESS_PACKAGED: '1', PRINTPRESS_DATA_DIR: undefined } }
+  const first = client(opts)
+  let second
+  try {
+    assert.equal((await first.start()).dataDir, data)
+    second = client(opts)
+    const failure = await second.waitFrame(frame => frame.event === 'fatal')
+    assert.equal(failure.error.code, 'DATA_DIR_BUSY')
+    await first.stop()
+    assert.equal(fs.existsSync(path.join(data, 'data-dir.lock.json')), false)
+  } finally { await first.dispose(); await second?.dispose(); removeTemporary(directory) }
+})
+
+test('packaged mode refuses to fall back when the configured desktop data directory is unavailable', realElectron, async () => {
+  const directory = tempDirectory(), appData = path.join(directory, 'appdata'), desktop = path.join(appData, 'printpress')
+  const unavailable = path.join(directory, 'not-a-directory')
+  fs.mkdirSync(desktop, { recursive: true })
+  fs.writeFileSync(unavailable, 'existing file')
+  fs.writeFileSync(path.join(desktop, 'data-dir.json'), JSON.stringify({ dataDir: unavailable }))
+  const service = client({ directory, observe: true, env: { HUASHU_PRINTPRESS_TEST_APP_DATA: appData, HUASHU_PRINTPRESS_PACKAGED: '1', PRINTPRESS_DATA_DIR: undefined } })
+  try {
+    const frame = await service.waitFrame(value => value.event === 'fatal')
+    assert.equal(frame.error.code, 'DATA_DIR_UNAVAILABLE')
+    assert.equal(fs.existsSync(path.join(desktop, 'data')), false)
+    assert.equal(fs.readFileSync(unavailable, 'utf8'), 'existing file')
+  } finally { await service.dispose(); removeTemporary(directory) }
+})
+
+test('packaged mode rejects a changed desktop bootstrap after acquiring its lock', realElectron, async () => {
+  const directory = tempDirectory(), desktop = path.join(directory, 'desktop'), bootstrap = path.join(desktop, 'data-dir.json')
+  fs.mkdirSync(desktop, { recursive: true })
+  fs.writeFileSync(bootstrap, JSON.stringify({ dataDir: path.join(directory, 'old-data') }))
+  const entry = path.join(directory, 'change-bootstrap.cjs')
+  fs.writeFileSync(entry, `const fs = require('node:fs'); const read = fs.readFileSync; let changed = false; fs.readFileSync = function(file, ...args) { const result = read.call(this, file, ...args); if (!changed && String(file) === ${JSON.stringify(bootstrap)}) { changed = true; fs.writeFileSync(file, JSON.stringify({dataDir:${JSON.stringify(path.join(directory, 'new-data'))}})); } return result; }; require(${JSON.stringify(path.join(ROOT, 'lib', 'printpress-worker.cjs'))}).startWorker();`)
+  const service = client({ directory, entry, env: { HUASHU_PRINTPRESS_DESKTOP_USER_DATA: desktop, HUASHU_PRINTPRESS_PACKAGED: '1', PRINTPRESS_DATA_DIR: undefined } })
+  try {
+    const frame = await service.waitFrame(value => ['ready', 'fatal'].includes(value.event))
+    assert.equal(frame.event, 'fatal', JSON.stringify(frame))
+    assert.equal(frame.error.code, 'DATA_DIR_CHANGED')
+    await service.done
+    assert.equal(fs.existsSync(path.join(directory, 'old-data', 'data-dir.lock.json')), false)
   } finally { await service.dispose(); removeTemporary(directory) }
 })
 

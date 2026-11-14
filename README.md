@@ -13,9 +13,9 @@
 | 依赖 | 状态 | 说明 |
 | --- | --- | --- |
 | 上游快照 `upstream/` | **已内置** | 92 样张 / 45 份参考 / 44 个脚本 / 23 个 demo，固定在上游 `e8d1148`（v3.3.0） |
-| 批印坊 | **需额外配置** | 当前桥接需要批印坊源码及其 Electron 依赖；桌面安装版的自动桥接尚未完成（见下文「批印坊」） |
+| 批印坊 | **需安装兼容版本** | Windows 自动发现与本插件版本匹配的桌面安装版；也可显式配置兼容源码目录（见下文「批印坊」） |
 
-风格素材已随仓库提供；批量出片和原生分层交付需要可用的批印坊桥接。当前桌面安装版尚不能直接桥接，具体配置见下文。
+风格素材已随仓库提供；批量出片和原生分层交付需要可用的批印坊桥接。安装包版本需与插件内置的批印坊版本匹配。
 
 ## 能力一览
 
@@ -71,7 +71,7 @@
 - 不需要另开独立的批印坊窗口或开发服务器。首次进入启动后台；插件卸载时等待业务收尾并释放数据目录锁。目录被独立桌面版占用时明确提示。
 - 图像处理采用「宿主优先、快速模型兜底」。当前 DSH 未注册抠图提供方时使用已有 MODNet 快速模型，并显示实际来源；已注册宿主服务报错时明确显示，不静默更换来源。宿主与本地快速模型的派生缓存分开，原名单、原图、工程与预设不清除。
 
-这是本机集成：运行依赖批印坊源码目录中的 Electron、原生依赖与模型，不把其二进制复制进资源包。目录移动后更新 `HUASHU_PRINTPRESS_ROOT` 或 Host 的 `printpressRoot` 配置并重启宿主；`printpressDataDir` / `printpressUserData` 分别指定业务数据与运行缓存。面板内不提供桌面程序的更新、迁移或重启。
+这是本机集成：运行依赖兼容的批印坊安装版或源码目录中的 Electron、原生依赖与模型。显式指定的目录移动后需更新 `HUASHU_PRINTPRESS_ROOT` 或 Host 的 `printpressRoot` 配置并重启宿主；`printpressDataDir` / `printpressUserData` 分别指定业务数据与运行缓存。面板内不提供桌面程序的更新、迁移或重启。
 
 ### 配色
 
@@ -149,15 +149,15 @@ HTTP 接口接入 DSH Connection 认证，写请求要求同源 JSON。静态资
 
 批印坊是独立桌面程序，不随本插件分发——它的运行时要 Electron 加 AI 模型，约 490MB，放进 git 没有意义。要用批量出片，先装它：
 
-当前插件只支持指向批印坊源码目录：目录内须有 `electron/api.cjs` 和 `node_modules/electron/dist/electron.exe`，通过 `printpressRoot` 配置或 `HUASHU_PRINTPRESS_ROOT` 环境变量指定。桌面安装版的目录结构不同，目前不能直接桥接；自动发现和桥接安装版正在开发。
+Windows 用户可从 [Print-Workshop Releases](https://github.com/Chandlersn/Print-Workshop/releases/latest) 安装与插件内置版本匹配的批印坊桌面版（当前为 0.7.1），再重启 DSH。插件会从 Windows 安装记录发现兼容安装版；也可通过 `printpressRoot` 或 `HUASHU_PRINTPRESS_ROOT` 显式指定安装目录或兼容源码目录。显式配置优先，配置错误时不会自动切换到其他安装。
 
-批印坊桌面版可从 [Print-Workshop Releases](https://github.com/Chandlersn/Print-Workshop/releases/latest) 获取，但单独安装它尚不能使本插件的批印坊页面工作。未配置可用的源码目录时，批印坊功能不可用。
+插件沿用桌面版的数据目录及其独占锁，运行缓存独立保存。桌面版正在使用同一数据目录时，关闭占用它的程序后再重试；自定义数据目录不可用或配置在启动过程中变化时会报错，不会静默切换到另一份数据。自动发现目前仅支持 Windows 和与插件内置清单完全匹配的版本。
 
 ### 构建
 
 Host 直接加载 JavaScript；Client 作者源码在 `src/client.js`，批印坊面板源码在 `src/printpress/`，经 esbuild 打包到 `lib/client.js` 与 `dist/printpress/`。修改后先构建，`check` 会重算产物并拒绝过期文件，避免安装成功却仍显示旧界面。
 
-使用批印坊桥接需要兼容的源码树和依赖；只有修改源码并重新生成内嵌面板时才需要执行下面的构建：
+重新生成内嵌批印坊面板需要兼容的源码树和依赖；普通安装无需执行下面的构建：
 
 ```powershell
 $env:HUASHU_PRINTPRESS_ROOT = '<你的批印坊源码目录>'
