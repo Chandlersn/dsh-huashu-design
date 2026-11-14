@@ -1,4 +1,4 @@
-# Dependencies
+﻿# Dependencies
 node_modules/
 pnpm-store/
 
@@ -9,7 +9,7 @@ artifacts/
 # The upstream snapshot is fetched, not committed: it is a full clone with its
 # own 200MB+ history, and its binary assets belong in the upstream repository
 # rather than in every fork of this adapter.
-upstream/.git/
+upstream/
 upstream/node_modules/
 
 # Local environment
